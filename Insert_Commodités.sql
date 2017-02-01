@@ -1,0 +1,16 @@
+INSERT INTO COMMODITE(CodCom,DescCom) VALUES
+('AS' ,'Chambre régulière'),
+('AF' ,'Chambre familiale'),
+('AS' ,'Chambre Suite'),
+('AB' ,'Chambre balcon'),
+('AP' ,'Chambre penthouse'),
+('AF' ,'Chambre fumeur'),
+('NF' ,'Chambre non-fumeur'),
+('AE' ,'Chambre escalade'),
+('AG' ,'Chambre gravité'),
+('AI' ,'Chambre isolée'),
+('AD' ,'Chambre degeu'),
+('AE' ,'Chambre enfant'),
+('MB' ,'Chambre mini bar'),
+('HP' ,'Chambre handicape'),
+('IN' ,'Chambre internet')
