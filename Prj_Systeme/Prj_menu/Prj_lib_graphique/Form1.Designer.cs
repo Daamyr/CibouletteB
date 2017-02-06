@@ -156,7 +156,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel1;
         protected btn_cancel btn_cancel1;
         protected btn_previous btn_previous1;
         protected btn_edit btn_edit1;
@@ -165,5 +164,6 @@
         protected btn_save btn_save1;
         protected Txt_CB txt_CB1;
         private Logo_CB logo_CB1;
+        protected System.Windows.Forms.Panel panel1;
     }
 }
