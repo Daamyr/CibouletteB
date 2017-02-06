@@ -13,3 +13,11 @@ C:\Users\Maxime\Documents\Cours\2016 Session Hiver\Prj_Systeme\Prj_menu\Prj_lib_
 C:\Users\Maxime\Documents\Cours\2016 Session Hiver\Prj_Systeme\Prj_menu\Prj_lib_graphique\obj\Debug\Prj_lib_graphique.csproj.GenerateResource.Cache
 C:\Users\Maxime\Documents\Cours\2016 Session Hiver\Prj_Systeme\Prj_menu\Prj_lib_graphique\obj\Debug\Prj_lib_graphique.dll
 C:\Users\Maxime\Documents\Cours\2016 Session Hiver\Prj_Systeme\Prj_menu\Prj_lib_graphique\obj\Debug\Prj_lib_graphique.pdb
+C:\Users\CharlesBrouard\Desktop\CibouletteB-master\Prj_Systeme\Prj_menu\Prj_lib_graphique\bin\Debug\Prj_lib_graphique.dll
+C:\Users\CharlesBrouard\Desktop\CibouletteB-master\Prj_Systeme\Prj_menu\Prj_lib_graphique\bin\Debug\Prj_lib_graphique.pdb
+C:\Users\CharlesBrouard\Desktop\CibouletteB-master\Prj_Systeme\Prj_menu\Prj_lib_graphique\obj\Debug\Prj_lib_graphique.csprojResolveAssemblyReference.cache
+C:\Users\CharlesBrouard\Desktop\CibouletteB-master\Prj_Systeme\Prj_menu\Prj_lib_graphique\obj\Debug\Prj_lib_graphique.Form1.resources
+C:\Users\CharlesBrouard\Desktop\CibouletteB-master\Prj_Systeme\Prj_menu\Prj_lib_graphique\obj\Debug\Prj_lib_graphique.Properties.Resources.resources
+C:\Users\CharlesBrouard\Desktop\CibouletteB-master\Prj_Systeme\Prj_menu\Prj_lib_graphique\obj\Debug\Prj_lib_graphique.csproj.GenerateResource.Cache
+C:\Users\CharlesBrouard\Desktop\CibouletteB-master\Prj_Systeme\Prj_menu\Prj_lib_graphique\obj\Debug\Prj_lib_graphique.dll
+C:\Users\CharlesBrouard\Desktop\CibouletteB-master\Prj_Systeme\Prj_menu\Prj_lib_graphique\obj\Debug\Prj_lib_graphique.pdb
