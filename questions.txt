@@ -1,0 +1,11 @@
+Pour les standards :
+	définir CHAQUE objets ou juste des noms générique e.g. "Tous les boutons seront nommés BTN_(utilité)_(lieu)
+
+	Le nom des projets individuels devront contenir nos nom?
+
+	Nom formulaire .cs ?
+
+	Tout ce qu'il y a dans l'exemple donné sont des exemples ? Ou alors y a-t-il des consignes ?
+	/ on ne peut faire que s'en inspirer ?
+
+	On pourra modifier/compléter nos standards au besoin ?
