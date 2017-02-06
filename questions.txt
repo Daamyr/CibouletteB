@@ -1,5 +1,6 @@
 Pour les standards :
 	définir CHAQUE objets ou juste des noms générique e.g. "Tous les boutons seront nommés BTN_(utilité)_(lieu)
+	-- On doit lister tous les types ?
 
 	Le nom des projets individuels devront contenir nos nom?
 
