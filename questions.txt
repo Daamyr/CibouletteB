@@ -3,9 +3,10 @@ Pour les standards :
 
 	Le nom des projets individuels devront contenir nos nom?
 
-	Nom formulaire .cs ?
+	Nom formulair.cs?
 
-	Tout ce qu'il y a dans l'exemple donné sont des exemples ? Ou alors y a-t-il des consignes ?
-	/ on ne peut faire que s'en inspirer ?
+	Tout ce qu'il y a dans l'exemple donné sont des exemples ? Ou alors y a-t-il des consignes?
+	/ on ne peut faire que s'en inspirer?
 
-	On pourra modifier/compléter nos standards au besoin ?
+	On pourra modifier/compléter nos standards au besoin?
+ok
