@@ -1,0 +1,12 @@
+#À quiconque à part moi qui va lire ça :
+#ce mémo est juste pour me rappeler des trucs, ce n'est pas à
+#prendre comme consigne/ordre. Je ne peux obliger personne à faire
+#ce que je veux :)
+
+07/02
+Vérifier que tout fonctionne bien avant de start vraiment
+FAIRE DES RÉSERVATIONS FICTIVES !
+Compléter les insertions
+Faudra refaire le menu d'acceuil parce qu'on a dû le supprimer
+Faire attention aux standards
+vérifier à chaque "gros" commit que tout fonctionne

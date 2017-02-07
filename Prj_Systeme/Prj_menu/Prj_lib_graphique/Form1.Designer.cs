@@ -163,12 +163,7 @@
         protected btn_remove btn_remove1;
         protected btn_save btn_save1;
         protected Txt_CB txt_CB1;
-<<<<<<< HEAD
-        private Logo_CB logo_CB1;
+        protected Logo_CB logo_CB1;
         protected System.Windows.Forms.Panel panel1;
-=======
-        private Logo_CB logo_CB1;
-        protected System.Windows.Forms.Panel panel1;
->>>>>>> 4fc6721bfeb0d0bf8de0256aec7e6b17849f4931
     }
 }
