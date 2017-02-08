@@ -57,7 +57,92 @@ insert into Client (Nom, Adresse, Telephone, NoCarte, TypeCarte, DateExp, Solde_
 insert into Client (Nom, Adresse, Telephone, NoCarte, TypeCarte, DateExp, Solde_Du) values ('Rachel Long', '19 Cardinal Road', '4985921944', '3569515119649923', 'jcb', '29/1/2017', 461.17)
 insert into Client (Nom, Adresse, Telephone, NoCarte, TypeCarte, DateExp, Solde_Du) values ('Harold Perkins', '2 Birchwood Pass', '4886223293', '3578040190871949', 'jcb', '4/3/2017', 482.96)
 insert into Client (Nom, Adresse, Telephone, NoCarte, TypeCarte, DateExp, Solde_Du) values ('Shirley Griffin', '675 Myrtle Point', '6172838767', '6331108661527029', 'switch', '18/1/2017', 125.40)
-insert into Client (Nom, Adresse, Telephone, NoCarte, TypeCarte, DateExp, Solde_Du) values ('Walter Dunn', '309 Lake View Park', '8703091552', '3583802526491715', 'jcb', '14/11/2017', 99.55)
+insert into Client (Nom, Adresse, Telephone, NoCarte, TypeCarte, DateExp, Solde_Du) values ('Walter Dunn', '309 Lake View Park', '8703091552', '3583802526491715', 'jcb', '14/11/2017', 99.55)	
+
+
+/**************************************
+*
+*		INSERTION TYPECHAM
+*
+***************************************/
+INSERT INTO TypeCham(CodTypCham, DescTyp, NbDispo) VALUES ('1J','1 LIT JUMEAU','1')
+INSERT INTO TypeCham(CodTypCham, DescTyp, NbDispo) VALUES ('2J','2 LITS JUMEAUX','1')
+INSERT INTO TypeCham(CodTypCham, DescTyp, NbDispo) VALUES ('1D','1 LIT DOUBLE','1')
+INSERT INTO TypeCham(CodTypCham, DescTyp, NbDispo) VALUES ('2D','2 LITS DOUBLE','1')
+INSERT INTO TypeCham(CodTypCham, DescTyp, NbDispo) VALUES ('LQ','LIT QUEEN','1')
+INSERT INTO TypeCham(CodTypCham, DescTyp, NbDispo) VALUES ('LK','LIT KING','1')
+INSERT INTO TypeCham(CodTypCham, DescTyp, NbDispo) VALUES ('ST','SUITE','1')
+INSERT INTO TypeCham(CodTypCham, DescTyp, NbDispo) VALUES ('SR','SALLE RÉCEPTION','1')
+
+/**************************************
+*
+*		INSERTION COMMODITE
+*
+***************************************/
+INSERT INTO COMMODITE(CodCom, DescCom) VALUES ('AS', 'STANDARD')
+INSERT INTO COMMODITE(CodCom, DescCom) VALUES ('AF', 'FAMILIALE')
+INSERT INTO COMMODITE(CodCom, DescCom) VALUES ('AP', 'PENTHOUSE')
+INSERT INTO COMMODITE(CodCom, DescCom) VALUES ('BA', 'AVEC BALCON')
+INSERT INTO COMMODITE(CodCom, DescCom) VALUES ('BT', 'AVEC BAIN TOURBILLON')
+INSERT INTO COMMODITE(CodCom, DescCom) VALUES ('CC', 'CHAMBRE COMMUNICANTE')
+INSERT INTO COMMODITE(CodCom, DescCom) VALUES ('IN', 'INTERNET')
+INSERT INTO COMMODITE(CodCom, DescCom) VALUES ('MB', 'MINIBAR')
+INSERT INTO COMMODITE(CodCom, DescCom) VALUES ('HP', 'HANDICAPE')
+INSERT INTO COMMODITE(CodCom, DescCom) VALUES ('NF', 'NON FUMEUR')
+INSERT INTO COMMODITE(CodCom, DescCom) VALUES ('SG', 'SANS GRAVITÉ')
+
+
+
+/**************************************
+*
+*		INSERTION LOCALISATION
+*
+***************************************/
+INSERT INTO Localisation(CodLoc, DescLoc) VALUES ('AR','ARRIÈRE')
+INSERT INTO Localisation(CodLoc, DescLoc) VALUES ('AS','PRÈS DE LASCENCEUR')
+INSERT INTO Localisation(CodLoc, DescLoc) VALUES ('AV','AVANT')
+INSERT INTO Localisation(CodLoc, DescLoc) VALUES ('VM','VUE SUR MER')
+INSERT INTO Localisation(CodLoc, DescLoc) VALUES ('SM','PRÈS DE LA SALLE À MANGER')
+INSERT INTO Localisation(CodLoc, DescLoc) VALUES ('SB','PRÈS DU BAR')
+
+
+/**************************************
+*
+*		INSERTION CHAMBRE
+*
+***************************************/
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0101','01','80','1','','AS','1J')
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0102','01','80','1','','AS','2J')
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0103','01','80','1','','AS','1D')
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0104','01','80','1','','AS','2D')
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0105','01','80','1','','AV','LQ')
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0106','01','80','1','','AV','LK')
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0107','01','80','1','','AR','ST')
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0108','01','80','1','','AR','1J')
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0109','01','80','1','','SM','2J')
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0110','01','80','1','','SB','1D')
+
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0201','02','100','1','','AS','2D')
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0202','02','100','1','','AS','LQ')
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0203','02','100','1','','AS','LK')
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0204','02','100','1','','AS','ST')
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0205','02','100','1','','AV','1J')
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0206','02','100','1','','AV','2J')
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0207','02','100','1','','AR','1D')
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0208','02','100','1','','AR','2D')
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0209','02','100','1','','VM','LQ')
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0210','02','100','1','','VM','LK')
+
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0301','03','120','1','','AS','ST')
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0302','03','120','1','','AS','1J')
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0303','03','120','1','','AS','2J')
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0304','03','120','1','','AS','1D')
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0305','03','120','1','','VM','2D')
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0306','03','120','1','','VM','LQ')
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0307','03','120','1','','AR','LK')
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0308','03','120','1','','AR','ST')
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0309','03','120','1','','AV','ST')
+INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0310','03','120','1','','AV','LQ')
 
 
 /**************************************
@@ -143,93 +228,7 @@ insert into De (Attribue, IdReser, NoCham) values (0, 0, '0306')
 insert into De (Attribue, IdReser, NoCham) values (0, 0, '0307')
 insert into De (Attribue, IdReser, NoCham) values (0, 0, '0308')
 insert into De (Attribue, IdReser, NoCham) values (0, 0, '0309')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0310')*/	
-
-
-/**************************************
-*
-*		INSERTION TYPECHAM
-*
-***************************************/
-INSERT INTO TypeCham(CodTypCham, DescTyp, NbDispo) VALUES ('1J','1 LIT JUMEAU','1')
-INSERT INTO TypeCham(CodTypCham, DescTyp, NbDispo) VALUES ('2J','2 LITS JUMEAUX','1')
-INSERT INTO TypeCham(CodTypCham, DescTyp, NbDispo) VALUES ('1D','1 LIT DOUBLE','1')
-INSERT INTO TypeCham(CodTypCham, DescTyp, NbDispo) VALUES ('2D','2 LITS DOUBLE','1')
-INSERT INTO TypeCham(CodTypCham, DescTyp, NbDispo) VALUES ('LQ','LIT QUEEN','1')
-INSERT INTO TypeCham(CodTypCham, DescTyp, NbDispo) VALUES ('LK','LIT KING','1')
-INSERT INTO TypeCham(CodTypCham, DescTyp, NbDispo) VALUES ('ST','SUITE','1')
-INSERT INTO TypeCham(CodTypCham, DescTyp, NbDispo) VALUES ('SR','SALLE RÉCEPTION','1')
-
-/**************************************
-*
-*		INSERTION COMMODITE
-*
-***************************************/
-INSERT INTO COMMODITE(CodCom, DescCom) VALUES ('AS', 'STANDARD')
-INSERT INTO COMMODITE(CodCom, DescCom) VALUES ('AF', 'FAMILIALE')
-INSERT INTO COMMODITE(CodCom, DescCom) VALUES ('AP', 'PENTHOUSE')
-INSERT INTO COMMODITE(CodCom, DescCom) VALUES ('BA', 'AVEC BALCON')
-INSERT INTO COMMODITE(CodCom, DescCom) VALUES ('BT', 'AVEC BAIN TOURBILLON')
-INSERT INTO COMMODITE(CodCom, DescCom) VALUES ('CC', 'CHAMBRE COMMUNICANTE')
-INSERT INTO COMMODITE(CodCom, DescCom) VALUES ('IN', 'INTERNET')
-INSERT INTO COMMODITE(CodCom, DescCom) VALUES ('MB', 'MINIBAR')
-INSERT INTO COMMODITE(CodCom, DescCom) VALUES ('HP', 'HANDICAPE')
-INSERT INTO COMMODITE(CodCom, DescCom) VALUES ('NF', 'NON FUMEUR')
-INSERT INTO COMMODITE(CodCom, DescCom) VALUES ('SG', 'SANS GRAVITÉ')
-
-
-
-/**************************************
-*
-*		INSERTION TYPETRX
-*
-***************************************/
-INSERT INTO Localisation(CodLoc, DescLoc) VALUES ('AR','ARRIÈRE')
-INSERT INTO Localisation(CodLoc, DescLoc) VALUES ('AS','PRÈS DE LASCENCEUR')
-INSERT INTO Localisation(CodLoc, DescLoc) VALUES ('AV','AVANT')
-INSERT INTO Localisation(CodLoc, DescLoc) VALUES ('VM','VUE SUR MER')
-INSERT INTO Localisation(CodLoc, DescLoc) VALUES ('SM','PRÈS DE LA SALLE À MANGER')
-INSERT INTO Localisation(CodLoc, DescLoc) VALUES ('SB','PRÈS DU BAR')
-
-
-/**************************************
-*
-*		INSERTION CHAMBRE
-*
-***************************************/
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0101','01','80','1','','AS','1J')
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0102','01','80','1','','AS','2J')
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0103','01','80','1','','AS','1D')
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0104','01','80','1','','AS','2D')
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0105','01','80','1','','AV','LQ')
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0106','01','80','1','','AV','LK')
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0107','01','80','1','','AR','ST')
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0108','01','80','1','','AR','1J')
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0109','01','80','1','','SM','2J')
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0110','01','80','1','','SB','1D')
-
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0201','02','100','1','','AS','2D')
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0202','02','100','1','','AS','LQ')
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0203','02','100','1','','AS','LK')
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0204','02','100','1','','AS','ST')
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0205','02','100','1','','AV','1J')
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0206','02','100','1','','AV','2J')
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0207','02','100','1','','AR','1D')
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0208','02','100','1','','AR','2D')
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0209','02','100','1','','VM','LQ')
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0210','02','100','1','','VM','LK')
-
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0301','03','120','1','','AS','ST')
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0302','03','120','1','','AS','1J')
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0303','03','120','1','','AS','2J')
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0304','03','120','1','','AS','1D')
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0305','03','120','1','','VM','2D')
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0306','03','120','1','','VM','LQ')
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0307','03','120','1','','AR','LK')
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0308','03','120','1','','AR','ST')
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0309','03','120','1','','AV','ST')
-INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0310','03','120','1','','AV','LQ')
-						 	
+insert into De (Attribue, IdReser, NoCham) values (0, 0, '0310')*/
 /*
 Dans l'insert des types de chambre : est-ce que le total des type dispo doit être = au total de chambre ?
 */			 	
