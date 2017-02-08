@@ -151,7 +151,7 @@ create table TypeTrx
 
 create table Trx
 (
-	IdTrx				int					not null,
+	IdTrx				int	identity(1,1)	not null,
 	DateTrx				date				null,
 	MontantTrx			dec(12,2)			null,
 	Reportee			tinyint				null,
