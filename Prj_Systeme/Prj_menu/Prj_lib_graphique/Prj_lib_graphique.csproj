@@ -54,11 +54,11 @@
     <Compile Include="btn_edit.Designer.cs">
       <DependentUpon>btn_edit.cs</DependentUpon>
     </Compile>
-    <Compile Include="btn_fonction.cs">
+    <Compile Include="btn_function.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="btn_fonction.Designer.cs">
-      <DependentUpon>btn_fonction.cs</DependentUpon>
+    <Compile Include="btn_function.Designer.cs">
+      <DependentUpon>btn_function.cs</DependentUpon>
     </Compile>
     <Compile Include="btn_next.cs">
       <SubType>Component</SubType>
@@ -108,6 +108,12 @@
     </Compile>
     <Compile Include="Txt_CB.Designer.cs">
       <DependentUpon>Txt_CB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lab_format.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="lab_format.Designer.cs">
+      <DependentUpon>lab_format.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
