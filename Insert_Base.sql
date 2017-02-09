@@ -189,10 +189,7 @@ INSERT INTO AYANT (CodCom, NoCham) VALUES ('BT', '0310')
 *		INSERTION RÉSERVATION
 *
 ***************************************/
-insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('01/02/2017','05/02/2017' ,'05/02/2017', 1)
-insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('01/02/2017','02/02/2017' ,'05/02/2017', 1)
-insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('01/02/2017','02/02/2017' ,'05/02/2017', 1)
-insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('01/02/2017','02/02/2017' ,'05/02/2017', 1)
+insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('10/04/2017','05/06/2017' ,'10/06/2017', 1)
 
 
 /**************************************
@@ -241,6 +238,9 @@ insert into Depart (DateDepart, ConfirmerPar, IdReser, NoCham, IdCli) values ('0
 *
 ***************************************/
 insert into De (Attribuee, IdReser, NoCham) values (1, 1, '0101')
+insert into De (Attribuee, IdReser, NoCham) values (1, 1, '0301')
+insert into De (Attribuee, IdReser, NoCham) values (1, 1, '0202')
+insert into De (Attribuee, IdReser, NoCham) values (1, 1, '0102')
 --Il faut attribuer une réservertation / faire des réservations
 /*insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0102')
 insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0103')
