@@ -147,10 +147,53 @@ INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES 
 
 /**************************************
 *
+*		INSERTION AYANT
+*
+***************************************/
+insert into AYANT (CodCom, NoCham) values ('AF','0101')
+--Valeurs auto-générée et aléatoire
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('AP', '0101')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('AS', '0102')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('NF', '0103')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('CC', '0104')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('NF', '0105')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('BA', '0106')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('BA', '0107')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('SG', '0108')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('BA', '0109')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('BA', '0110')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('AS', '0201')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('HP', '0202')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('BT', '0203')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('IN', '0204')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('MB', '0205')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('AF', '0206')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('AP', '0207')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('SG', '0208')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('NF', '0209')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('AS', '0210')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('CC', '0301')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('BA', '0302')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('BT', '0303')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('AS', '0304')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('AP', '0305')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('NF', '0306')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('BT', '0307')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('BT', '0308')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('CC', '0309')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('BT', '0310')
+
+
+/**************************************
+*
 *		INSERTION RÉSERVATION
 *
 ***************************************/
-insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('01/02/2017','02/02/2017' ,'05/02/2017', 1)
+insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('10/02/2017','05/06/2017' ,'10/06/2017', 1)
+insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('25/01/2017','01/04/2017' ,'03/04/2017', 20)
+insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('22/12/2016','03/03/2017' ,'10/03/2017', 31)
+insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('6/01/2017','02/03/2017' ,'07/03/2017', 44)
+insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('1/02/2017','25/02/2017' ,'28/02/2017', 6)
 
 
 /**************************************
@@ -198,37 +241,57 @@ insert into Depart (DateDepart, ConfirmerPar, IdReser, NoCham, IdCli) values ('0
 *		INSERTION DE
 *
 ***************************************/
-insert into De (Attribue, IdReser, NoCham) values (1, 1, '0101')
+insert into De (Attribuee, IdReser, NoCham) values (1, 1, '0101')
+insert into De (Attribuee, IdReser, NoCham) values (1, 1, '0301')
+insert into De (Attribuee, IdReser, NoCham) values (1, 1, '0202')
+insert into De (Attribuee, IdReser, NoCham) values (1, 1, '0102')
+
+insert into De (Attribuee, IdReser, NoCham) values (1, 2, '0102')
+insert into De (Attribuee, IdReser, NoCham) values (1, 2, '0105')
+
+insert into De (Attribuee, IdReser, NoCham) values (1, 3, '0202')
+
+insert into De (Attribuee, IdReser, NoCham) values (1, 4, '0301')
+insert into De (Attribuee, IdReser, NoCham) values (1, 4, '0302')
+insert into De (Attribuee, IdReser, NoCham) values (1, 4, '0303')
+insert into De (Attribuee, IdReser, NoCham) values (1, 4, '0304')
+insert into De (Attribuee, IdReser, NoCham) values (1, 4, '0305')
+
+
+insert into De (Attribuee, IdReser, NoCham) values (1, 5, '0105')
+insert into De (Attribuee, IdReser, NoCham) values (1, 5, '0106')
+insert into De (Attribuee, IdReser, NoCham) values (1, 5, '0205')
+
 --Il faut attribuer une réservertation / faire des réservations
-/*insert into De (Attribue, IdReser, NoCham) values (0, 0, '0102')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0103')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0104')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0105')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0106')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0107')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0108')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0109')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '1010')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0201')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0202')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0203')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0204')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0205')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0206')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0207')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0208')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0209')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0210')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0301')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0302')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0303')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0304')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0305')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0306')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0307')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0308')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0309')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0310')*/
+/*insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0102')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0103')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0104')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0105')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0106')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0107')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0108')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0109')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '1010')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0201')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0202')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0203')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0204')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0205')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0206')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0207')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0208')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0209')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0210')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0301')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0302')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0303')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0304')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0305')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0306')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0307')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0308')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0309')
+insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0310')*/
 /*
 Dans l'insert des types de chambre : est-ce que le total des type dispo doit être = au total de chambre ?
 */			 	

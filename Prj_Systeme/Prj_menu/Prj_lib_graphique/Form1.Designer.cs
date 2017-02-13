@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.logo_CB1 = new Prj_lib_graphique.Logo_CB();
             this.txt_CB1 = new Prj_lib_graphique.Txt_CB();
             this.btn_save1 = new Prj_lib_graphique.btn_save();
             this.btn_remove1 = new Prj_lib_graphique.btn_remove();
@@ -37,16 +38,25 @@
             this.btn_edit1 = new Prj_lib_graphique.btn_edit();
             this.btn_previous1 = new Prj_lib_graphique.btn_previous();
             this.btn_cancel1 = new Prj_lib_graphique.btn_cancel();
-            this.logo_CB1 = new Prj_lib_graphique.Logo_CB();
             ((System.ComponentModel.ISupportInitialize)(this.logo_CB1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(39, 94);
+            this.panel1.Location = new System.Drawing.Point(12, 102);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1269, 439);
+            this.panel1.Size = new System.Drawing.Size(1158, 439);
             this.panel1.TabIndex = 8;
+            // 
+            // logo_CB1
+            // 
+            this.logo_CB1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logo_CB1.BackgroundImage")));
+            this.logo_CB1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.logo_CB1.Location = new System.Drawing.Point(13, 17);
+            this.logo_CB1.Name = "logo_CB1";
+            this.logo_CB1.Size = new System.Drawing.Size(75, 75);
+            this.logo_CB1.TabIndex = 0;
+            this.logo_CB1.TabStop = false;
             // 
             // txt_CB1
             // 
@@ -65,7 +75,7 @@
             // 
             this.btn_save1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_save1.BackgroundImage")));
             this.btn_save1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_save1.Location = new System.Drawing.Point(608, 539);
+            this.btn_save1.Location = new System.Drawing.Point(535, 547);
             this.btn_save1.Name = "btn_save1";
             this.btn_save1.Size = new System.Drawing.Size(67, 63);
             this.btn_save1.TabIndex = 13;
@@ -75,7 +85,7 @@
             // 
             this.btn_remove1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_remove1.BackgroundImage")));
             this.btn_remove1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_remove1.Location = new System.Drawing.Point(1256, 539);
+            this.btn_remove1.Location = new System.Drawing.Point(1099, 546);
             this.btn_remove1.Name = "btn_remove1";
             this.btn_remove1.Size = new System.Drawing.Size(67, 63);
             this.btn_remove1.TabIndex = 10;
@@ -85,7 +95,7 @@
             // 
             this.btn_next1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_next1.BackgroundImage")));
             this.btn_next1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_next1.Location = new System.Drawing.Point(1088, 539);
+            this.btn_next1.Location = new System.Drawing.Point(1026, 546);
             this.btn_next1.Name = "btn_next1";
             this.btn_next1.Size = new System.Drawing.Size(67, 63);
             this.btn_next1.TabIndex = 11;
@@ -95,7 +105,7 @@
             // 
             this.btn_edit1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_edit1.BackgroundImage")));
             this.btn_edit1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_edit1.Location = new System.Drawing.Point(535, 538);
+            this.btn_edit1.Location = new System.Drawing.Point(462, 546);
             this.btn_edit1.Name = "btn_edit1";
             this.btn_edit1.Size = new System.Drawing.Size(67, 63);
             this.btn_edit1.TabIndex = 14;
@@ -105,7 +115,7 @@
             // 
             this.btn_previous1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_previous1.BackgroundImage")));
             this.btn_previous1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_previous1.Location = new System.Drawing.Point(175, 534);
+            this.btn_previous1.Location = new System.Drawing.Point(91, 547);
             this.btn_previous1.Name = "btn_previous1";
             this.btn_previous1.Size = new System.Drawing.Size(67, 63);
             this.btn_previous1.TabIndex = 9;
@@ -115,21 +125,11 @@
             // 
             this.btn_cancel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_cancel1.BackgroundImage")));
             this.btn_cancel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_cancel1.Location = new System.Drawing.Point(681, 538);
+            this.btn_cancel1.Location = new System.Drawing.Point(608, 546);
             this.btn_cancel1.Name = "btn_cancel1";
             this.btn_cancel1.Size = new System.Drawing.Size(67, 63);
             this.btn_cancel1.TabIndex = 12;
             this.btn_cancel1.UseVisualStyleBackColor = true;
-            // 
-            // logo_CB1
-            // 
-            this.logo_CB1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logo_CB1.BackgroundImage")));
-            this.logo_CB1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.logo_CB1.Location = new System.Drawing.Point(13, 17);
-            this.logo_CB1.Name = "logo_CB1";
-            this.logo_CB1.Size = new System.Drawing.Size(75, 75);
-            this.logo_CB1.TabIndex = 0;
-            this.logo_CB1.TabStop = false;
             // 
             // Form1
             // 
@@ -137,7 +137,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Prj_lib_graphique.Properties.Resources.FMenu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1335, 608);
+            this.ClientSize = new System.Drawing.Size(1182, 622);
             this.Controls.Add(this.logo_CB1);
             this.Controls.Add(this.txt_CB1);
             this.Controls.Add(this.btn_save1);

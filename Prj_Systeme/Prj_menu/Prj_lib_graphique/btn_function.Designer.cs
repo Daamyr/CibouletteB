@@ -1,6 +1,6 @@
 ﻿namespace Prj_lib_graphique
 {
-    partial class btn_fonction
+    partial class btn_function
     {
         /// <summary> 
         /// Required designer variable.
@@ -33,7 +33,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Font = new System.Drawing.Font("Californian FB", 15.75F);
             this.Location = new System.Drawing.Point(62, 401);
-            this.Name = "Btn_Fonction";
+            this.Name = "Btn_Function";
             this.Size = new System.Drawing.Size(126, 48);
             this.Text = "Arrivé";
             this.UseVisualStyleBackColor = true;

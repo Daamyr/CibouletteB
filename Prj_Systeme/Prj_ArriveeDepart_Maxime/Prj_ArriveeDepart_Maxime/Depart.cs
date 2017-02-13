@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
-using System.Linq;
+using System.Drawing;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Prj_lib_graphique
+namespace Prj_ArriveeDepart_Maxime
 {
-    public partial class btn_fonction : Button
+    public partial class Depart : Prj_lib_graphique.Form1
     {
-        public btn_fonction()
+        public Depart()
         {
             InitializeComponent();
         }

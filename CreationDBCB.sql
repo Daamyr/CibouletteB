@@ -103,7 +103,7 @@ create table Ayant
 
 create table De
 (
-	Attribue			tinyint				null,
+	Attribuee			tinyint				null,
 	IdReser				int					not null,
 	NoCham				varchar(4)			not null,
 
