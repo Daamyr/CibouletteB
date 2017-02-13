@@ -49,11 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Arrivee.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Arrivee.Designer.cs">
-      <DependentUpon>Arrivee.cs</DependentUpon>
+    <Compile Include="DataSet_Arrivee.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Arrivee.xsd</DependentUpon>
     </Compile>
     <Compile Include="Depart.cs">
       <SubType>Form</SubType>
@@ -61,13 +60,19 @@
     <Compile Include="Depart.Designer.cs">
       <DependentUpon>Depart.cs</DependentUpon>
     </Compile>
+    <Compile Include="Arrivee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Arrivee.Designer.cs">
+      <DependentUpon>Arrivee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Arrivee.resx">
-      <DependentUpon>Arrivee.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Depart.resx">
       <DependentUpon>Depart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Arrivee.resx">
+      <DependentUpon>Arrivee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -79,6 +84,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DataSet_Arrivee.xsc">
+      <DependentUpon>DataSet_Arrivee.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Arrivee.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Arrivee.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_Arrivee.xss">
+      <DependentUpon>DataSet_Arrivee.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

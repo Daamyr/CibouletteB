@@ -22,5 +22,25 @@ namespace Prj_ArriveeDepart_Maxime.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=cyber;Initial Catalog=eq01-h17;User ID=eq01-h17;Password=104308")]
+        public string eq01_h17ConnectionString {
+            get {
+                return ((string)(this["eq01_h17ConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MAXAMD\\SQLEXPRESS14;Initial Catalog=Hotel;Integrated Security=True")]
+        public string HotelConnectionString {
+            get {
+                return ((string)(this["HotelConnectionString"]));
+            }
+        }
     }
 }

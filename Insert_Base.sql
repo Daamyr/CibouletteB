@@ -189,7 +189,11 @@ INSERT INTO AYANT (CodCom, NoCham) VALUES ('BT', '0310')
 *		INSERTION RÉSERVATION
 *
 ***************************************/
-insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('10/04/2017','05/06/2017' ,'10/06/2017', 1)
+insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('10/02/2017','05/06/2017' ,'10/06/2017', 1)
+insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('25/01/2017','01/04/2017' ,'03/04/2017', 20)
+insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('22/12/2016','03/03/2017' ,'10/03/2017', 31)
+insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('6/01/2017','02/03/2017' ,'07/03/2017', 44)
+insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('1/02/2017','25/02/2017' ,'28/02/2017', 6)
 
 
 /**************************************
@@ -241,6 +245,23 @@ insert into De (Attribuee, IdReser, NoCham) values (1, 1, '0101')
 insert into De (Attribuee, IdReser, NoCham) values (1, 1, '0301')
 insert into De (Attribuee, IdReser, NoCham) values (1, 1, '0202')
 insert into De (Attribuee, IdReser, NoCham) values (1, 1, '0102')
+
+insert into De (Attribuee, IdReser, NoCham) values (1, 2, '0102')
+insert into De (Attribuee, IdReser, NoCham) values (1, 2, '0105')
+
+insert into De (Attribuee, IdReser, NoCham) values (1, 3, '0202')
+
+insert into De (Attribuee, IdReser, NoCham) values (1, 4, '0301')
+insert into De (Attribuee, IdReser, NoCham) values (1, 4, '0302')
+insert into De (Attribuee, IdReser, NoCham) values (1, 4, '0303')
+insert into De (Attribuee, IdReser, NoCham) values (1, 4, '0304')
+insert into De (Attribuee, IdReser, NoCham) values (1, 4, '0305')
+
+
+insert into De (Attribuee, IdReser, NoCham) values (1, 5, '0105')
+insert into De (Attribuee, IdReser, NoCham) values (1, 5, '0106')
+insert into De (Attribuee, IdReser, NoCham) values (1, 5, '0205')
+
 --Il faut attribuer une réservertation / faire des réservations
 /*insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0102')
 insert into De (Attribuee, IdReser, NoCham) values (0, 0, '0103')
