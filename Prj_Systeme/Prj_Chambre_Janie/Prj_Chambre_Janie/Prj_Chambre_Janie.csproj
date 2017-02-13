@@ -54,6 +54,11 @@
     <Compile Include="Chambre.Designer.cs">
       <DependentUpon>Chambre.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataSet_Chambre.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Chambre.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Chambre.resx">
@@ -69,6 +74,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DataSet_Chambre.xsc">
+      <DependentUpon>DataSet_Chambre.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Chambre.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Chambre.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet_Chambre.xss">
+      <DependentUpon>DataSet_Chambre.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
