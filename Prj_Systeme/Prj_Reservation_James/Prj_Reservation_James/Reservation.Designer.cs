@@ -34,13 +34,6 @@
             this.TA_Res = new Prj_Reservation_James.CBDataSetTableAdapters.ReservationTableAdapter();
             this.TA_Manager = new Prj_Reservation_James.CBDataSetTableAdapters.TableAdapterManager();
             this.reservationDataGridView = new System.Windows.Forms.DataGridView();
-            this.noChamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.etageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prixDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.etatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.memoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codLocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codTypChamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BS_Cham = new System.Windows.Forms.BindingSource(this.components);
             this.Panel_Res = new System.Windows.Forms.Panel();
             this.TextBox_Fin = new System.Windows.Forms.TextBox();
@@ -58,7 +51,7 @@
             this.Label_IdCli = new System.Windows.Forms.Label();
             this.Label_Adresse = new System.Windows.Forms.Label();
             this.Label_Telephone = new System.Windows.Forms.Label();
-            this.Label_TypeTrx = new System.Windows.Forms.Label();
+            this.Label_TypeCarte = new System.Windows.Forms.Label();
             this.Label_DateExp = new System.Windows.Forms.Label();
             this.Label_Nom = new System.Windows.Forms.Label();
             this.Label_Fax = new System.Windows.Forms.Label();
@@ -67,10 +60,19 @@
             this.TextBox_Nom = new System.Windows.Forms.TextBox();
             this.TextBox_Adresse = new System.Windows.Forms.TextBox();
             this.TextBox_Telephone = new System.Windows.Forms.TextBox();
-            this.TextBox_TypeTrx = new System.Windows.Forms.TextBox();
+            this.TextBox_TypeCarte = new System.Windows.Forms.TextBox();
             this.TextBox_DateExp = new System.Windows.Forms.TextBox();
             this.TextBox_Fax = new System.Windows.Forms.TextBox();
             this.TextBox_Solde_Du = new System.Windows.Forms.TextBox();
+            this.BS_Client = new System.Windows.Forms.BindingSource(this.components);
+            this.TA_Client = new Prj_Reservation_James.CBDataSetTableAdapters.ClientTableAdapter();
+            this.noChamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.etageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prixDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.etatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.memoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codLocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codTypChamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.logo_CB1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CBDataSet)).BeginInit();
@@ -79,6 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.BS_Cham)).BeginInit();
             this.Panel_Res.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_Client)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -144,55 +147,6 @@
             this.reservationDataGridView.RowHeadersVisible = false;
             this.reservationDataGridView.Size = new System.Drawing.Size(1269, 163);
             this.reservationDataGridView.TabIndex = 0;
-            // 
-            // noChamDataGridViewTextBoxColumn
-            // 
-            this.noChamDataGridViewTextBoxColumn.DataPropertyName = "NoCham";
-            this.noChamDataGridViewTextBoxColumn.HeaderText = "NoCham";
-            this.noChamDataGridViewTextBoxColumn.Name = "noChamDataGridViewTextBoxColumn";
-            this.noChamDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // etageDataGridViewTextBoxColumn
-            // 
-            this.etageDataGridViewTextBoxColumn.DataPropertyName = "Etage";
-            this.etageDataGridViewTextBoxColumn.HeaderText = "Etage";
-            this.etageDataGridViewTextBoxColumn.Name = "etageDataGridViewTextBoxColumn";
-            this.etageDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // prixDataGridViewTextBoxColumn
-            // 
-            this.prixDataGridViewTextBoxColumn.DataPropertyName = "Prix";
-            this.prixDataGridViewTextBoxColumn.HeaderText = "Prix";
-            this.prixDataGridViewTextBoxColumn.Name = "prixDataGridViewTextBoxColumn";
-            this.prixDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // etatDataGridViewTextBoxColumn
-            // 
-            this.etatDataGridViewTextBoxColumn.DataPropertyName = "Etat";
-            this.etatDataGridViewTextBoxColumn.HeaderText = "Etat";
-            this.etatDataGridViewTextBoxColumn.Name = "etatDataGridViewTextBoxColumn";
-            this.etatDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // memoDataGridViewTextBoxColumn
-            // 
-            this.memoDataGridViewTextBoxColumn.DataPropertyName = "Memo";
-            this.memoDataGridViewTextBoxColumn.HeaderText = "Memo";
-            this.memoDataGridViewTextBoxColumn.Name = "memoDataGridViewTextBoxColumn";
-            this.memoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codLocDataGridViewTextBoxColumn
-            // 
-            this.codLocDataGridViewTextBoxColumn.DataPropertyName = "CodLoc";
-            this.codLocDataGridViewTextBoxColumn.HeaderText = "CodLoc";
-            this.codLocDataGridViewTextBoxColumn.Name = "codLocDataGridViewTextBoxColumn";
-            this.codLocDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codTypChamDataGridViewTextBoxColumn
-            // 
-            this.codTypChamDataGridViewTextBoxColumn.DataPropertyName = "CodTypCham";
-            this.codTypChamDataGridViewTextBoxColumn.HeaderText = "CodTypCham";
-            this.codTypChamDataGridViewTextBoxColumn.Name = "codTypChamDataGridViewTextBoxColumn";
-            this.codTypChamDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // BS_Cham
             // 
@@ -296,7 +250,7 @@
             this.panel2.Controls.Add(this.TextBox_Solde_Du);
             this.panel2.Controls.Add(this.TextBox_Fax);
             this.panel2.Controls.Add(this.TextBox_DateExp);
-            this.panel2.Controls.Add(this.TextBox_TypeTrx);
+            this.panel2.Controls.Add(this.TextBox_TypeCarte);
             this.panel2.Controls.Add(this.TextBox_Telephone);
             this.panel2.Controls.Add(this.TextBox_Nom);
             this.panel2.Controls.Add(this.TextBox_Adresse);
@@ -305,7 +259,7 @@
             this.panel2.Controls.Add(this.Label_Fax);
             this.panel2.Controls.Add(this.Label_Nom);
             this.panel2.Controls.Add(this.Label_DateExp);
-            this.panel2.Controls.Add(this.Label_TypeTrx);
+            this.panel2.Controls.Add(this.Label_TypeCarte);
             this.panel2.Controls.Add(this.Label_Telephone);
             this.panel2.Controls.Add(this.Label_Adresse);
             this.panel2.Controls.Add(this.Label_IdCli);
@@ -350,14 +304,14 @@
             this.Label_Telephone.TabIndex = 2;
             this.Label_Telephone.Text = "Telephone :";
             // 
-            // Label_TypeTrx
+            // Label_TypeCarte
             // 
-            this.Label_TypeTrx.AutoSize = true;
-            this.Label_TypeTrx.Location = new System.Drawing.Point(20, 116);
-            this.Label_TypeTrx.Name = "Label_TypeTrx";
-            this.Label_TypeTrx.Size = new System.Drawing.Size(82, 13);
-            this.Label_TypeTrx.TabIndex = 3;
-            this.Label_TypeTrx.Text = "Type de carte : ";
+            this.Label_TypeCarte.AutoSize = true;
+            this.Label_TypeCarte.Location = new System.Drawing.Point(20, 116);
+            this.Label_TypeCarte.Name = "Label_TypeCarte";
+            this.Label_TypeCarte.Size = new System.Drawing.Size(82, 13);
+            this.Label_TypeCarte.TabIndex = 3;
+            this.Label_TypeCarte.Text = "Type de carte : ";
             // 
             // Label_DateExp
             // 
@@ -423,12 +377,12 @@
             this.TextBox_Telephone.Size = new System.Drawing.Size(169, 20);
             this.TextBox_Telephone.TabIndex = 11;
             // 
-            // TextBox_TypeTrx
+            // TextBox_TypeCarte
             // 
-            this.TextBox_TypeTrx.Location = new System.Drawing.Point(114, 113);
-            this.TextBox_TypeTrx.Name = "TextBox_TypeTrx";
-            this.TextBox_TypeTrx.Size = new System.Drawing.Size(169, 20);
-            this.TextBox_TypeTrx.TabIndex = 12;
+            this.TextBox_TypeCarte.Location = new System.Drawing.Point(114, 113);
+            this.TextBox_TypeCarte.Name = "TextBox_TypeCarte";
+            this.TextBox_TypeCarte.Size = new System.Drawing.Size(169, 20);
+            this.TextBox_TypeCarte.TabIndex = 12;
             // 
             // TextBox_DateExp
             // 
@@ -451,6 +405,64 @@
             this.TextBox_Solde_Du.Size = new System.Drawing.Size(169, 20);
             this.TextBox_Solde_Du.TabIndex = 15;
             // 
+            // BS_Client
+            // 
+            this.BS_Client.DataMember = "Client";
+            this.BS_Client.DataSource = this.CBDataSet;
+            // 
+            // TA_Client
+            // 
+            this.TA_Client.ClearBeforeFill = true;
+            // 
+            // noChamDataGridViewTextBoxColumn
+            // 
+            this.noChamDataGridViewTextBoxColumn.DataPropertyName = "NoCham";
+            this.noChamDataGridViewTextBoxColumn.HeaderText = "NoCham";
+            this.noChamDataGridViewTextBoxColumn.Name = "noChamDataGridViewTextBoxColumn";
+            this.noChamDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // etageDataGridViewTextBoxColumn
+            // 
+            this.etageDataGridViewTextBoxColumn.DataPropertyName = "Etage";
+            this.etageDataGridViewTextBoxColumn.HeaderText = "Etage";
+            this.etageDataGridViewTextBoxColumn.Name = "etageDataGridViewTextBoxColumn";
+            this.etageDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // prixDataGridViewTextBoxColumn
+            // 
+            this.prixDataGridViewTextBoxColumn.DataPropertyName = "Prix";
+            this.prixDataGridViewTextBoxColumn.HeaderText = "Prix";
+            this.prixDataGridViewTextBoxColumn.Name = "prixDataGridViewTextBoxColumn";
+            this.prixDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // etatDataGridViewTextBoxColumn
+            // 
+            this.etatDataGridViewTextBoxColumn.DataPropertyName = "Etat";
+            this.etatDataGridViewTextBoxColumn.HeaderText = "Etat";
+            this.etatDataGridViewTextBoxColumn.Name = "etatDataGridViewTextBoxColumn";
+            this.etatDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // memoDataGridViewTextBoxColumn
+            // 
+            this.memoDataGridViewTextBoxColumn.DataPropertyName = "Memo";
+            this.memoDataGridViewTextBoxColumn.HeaderText = "Memo";
+            this.memoDataGridViewTextBoxColumn.Name = "memoDataGridViewTextBoxColumn";
+            this.memoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codLocDataGridViewTextBoxColumn
+            // 
+            this.codLocDataGridViewTextBoxColumn.DataPropertyName = "CodLoc";
+            this.codLocDataGridViewTextBoxColumn.HeaderText = "CodLoc";
+            this.codLocDataGridViewTextBoxColumn.Name = "codLocDataGridViewTextBoxColumn";
+            this.codLocDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codTypChamDataGridViewTextBoxColumn
+            // 
+            this.codTypChamDataGridViewTextBoxColumn.DataPropertyName = "CodTypCham";
+            this.codTypChamDataGridViewTextBoxColumn.HeaderText = "CodTypCham";
+            this.codTypChamDataGridViewTextBoxColumn.Name = "codTypChamDataGridViewTextBoxColumn";
+            this.codTypChamDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // Reservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -468,6 +480,7 @@
             this.Panel_Res.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_Client)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -492,6 +505,26 @@
         private System.Windows.Forms.Label Label_Debut;
         private System.Windows.Forms.BindingSource BS_Cham;
         private CBDataSetTableAdapters.ChambreTableAdapter TA_Cham;
+        private System.Windows.Forms.Label Label_InfoCli;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label Label_Telephone;
+        private System.Windows.Forms.Label Label_Adresse;
+        private System.Windows.Forms.Label Label_IdCli;
+        private System.Windows.Forms.Label Label_DateExp;
+        private System.Windows.Forms.Label Label_TypeCarte;
+        private System.Windows.Forms.Label Label_Solde_Du;
+        private System.Windows.Forms.Label Label_Fax;
+        private System.Windows.Forms.Label Label_Nom;
+        private System.Windows.Forms.TextBox TextBox_Solde_Du;
+        private System.Windows.Forms.TextBox TextBox_Fax;
+        private System.Windows.Forms.TextBox TextBox_DateExp;
+        private System.Windows.Forms.TextBox TextBox_TypeCarte;
+        private System.Windows.Forms.TextBox TextBox_Telephone;
+        private System.Windows.Forms.TextBox TextBox_Nom;
+        private System.Windows.Forms.TextBox TextBox_Adresse;
+        private System.Windows.Forms.TextBox TextBox_IdCli;
+        private System.Windows.Forms.BindingSource BS_Client;
+        private CBDataSetTableAdapters.ClientTableAdapter TA_Client;
         private System.Windows.Forms.DataGridViewTextBoxColumn noChamDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn etageDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prixDataGridViewTextBoxColumn;
@@ -499,23 +532,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn memoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codLocDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codTypChamDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label Label_InfoCli;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label Label_Telephone;
-        private System.Windows.Forms.Label Label_Adresse;
-        private System.Windows.Forms.Label Label_IdCli;
-        private System.Windows.Forms.Label Label_DateExp;
-        private System.Windows.Forms.Label Label_TypeTrx;
-        private System.Windows.Forms.Label Label_Solde_Du;
-        private System.Windows.Forms.Label Label_Fax;
-        private System.Windows.Forms.Label Label_Nom;
-        private System.Windows.Forms.TextBox TextBox_Solde_Du;
-        private System.Windows.Forms.TextBox TextBox_Fax;
-        private System.Windows.Forms.TextBox TextBox_DateExp;
-        private System.Windows.Forms.TextBox TextBox_TypeTrx;
-        private System.Windows.Forms.TextBox TextBox_Telephone;
-        private System.Windows.Forms.TextBox TextBox_Nom;
-        private System.Windows.Forms.TextBox TextBox_Adresse;
-        private System.Windows.Forms.TextBox TextBox_IdCli;
     }
 }
