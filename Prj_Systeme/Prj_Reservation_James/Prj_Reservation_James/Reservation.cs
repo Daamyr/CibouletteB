@@ -15,18 +15,20 @@ namespace Prj_Reservation_James
             InitializeComponent();
         }
 
-        private void reservationBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.BS_Res.EndEdit();
-            this.TA_Res.UpdateAll(this.CBDataSet);
+        //private void reservationBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        //{
+        //    this.Validate();
+        //    this.BS_Res.EndEdit();
+        //    this.TA_Manager.UpdateAll(this.CBDataSet);
 
-        }
+        //}
 
         private void Reservation_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'CBDataSet.Chambre' table. You can move, or remove it, as needed.
+            this.TA_Cham.Fill(this.CBDataSet.Chambre);
             // TODO: This line of code loads data into the 'cBDataSet.Reservation' table. You can move, or remove it, as needed.
-            this.reservationTableAdapter.Fill(this.CBDataSet.Reservation);
+            this.TA_Res.Fill(this.CBDataSet.Reservation);
 
             Lien_Res();
         }
