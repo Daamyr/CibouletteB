@@ -31,9 +31,9 @@ namespace Prj_ArriveeDepart_Maxime
             this.bs_Reser.DataMember = "Reservation";
 
             textBox2.DataBindings.Add("Text", bs_De, "IdReser");
-            dateTimePicker1.DataBindings.Add("Value", bs_Reser, "DateDebut");
+            dateTimePicker1.DataBindings.Add("Text", bs_Reser, "DateDebut");
             dateTimePicker2.DataBindings.Add("Value", bs_Reser, "DateFin");
-            label22.DataBindings.Add("Text", bs_Reser, "IdCli");
+            Label_Reser_IdCli.DataBindings.Add("Text", bs_Reser, "IdCli");
 
         }
 
