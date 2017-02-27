@@ -33,7 +33,7 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label24 = new System.Windows.Forms.Label();
-            this.Label_Reser_IdCli = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -56,24 +56,24 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.attribueeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idReserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noChamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bs_De = new System.Windows.Forms.BindingSource(this.components);
             this.DataSet_Arrivee = new Prj_ArriveeDepart_Maxime.DataSet_Arrivee();
             this.bs_Reser = new System.Windows.Forms.BindingSource(this.components);
             this.TA_Reser = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.ReservationTableAdapter();
             this.dataSetArrivee1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bs_De = new System.Windows.Forms.BindingSource(this.components);
             this.TA_de = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.DeTableAdapter();
+            this.attribueeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idReserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noChamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.logo_CB1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bs_De)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet_Arrivee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bs_Reser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetArrivee1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bs_De)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -87,7 +87,7 @@
             this.panel3.Controls.Add(this.dateTimePicker2);
             this.panel3.Controls.Add(this.dateTimePicker1);
             this.panel3.Controls.Add(this.label24);
-            this.panel3.Controls.Add(this.Label_Reser_IdCli);
+            this.panel3.Controls.Add(this.label22);
             this.panel3.Controls.Add(this.label19);
             this.panel3.Controls.Add(this.textBox2);
             this.panel3.Controls.Add(this.label6);
@@ -125,15 +125,15 @@
             this.label24.TabIndex = 6;
             this.label24.Text = "Value";
             // 
-            // Label_Reser_IdCli
+            // label22
             // 
-            this.Label_Reser_IdCli.AutoSize = true;
-            this.Label_Reser_IdCli.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_Reser_IdCli.Location = new System.Drawing.Point(122, 129);
-            this.Label_Reser_IdCli.Name = "Label_Reser_IdCli";
-            this.Label_Reser_IdCli.Size = new System.Drawing.Size(42, 18);
-            this.Label_Reser_IdCli.TabIndex = 6;
-            this.Label_Reser_IdCli.Text = "Value";
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(122, 129);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(42, 18);
+            this.label22.TabIndex = 6;
+            this.label22.Text = "Value";
             // 
             // label19
             // 
@@ -362,29 +362,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1151, 250);
             this.dataGridView1.TabIndex = 8;
             // 
-            // attribueeDataGridViewTextBoxColumn
-            // 
-            this.attribueeDataGridViewTextBoxColumn.DataPropertyName = "Attribuee";
-            this.attribueeDataGridViewTextBoxColumn.HeaderText = "Attribuee";
-            this.attribueeDataGridViewTextBoxColumn.Name = "attribueeDataGridViewTextBoxColumn";
-            // 
-            // idReserDataGridViewTextBoxColumn
-            // 
-            this.idReserDataGridViewTextBoxColumn.DataPropertyName = "IdReser";
-            this.idReserDataGridViewTextBoxColumn.HeaderText = "IdReser";
-            this.idReserDataGridViewTextBoxColumn.Name = "idReserDataGridViewTextBoxColumn";
-            // 
-            // noChamDataGridViewTextBoxColumn
-            // 
-            this.noChamDataGridViewTextBoxColumn.DataPropertyName = "NoCham";
-            this.noChamDataGridViewTextBoxColumn.HeaderText = "NoCham";
-            this.noChamDataGridViewTextBoxColumn.Name = "noChamDataGridViewTextBoxColumn";
-            // 
-            // bs_De
-            // 
-            this.bs_De.DataMember = "De";
-            this.bs_De.DataSource = this.DataSet_Arrivee;
-            // 
             // DataSet_Arrivee
             // 
             this.DataSet_Arrivee.DataSetName = "DataSet_Arrivee";
@@ -404,9 +381,32 @@
             this.dataSetArrivee1BindingSource.DataSource = this.DataSet_Arrivee;
             this.dataSetArrivee1BindingSource.Position = 0;
             // 
+            // bs_De
+            // 
+            this.bs_De.DataMember = "De";
+            this.bs_De.DataSource = this.DataSet_Arrivee;
+            // 
             // TA_de
             // 
             this.TA_de.ClearBeforeFill = true;
+            // 
+            // attribueeDataGridViewTextBoxColumn
+            // 
+            this.attribueeDataGridViewTextBoxColumn.DataPropertyName = "Attribuee";
+            this.attribueeDataGridViewTextBoxColumn.HeaderText = "Attribuee";
+            this.attribueeDataGridViewTextBoxColumn.Name = "attribueeDataGridViewTextBoxColumn";
+            // 
+            // idReserDataGridViewTextBoxColumn
+            // 
+            this.idReserDataGridViewTextBoxColumn.DataPropertyName = "IdReser";
+            this.idReserDataGridViewTextBoxColumn.HeaderText = "IdReser";
+            this.idReserDataGridViewTextBoxColumn.Name = "idReserDataGridViewTextBoxColumn";
+            // 
+            // noChamDataGridViewTextBoxColumn
+            // 
+            this.noChamDataGridViewTextBoxColumn.DataPropertyName = "NoCham";
+            this.noChamDataGridViewTextBoxColumn.HeaderText = "NoCham";
+            this.noChamDataGridViewTextBoxColumn.Name = "noChamDataGridViewTextBoxColumn";
             // 
             // Arrivee
             // 
@@ -421,10 +421,10 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bs_De)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet_Arrivee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bs_Reser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetArrivee1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bs_De)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -436,7 +436,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label Label_Reser_IdCli;
+        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
