@@ -56,25 +56,36 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.DataSet_Arrivee = new Prj_ArriveeDepart_Maxime.DataSet_Arrivee();
-            this.bs_Reser = new System.Windows.Forms.BindingSource(this.components);
-            this.TA_Reser = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.ReservationTableAdapter();
-            this.dataSetArrivee1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bs_De = new System.Windows.Forms.BindingSource(this.components);
-            this.TA_de = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.DeTableAdapter();
             this.attribueeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idReserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noChamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BS_De = new System.Windows.Forms.BindingSource(this.components);
+            this.DataSet_Arrivee = new Prj_ArriveeDepart_Maxime.DataSet_Arrivee();
+            this.BS_Reser = new System.Windows.Forms.BindingSource(this.components);
+            this.TA_Reser = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.ReservationTableAdapter();
+            this.dataSetArrivee1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.TA_de = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.DeTableAdapter();
+            this.TA_Client = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.ClientTableAdapter();
+            this.BS_Client = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.logo_CB1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_De)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet_Arrivee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bs_Reser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_Reser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetArrivee1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bs_De)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_Client)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btn_previous1
+            // 
+            this.btn_previous1.Click += new System.EventHandler(this.btn_previous1_Click);
+            // 
+            // btn_next1
+            // 
+            this.btn_next1.Click += new System.EventHandler(this.btn_next1_Click);
             // 
             // panel1
             // 
@@ -356,39 +367,11 @@
             this.attribueeDataGridViewTextBoxColumn,
             this.idReserDataGridViewTextBoxColumn,
             this.noChamDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.bs_De;
+            this.dataGridView1.DataSource = this.BS_De;
             this.dataGridView1.Location = new System.Drawing.Point(3, 186);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1151, 250);
             this.dataGridView1.TabIndex = 8;
-            // 
-            // DataSet_Arrivee
-            // 
-            this.DataSet_Arrivee.DataSetName = "DataSet_Arrivee";
-            this.DataSet_Arrivee.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bs_Reser
-            // 
-            this.bs_Reser.DataMember = "Reservation";
-            this.bs_Reser.DataSource = this.DataSet_Arrivee;
-            // 
-            // TA_Reser
-            // 
-            this.TA_Reser.ClearBeforeFill = true;
-            // 
-            // dataSetArrivee1BindingSource
-            // 
-            this.dataSetArrivee1BindingSource.DataSource = this.DataSet_Arrivee;
-            this.dataSetArrivee1BindingSource.Position = 0;
-            // 
-            // bs_De
-            // 
-            this.bs_De.DataMember = "De";
-            this.bs_De.DataSource = this.DataSet_Arrivee;
-            // 
-            // TA_de
-            // 
-            this.TA_de.ClearBeforeFill = true;
             // 
             // attribueeDataGridViewTextBoxColumn
             // 
@@ -408,6 +391,38 @@
             this.noChamDataGridViewTextBoxColumn.HeaderText = "NoCham";
             this.noChamDataGridViewTextBoxColumn.Name = "noChamDataGridViewTextBoxColumn";
             // 
+            // BS_De
+            // 
+            this.BS_De.DataMember = "De";
+            this.BS_De.DataSource = this.DataSet_Arrivee;
+            // 
+            // DataSet_Arrivee
+            // 
+            this.DataSet_Arrivee.DataSetName = "DataSet_Arrivee";
+            this.DataSet_Arrivee.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // BS_Reser
+            // 
+            this.BS_Reser.DataMember = "Reservation";
+            this.BS_Reser.DataSource = this.DataSet_Arrivee;
+            // 
+            // TA_Reser
+            // 
+            this.TA_Reser.ClearBeforeFill = true;
+            // 
+            // dataSetArrivee1BindingSource
+            // 
+            this.dataSetArrivee1BindingSource.DataSource = this.DataSet_Arrivee;
+            this.dataSetArrivee1BindingSource.Position = 0;
+            // 
+            // TA_de
+            // 
+            this.TA_de.ClearBeforeFill = true;
+            // 
+            // TA_Client
+            // 
+            this.TA_Client.ClearBeforeFill = true;
+            // 
             // Arrivee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -421,10 +436,11 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_De)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet_Arrivee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bs_Reser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_Reser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetArrivee1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bs_De)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_Client)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -460,13 +476,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private DataSet_Arrivee DataSet_Arrivee;
-        private System.Windows.Forms.BindingSource bs_Reser;
+        private System.Windows.Forms.BindingSource BS_Reser;
         private DataSet_ArriveeTableAdapters.ReservationTableAdapter TA_Reser;
         private System.Windows.Forms.BindingSource dataSetArrivee1BindingSource;
-        private System.Windows.Forms.BindingSource bs_De;
+        private System.Windows.Forms.BindingSource BS_De;
         private DataSet_ArriveeTableAdapters.DeTableAdapter TA_de;
         private System.Windows.Forms.DataGridViewTextBoxColumn attribueeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idReserDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn noChamDataGridViewTextBoxColumn;
+        private DataSet_ArriveeTableAdapters.ClientTableAdapter TA_Client;
+        private System.Windows.Forms.BindingSource BS_Client;
     }
 }

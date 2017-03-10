@@ -3206,8 +3206,8 @@ namespace Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters {
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Arrive] ([DateArrive], [IdCli], [IdReser], [NoCham]) VALUES (@" +
-                "DateArrive, @IdCli, @IdReser, @NoCham);\r\nSELECT IdArrive, DateArrive, IdCli, IdR" +
-                "eser, NoCham FROM Arrive WHERE (IdArrive = SCOPE_IDENTITY())";
+                "DateArrive, @IdCli, @IdReser, @NoCham);\nSELECT IdArrive, DateArrive, IdCli, IdRe" +
+                "ser, NoCham FROM Arrive WHERE (IdArrive = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateArrive", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateArrive", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdCli", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdCli", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4874,8 +4874,8 @@ SELECT IdCli, Nom, Adresse, Telephone, NoCarte, TypeCarte, DateExp, Solde_Du FRO
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Reservation] ([DateReser], [DateDebut], [DateFin], [IdCli]) VA" +
-                "LUES (@DateReser, @DateDebut, @DateFin, @IdCli);\r\nSELECT IdReser, DateReser, Dat" +
-                "eDebut, DateFin, IdCli FROM Reservation WHERE (IdReser = SCOPE_IDENTITY())";
+                "LUES (@DateReser, @DateDebut, @DateFin, @IdCli);\nSELECT IdReser, DateReser, Date" +
+                "Debut, DateFin, IdCli FROM Reservation WHERE (IdReser = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateReser", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateReser", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateDebut", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateDebut", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
