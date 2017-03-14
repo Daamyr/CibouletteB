@@ -189,11 +189,23 @@ INSERT INTO AYANT (CodCom, NoCham) VALUES ('BT', '0310')
 *		INSERTION RÉSERVATION
 *
 ***************************************/
-insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('10/02/2017','05/06/2017' ,'10/06/2017', 1)
-insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('25/01/2017','01/04/2017' ,'03/04/2017', 20)
+insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('01/02/2017','05/06/2017' ,'10/06/2017', 1)
+insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('01/04/2017','02/04/2017' ,'17/04/2017', 20)
 insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('22/12/2016','03/03/2017' ,'10/03/2017', 31)
 insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('6/01/2017','02/03/2017' ,'07/03/2017', 44)
 insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('1/02/2017','25/02/2017' ,'28/02/2017', 6)
+
+
+/**************************************
+*
+*		INSERTION ARRIVE
+*
+***************************************/
+insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('09/02/2017', 1, 1, '0102')
+insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('02/04/2017', 20, 2, '0102')
+insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('05/02/2017', 45, 2, '0105')
+insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('02/03/2017', 8, 4, '0304')
+insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('06/03/2017', 6, 3, '0202')
 
 
 /**************************************
@@ -218,14 +230,6 @@ INSERT INTO TypeTrx(CodTypTrx,DescTrx,Nature) VALUES ('09','PAIEMENT','CR')
 *
 ***************************************/
 insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli) values ('02/02/2017', 299.99, 0, '09', 1, '0101', 1)
-
-
-/**************************************
-*
-*		INSERTION ARRIVE
-*
-***************************************/
-insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('02/02/2017', 1, 1, '0101')
 
 
 /**************************************

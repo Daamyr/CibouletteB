@@ -59,15 +59,22 @@
             this.attribueeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idReserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noChamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TYPECHAM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Prix = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BS_De = new System.Windows.Forms.BindingSource(this.components);
             this.DataSet_Arrivee = new Prj_ArriveeDepart_Maxime.DataSet_Arrivee();
+            this.BS_Client = new System.Windows.Forms.BindingSource(this.components);
+            this.BS_Chambre = new System.Windows.Forms.BindingSource(this.components);
+            this.lb_IdArrive = new Prj_lib_graphique.lab_format();
             this.BS_Reser = new System.Windows.Forms.BindingSource(this.components);
             this.TA_Reservation = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.ReservationTableAdapter();
             this.TA_De = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.DeTableAdapter();
             this.TA_Client = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.ClientTableAdapter();
-            this.BS_Client = new System.Windows.Forms.BindingSource(this.components);
             this.TA_Chambre = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.ChambreTableAdapter();
-            this.BS_Chambre = new System.Windows.Forms.BindingSource(this.components);
+            this.BS_TypeCham = new System.Windows.Forms.BindingSource(this.components);
+            this.TA_TypeCham = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.TypeChamTableAdapter();
+            this.TA_Arrive = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.ArriveTableAdapter();
+            this.BS_Arrive = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.logo_CB1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -75,9 +82,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BS_De)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet_Arrivee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BS_Reser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BS_Client)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BS_Chambre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_Reser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_TypeCham)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_Arrive)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_previous1
@@ -90,6 +99,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lb_IdArrive);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -115,6 +125,7 @@
             // 
             // dateTimePicker3
             // 
+            this.dateTimePicker3.Enabled = false;
             this.dateTimePicker3.Location = new System.Drawing.Point(280, 14);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(136, 20);
@@ -122,6 +133,7 @@
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.Enabled = false;
             this.dateTimePicker2.Location = new System.Drawing.Point(117, 97);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
@@ -129,6 +141,7 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Location = new System.Drawing.Point(117, 61);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
@@ -156,11 +169,11 @@
             // 
             // textBox2
             // 
+            this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(122, 17);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(59, 20);
             this.textBox2.TabIndex = 5;
-            this.textBox2.TextChanged += new System.EventHandler(this.onIdReserChanged);
             // 
             // label6
             // 
@@ -365,7 +378,9 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.attribueeDataGridViewTextBoxColumn,
             this.idReserDataGridViewTextBoxColumn,
-            this.noChamDataGridViewTextBoxColumn});
+            this.noChamDataGridViewTextBoxColumn,
+            this.TYPECHAM,
+            this.Prix});
             this.dataGridView1.DataSource = this.BS_De;
             this.dataGridView1.Location = new System.Drawing.Point(3, 186);
             this.dataGridView1.Name = "dataGridView1";
@@ -390,6 +405,18 @@
             this.noChamDataGridViewTextBoxColumn.HeaderText = "NoCham";
             this.noChamDataGridViewTextBoxColumn.Name = "noChamDataGridViewTextBoxColumn";
             // 
+            // TYPECHAM
+            // 
+            this.TYPECHAM.DataPropertyName = "DesTyp";
+            this.TYPECHAM.HeaderText = "Type de Chambre";
+            this.TYPECHAM.Name = "TYPECHAM";
+            // 
+            // Prix
+            // 
+            this.Prix.DataPropertyName = "Prix";
+            this.Prix.HeaderText = "Prix";
+            this.Prix.Name = "Prix";
+            // 
             // BS_De
             // 
             this.BS_De.DataMember = "De";
@@ -399,6 +426,22 @@
             // 
             this.DataSet_Arrivee.DataSetName = "DataSet_Arrivee";
             this.DataSet_Arrivee.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // BS_Client
+            // 
+            this.BS_Client.DataMember = "Client";
+            this.BS_Client.DataSource = this.DataSet_Arrivee;
+            // 
+            // lb_IdArrive
+            // 
+            this.lb_IdArrive.AutoSize = true;
+            this.lb_IdArrive.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_IdArrive.Location = new System.Drawing.Point(587, 17);
+            this.lb_IdArrive.Name = "lb_IdArrive";
+            this.lb_IdArrive.Size = new System.Drawing.Size(76, 18);
+            this.lb_IdArrive.TabIndex = 9;
+            this.lb_IdArrive.Text = "lab_format1";
+            this.lb_IdArrive.TextChanged += new System.EventHandler(this.lb_IdArrive_TextChanged);
             // 
             // BS_Reser
             // 
@@ -421,6 +464,24 @@
             // 
             this.TA_Chambre.ClearBeforeFill = true;
             // 
+            // BS_TypeCham
+            // 
+            this.BS_TypeCham.DataMember = "TypeCham";
+            this.BS_TypeCham.DataSource = this.DataSet_Arrivee;
+            // 
+            // TA_TypeCham
+            // 
+            this.TA_TypeCham.ClearBeforeFill = true;
+            // 
+            // TA_Arrive
+            // 
+            this.TA_Arrive.ClearBeforeFill = true;
+            // 
+            // BS_Arrive
+            // 
+            this.BS_Arrive.DataMember = "Arrive";
+            this.BS_Arrive.DataSource = this.DataSet_Arrivee;
+            // 
             // Arrivee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -429,6 +490,7 @@
             this.Load += new System.EventHandler(this.Arrivee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logo_CB1)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -436,9 +498,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BS_De)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet_Arrivee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BS_Reser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BS_Client)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BS_Chambre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_Reser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_TypeCham)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_Arrive)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -477,13 +541,20 @@
         private DataSet_ArriveeTableAdapters.ReservationTableAdapter TA_Reservation;
         private System.Windows.Forms.BindingSource BS_De;
         private DataSet_ArriveeTableAdapters.DeTableAdapter TA_De;
-        private System.Windows.Forms.DataGridViewTextBoxColumn attribueeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idReserDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn noChamDataGridViewTextBoxColumn;
         private DataSet_ArriveeTableAdapters.ClientTableAdapter TA_Client;
         private System.Windows.Forms.BindingSource BS_Client;
         private DataSet_ArriveeTableAdapters.ChambreTableAdapter TA_Chambre;
         private System.Windows.Forms.BindingSource BS_Chambre;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.BindingSource BS_TypeCham;
+        private DataSet_ArriveeTableAdapters.TypeChamTableAdapter TA_TypeCham;
+        private System.Windows.Forms.DataGridViewTextBoxColumn attribueeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idReserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noChamDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TYPECHAM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Prix;
+        private Prj_lib_graphique.lab_format lb_IdArrive;
+        private DataSet_ArriveeTableAdapters.ArriveTableAdapter TA_Arrive;
+        private System.Windows.Forms.BindingSource BS_Arrive;
     }
 }
