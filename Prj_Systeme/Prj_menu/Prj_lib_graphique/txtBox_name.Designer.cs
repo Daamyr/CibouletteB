@@ -1,6 +1,6 @@
 ﻿namespace Prj_lib_graphique
 {
-    partial class btn_next
+    partial class txtBox_name
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            this.BackgroundImage = global::Prj_lib_graphique.Properties.Resources.suivant;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Location = new System.Drawing.Point(937, 539);
-            this.Name = "btn_next";
-            this.Size = new System.Drawing.Size(67, 63);
-            this.TabIndex = 11;
-            this.UseVisualStyleBackColor = true;
+            //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
+            this.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name = "txtBox_name";
+            this.Size = new System.Drawing.Size(100, 25);
+            this.Text = "txtBox";
         }
 
         #endregion

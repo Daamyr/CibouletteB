@@ -9,3 +9,14 @@ C:\Users\Maxime\Documents\Cours\2016 Session Hiver\CibouletteB\Prj_Systeme\Prj_m
 C:\Users\Maxime\Documents\Cours\2016 Session Hiver\CibouletteB\Prj_Systeme\Prj_menu\Prj_menu\obj\Debug\Prj_menu.csproj.GenerateResource.Cache
 C:\Users\Maxime\Documents\Cours\2016 Session Hiver\CibouletteB\Prj_Systeme\Prj_menu\Prj_menu\obj\Debug\Prj_menu.exe
 C:\Users\Maxime\Documents\Cours\2016 Session Hiver\CibouletteB\Prj_Systeme\Prj_menu\Prj_menu\obj\Debug\Prj_menu.pdb
+C:\Users\Maxime\Documents\Cours\2016 Session Hiver\jsaispasoumettre\CibouletteB-Max7\Prj_Systeme\Prj_menu\Prj_menu\bin\Debug\Prj_menu.exe.config
+C:\Users\Maxime\Documents\Cours\2016 Session Hiver\jsaispasoumettre\CibouletteB-Max7\Prj_Systeme\Prj_menu\Prj_menu\bin\Debug\Prj_menu.exe
+C:\Users\Maxime\Documents\Cours\2016 Session Hiver\jsaispasoumettre\CibouletteB-Max7\Prj_Systeme\Prj_menu\Prj_menu\bin\Debug\Prj_menu.pdb
+C:\Users\Maxime\Documents\Cours\2016 Session Hiver\jsaispasoumettre\CibouletteB-Max7\Prj_Systeme\Prj_menu\Prj_menu\bin\Debug\Prj_lib_graphique.dll
+C:\Users\Maxime\Documents\Cours\2016 Session Hiver\jsaispasoumettre\CibouletteB-Max7\Prj_Systeme\Prj_menu\Prj_menu\bin\Debug\Prj_lib_graphique.pdb
+C:\Users\Maxime\Documents\Cours\2016 Session Hiver\jsaispasoumettre\CibouletteB-Max7\Prj_Systeme\Prj_menu\Prj_menu\obj\Debug\Prj_menu.csprojResolveAssemblyReference.cache
+C:\Users\Maxime\Documents\Cours\2016 Session Hiver\jsaispasoumettre\CibouletteB-Max7\Prj_Systeme\Prj_menu\Prj_menu\obj\Debug\Prj_menu.Menu.resources
+C:\Users\Maxime\Documents\Cours\2016 Session Hiver\jsaispasoumettre\CibouletteB-Max7\Prj_Systeme\Prj_menu\Prj_menu\obj\Debug\Prj_menu.Properties.Resources.resources
+C:\Users\Maxime\Documents\Cours\2016 Session Hiver\jsaispasoumettre\CibouletteB-Max7\Prj_Systeme\Prj_menu\Prj_menu\obj\Debug\Prj_menu.csproj.GenerateResource.Cache
+C:\Users\Maxime\Documents\Cours\2016 Session Hiver\jsaispasoumettre\CibouletteB-Max7\Prj_Systeme\Prj_menu\Prj_menu\obj\Debug\Prj_menu.exe
+C:\Users\Maxime\Documents\Cours\2016 Session Hiver\jsaispasoumettre\CibouletteB-Max7\Prj_Systeme\Prj_menu\Prj_menu\obj\Debug\Prj_menu.pdb

@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            this.BackgroundImage = global::Prj_lib_graphique.Properties.Resources.modifier;
+
+            this.BackgroundImage = global::Prj_lib_graphique.Properties.Resources.MODEmodifier;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Location = new System.Drawing.Point(382, 539);
-            this.Name = "button6";
-            this.Size = new System.Drawing.Size(67, 63);
-            this.TabIndex = 14;
+            this.Name = "edit";
+            this.Size = new System.Drawing.Size(78, 78);
             this.UseVisualStyleBackColor = true;
         }
 

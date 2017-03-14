@@ -42,6 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="btn_add.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="btn_add.Designer.cs">
+      <DependentUpon>btn_add.cs</DependentUpon>
+    </Compile>
     <Compile Include="btn_cancel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -85,6 +91,12 @@
       <DependentUpon>btn_save.cs</DependentUpon>
     </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="btn_delete.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="btn_delete.Designer.cs">
+      <DependentUpon>btn_delete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +114,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="txtBox_name.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="txtBox_name.Designer.cs">
+      <DependentUpon>txtBox_name.cs</DependentUpon>
     </Compile>
     <Compile Include="Txt_CB.cs">
       <SubType>Component</SubType>
@@ -148,6 +166,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MODEmodifier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MODEajout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MODEsupprimer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

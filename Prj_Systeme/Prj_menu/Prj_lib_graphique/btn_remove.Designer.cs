@@ -32,7 +32,7 @@
             this.BackgroundImage = global::Prj_lib_graphique.Properties.Resources.poubelle;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Location = new System.Drawing.Point(1225, 539);
-            this.Name = "button2";
+            this.Name = "supprimer";
             this.Size = new System.Drawing.Size(67, 63);
             this.TabIndex = 10;
             this.UseVisualStyleBackColor = true;

@@ -63,6 +63,16 @@ namespace Prj_menu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add {
+            get {
+                object obj = ResourceManager.GetObject("add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FMenu {
             get {
                 object obj = ResourceManager.GetObject("FMenu", resourceCulture);
@@ -86,6 +96,26 @@ namespace Prj_menu.Properties {
         internal static System.Drawing.Bitmap logoprojet {
             get {
                 object obj = ResourceManager.GetObject("logoprojet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MODEajout {
+            get {
+                object obj = ResourceManager.GetObject("MODEajout", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MODEmodifier {
+            get {
+                object obj = ResourceManager.GetObject("MODEmodifier", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -5,3 +5,10 @@ C:\Users\Maxime\Documents\Cours\2016 Session Hiver\CibouletteB\Prj_Systeme\Prj_m
 C:\Users\Maxime\Documents\Cours\2016 Session Hiver\CibouletteB\Prj_Systeme\Prj_menu\Prj_lib_graphique\obj\Debug\Prj_lib_graphique.csproj.GenerateResource.Cache
 C:\Users\Maxime\Documents\Cours\2016 Session Hiver\CibouletteB\Prj_Systeme\Prj_menu\Prj_lib_graphique\obj\Debug\Prj_lib_graphique.dll
 C:\Users\Maxime\Documents\Cours\2016 Session Hiver\CibouletteB\Prj_Systeme\Prj_menu\Prj_lib_graphique\obj\Debug\Prj_lib_graphique.pdb
+C:\Users\Maxime\Documents\Cours\2016 Session Hiver\jsaispasoumettre\CibouletteB-Max7\Prj_Systeme\Prj_menu\Prj_lib_graphique\bin\Debug\Prj_lib_graphique.dll
+C:\Users\Maxime\Documents\Cours\2016 Session Hiver\jsaispasoumettre\CibouletteB-Max7\Prj_Systeme\Prj_menu\Prj_lib_graphique\bin\Debug\Prj_lib_graphique.pdb
+C:\Users\Maxime\Documents\Cours\2016 Session Hiver\jsaispasoumettre\CibouletteB-Max7\Prj_Systeme\Prj_menu\Prj_lib_graphique\obj\Debug\Prj_lib_graphique.Form1.resources
+C:\Users\Maxime\Documents\Cours\2016 Session Hiver\jsaispasoumettre\CibouletteB-Max7\Prj_Systeme\Prj_menu\Prj_lib_graphique\obj\Debug\Prj_lib_graphique.Properties.Resources.resources
+C:\Users\Maxime\Documents\Cours\2016 Session Hiver\jsaispasoumettre\CibouletteB-Max7\Prj_Systeme\Prj_menu\Prj_lib_graphique\obj\Debug\Prj_lib_graphique.csproj.GenerateResource.Cache
+C:\Users\Maxime\Documents\Cours\2016 Session Hiver\jsaispasoumettre\CibouletteB-Max7\Prj_Systeme\Prj_menu\Prj_lib_graphique\obj\Debug\Prj_lib_graphique.dll
+C:\Users\Maxime\Documents\Cours\2016 Session Hiver\jsaispasoumettre\CibouletteB-Max7\Prj_Systeme\Prj_menu\Prj_lib_graphique\obj\Debug\Prj_lib_graphique.pdb

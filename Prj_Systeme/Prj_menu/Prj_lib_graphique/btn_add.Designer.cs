@@ -1,6 +1,6 @@
 ﻿namespace Prj_lib_graphique
 {
-    partial class btn_next
+    partial class btn_add
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            this.BackgroundImage = global::Prj_lib_graphique.Properties.Resources.suivant;
+            //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
+            this.BackColor = System.Drawing.Color.Transparent;
+            this.BackgroundImage = global::Prj_lib_graphique.Properties.Resources.MODEajout;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Location = new System.Drawing.Point(937, 539);
-            this.Name = "btn_next";
-            this.Size = new System.Drawing.Size(67, 63);
-            this.TabIndex = 11;
-            this.UseVisualStyleBackColor = true;
+            this.Name = "btn_add";
+            this.Size = new System.Drawing.Size(78, 78);
+            this.UseVisualStyleBackColor = false;
         }
 
         #endregion

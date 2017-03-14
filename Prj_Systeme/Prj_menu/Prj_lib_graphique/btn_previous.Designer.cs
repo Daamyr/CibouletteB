@@ -32,7 +32,7 @@
             this.BackgroundImage = global::Prj_lib_graphique.Properties.Resources.précédent;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Location = new System.Drawing.Point(93, 539);
-            this.Name = "button1";
+            this.Name = "btn_previous";
             this.Size = new System.Drawing.Size(67, 63);
             this.TabIndex = 9;
             this.UseVisualStyleBackColor = true;

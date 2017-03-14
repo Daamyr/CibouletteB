@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label24 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -62,11 +62,12 @@
             this.BS_De = new System.Windows.Forms.BindingSource(this.components);
             this.DataSet_Arrivee = new Prj_ArriveeDepart_Maxime.DataSet_Arrivee();
             this.BS_Reser = new System.Windows.Forms.BindingSource(this.components);
-            this.TA_Reser = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.ReservationTableAdapter();
-            this.dataSetArrivee1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.TA_de = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.DeTableAdapter();
+            this.TA_Reservation = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.ReservationTableAdapter();
+            this.TA_De = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.DeTableAdapter();
             this.TA_Client = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.ClientTableAdapter();
             this.BS_Client = new System.Windows.Forms.BindingSource(this.components);
+            this.TA_Chambre = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.ChambreTableAdapter();
+            this.BS_Chambre = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.logo_CB1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -75,8 +76,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.BS_De)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet_Arrivee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BS_Reser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetArrivee1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BS_Client)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_Chambre)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_previous1
@@ -95,11 +96,11 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.dateTimePicker3);
             this.panel3.Controls.Add(this.dateTimePicker2);
             this.panel3.Controls.Add(this.dateTimePicker1);
             this.panel3.Controls.Add(this.label24);
             this.panel3.Controls.Add(this.label22);
-            this.panel3.Controls.Add(this.label19);
             this.panel3.Controls.Add(this.textBox2);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label11);
@@ -111,6 +112,13 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(453, 176);
             this.panel3.TabIndex = 7;
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Location = new System.Drawing.Point(280, 14);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(136, 20);
+            this.dateTimePicker3.TabIndex = 8;
             // 
             // dateTimePicker2
             // 
@@ -146,22 +154,13 @@
             this.label22.TabIndex = 6;
             this.label22.Text = "Value";
             // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(279, 17);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(42, 18);
-            this.label19.TabIndex = 6;
-            this.label19.Text = "Value";
-            // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(122, 17);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(59, 20);
             this.textBox2.TabIndex = 5;
+            this.textBox2.TextChanged += new System.EventHandler(this.onIdReserChanged);
             // 
             // label6
             // 
@@ -406,22 +405,21 @@
             this.BS_Reser.DataMember = "Reservation";
             this.BS_Reser.DataSource = this.DataSet_Arrivee;
             // 
-            // TA_Reser
+            // TA_Reservation
             // 
-            this.TA_Reser.ClearBeforeFill = true;
+            this.TA_Reservation.ClearBeforeFill = true;
             // 
-            // dataSetArrivee1BindingSource
+            // TA_De
             // 
-            this.dataSetArrivee1BindingSource.DataSource = this.DataSet_Arrivee;
-            this.dataSetArrivee1BindingSource.Position = 0;
-            // 
-            // TA_de
-            // 
-            this.TA_de.ClearBeforeFill = true;
+            this.TA_De.ClearBeforeFill = true;
             // 
             // TA_Client
             // 
             this.TA_Client.ClearBeforeFill = true;
+            // 
+            // TA_Chambre
+            // 
+            this.TA_Chambre.ClearBeforeFill = true;
             // 
             // Arrivee
             // 
@@ -439,8 +437,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.BS_De)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet_Arrivee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BS_Reser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetArrivee1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BS_Client)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_Chambre)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -453,7 +451,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label11;
@@ -477,14 +474,16 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private DataSet_Arrivee DataSet_Arrivee;
         private System.Windows.Forms.BindingSource BS_Reser;
-        private DataSet_ArriveeTableAdapters.ReservationTableAdapter TA_Reser;
-        private System.Windows.Forms.BindingSource dataSetArrivee1BindingSource;
+        private DataSet_ArriveeTableAdapters.ReservationTableAdapter TA_Reservation;
         private System.Windows.Forms.BindingSource BS_De;
-        private DataSet_ArriveeTableAdapters.DeTableAdapter TA_de;
+        private DataSet_ArriveeTableAdapters.DeTableAdapter TA_De;
         private System.Windows.Forms.DataGridViewTextBoxColumn attribueeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idReserDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn noChamDataGridViewTextBoxColumn;
         private DataSet_ArriveeTableAdapters.ClientTableAdapter TA_Client;
         private System.Windows.Forms.BindingSource BS_Client;
+        private DataSet_ArriveeTableAdapters.ChambreTableAdapter TA_Chambre;
+        private System.Windows.Forms.BindingSource BS_Chambre;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
     }
 }
