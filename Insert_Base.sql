@@ -28,7 +28,7 @@ insert into Client (Nom, Adresse, Telephone, NoCarte, TypeCarte, DateExp, Solde_
 insert into Client (Nom, Adresse, Telephone, NoCarte, TypeCarte, DateExp, Solde_Du) values ('Julia Graham', '396 Anniversary Circle', '8062352324', '6221088177661100', 'maestro', '6/3/2017', 218.77)
 insert into Client (Nom, Adresse, Telephone, NoCarte, TypeCarte, DateExp, Solde_Du) values ('Jennifer Stevens', '961 Emmet Parkway', '7058831946', '4913731575219363', 'visaelectron', '30/10/2017', 347.70)
 insert into Client (Nom, Adresse, Telephone, NoCarte, TypeCarte, DateExp, Solde_Du) values ('Julia Hanson', '4379 Vahlen Hill', '6541467454', '4530466293894272', 'crédit', '28/1/2017', 698.52)
-insert into Client (Nom, Adresse, Telephone, NoCarte, TypeCarte, DateExp, Solde_Du) values ('Judy Willis', '000 Sachtjen Road', '1343008699', '5602256435491146', 'bankcard', '12/4/2017', 326.19)
+insert into Client (Nom, Adresse, Telephone, NoCarte, TypeCarte, DateExp, Solde_Du) values ('Judy Willis', '200 Sachtjen Road', '1343008699', '5602256435491146', 'bankcard', '12/4/2017', 326.19)
 insert into Client (Nom, Adresse, Telephone, NoCarte, TypeCarte, DateExp, Solde_Du) values ('Ralph Fernandez', '37 Elgar Road', '5572613236', '4530373834767555', 'crédit', '11/3/2017', 365.47)
 insert into Client (Nom, Adresse, Telephone, NoCarte, TypeCarte, DateExp, Solde_Du) values ('Denise Carpenter', '77 Onsgard Terrace', '5717249556', '9309057289284572', 'maestro', '18/8/2017', 108.38)
 insert into Client (Nom, Adresse, Telephone, NoCarte, TypeCarte, DateExp, Solde_Du) values ('Janice Jackson', '2 Starling Pass', '2043068781', '4893019072032903', 'crédit', '26/4/2017', 756.33)
@@ -57,93 +57,7 @@ insert into Client (Nom, Adresse, Telephone, NoCarte, TypeCarte, DateExp, Solde_
 insert into Client (Nom, Adresse, Telephone, NoCarte, TypeCarte, DateExp, Solde_Du) values ('Rachel Long', '19 Cardinal Road', '4985921944', '3569515119649923', 'jcb', '29/1/2017', 461.17)
 insert into Client (Nom, Adresse, Telephone, NoCarte, TypeCarte, DateExp, Solde_Du) values ('Harold Perkins', '2 Birchwood Pass', '4886223293', '3578040190871949', 'jcb', '4/3/2017', 482.96)
 insert into Client (Nom, Adresse, Telephone, NoCarte, TypeCarte, DateExp, Solde_Du) values ('Shirley Griffin', '675 Myrtle Point', '6172838767', '6331108661527029', 'switch', '18/1/2017', 125.40)
-insert into Client (Nom, Adresse, Telephone, NoCarte, TypeCarte, DateExp, Solde_Du) values ('Walter Dunn', '309 Lake View Park', '8703091552', '3583802526491715', 'jcb', '14/11/2017', 99.55)
-
-
-/**************************************
-*
-*		INSERTION RÉSERVATION
-*
-***************************************/
-insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('01/02/2017','02/02/2017' ,'05/02/2017', 1)
-
-
-/**************************************
-*
-*		INSERTION TYPETRX
-*
-***************************************/
-INSERT INTO TypeTrx(CodTypTrx,DescTrx,Nature) VALUES ('01','PRIX DE LA CHAMBRE','DB')
-INSERT INTO TypeTrx(CodTypTrx,DescTrx,Nature) VALUES ('02','LIT ADDITIONNEL','DB')
-INSERT INTO TypeTrx(CodTypTrx,DescTrx,Nature) VALUES ('03','TÉLÉPHONE INTERRUBAIN','DB')
-INSERT INTO TypeTrx(CodTypTrx,DescTrx,Nature) VALUES ('04','PHOTOCOPIE','DB')
-INSERT INTO TypeTrx(CodTypTrx,DescTrx,Nature) VALUES ('05','INTERNET','DB')
-INSERT INTO TypeTrx(CodTypTrx,DescTrx,Nature) VALUES ('06','RESTAURANT','DB')
-INSERT INTO TypeTrx(CodTypTrx,DescTrx,Nature) VALUES ('07','BAR TERRASSE','DB')
-INSERT INTO TypeTrx(CodTypTrx,DescTrx,Nature) VALUES ('08','DÉPOT ARGENT','CR')
-INSERT INTO TypeTrx(CodTypTrx,DescTrx,Nature) VALUES ('09','PAIEMENT','CR')
-
-
-/**************************************
-*
-*		INSERTION TRX
-*
-***************************************/
-insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli) values ('02/02/2017', 299.99, 0, '09', 1, '0101', 1)
-
-
-/**************************************
-*
-*		INSERTION ARRIVE
-*
-***************************************/
-insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('02/02/2017', 1, 1, '0101')
-
-
-/**************************************
-*
-*		INSERTION DEPART
-*
-***************************************/
-insert into Depart (DateDepart, ConfirmerPar, IdReser, NoCham, IdCli) values ('05/02/2017', 'JJ', 1, '0101', 1)
-
-
-/**************************************
-*
-*		INSERTION DE
-*
-***************************************/
-insert into De (Attribue, IdReser, NoCham) values (1, 1, '0101')
---Il faut attribuer une réservertation / faire des réservations
-/*insert into De (Attribue, IdReser, NoCham) values (0, 0, '0102')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0103')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0104')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0105')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0106')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0107')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0108')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0109')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '1010')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0201')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0202')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0203')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0204')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0205')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0206')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0207')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0208')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0209')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0210')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0301')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0302')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0303')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0304')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0305')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0306')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0307')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0308')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0309')
-insert into De (Attribue, IdReser, NoCham) values (0, 0, '0310')*/	
+insert into Client (Nom, Adresse, Telephone, NoCarte, TypeCarte, DateExp, Solde_Du) values ('Walter Dunn', '309 Lake View Park', '8703091552', '3583802526491715', 'jcb', '14/11/2017', 99.55)	
 
 
 /**************************************
@@ -181,7 +95,7 @@ INSERT INTO COMMODITE(CodCom, DescCom) VALUES ('SG', 'SANS GRAVITÉ')
 
 /**************************************
 *
-*		INSERTION TYPETRX
+*		INSERTION LOCALISATION
 *
 ***************************************/
 INSERT INTO Localisation(CodLoc, DescLoc) VALUES ('AR','ARRIÈRE')
@@ -229,7 +143,161 @@ INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES 
 INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0308','03','120','1','','AR','ST')
 INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0309','03','120','1','','AV','ST')
 INSERT INTO Chambre(NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham) VALUES ('0310','03','120','1','','AV','LQ')
-						 	
+
+
+/**************************************
+*
+*		INSERTION AYANT
+*
+***************************************/
+insert into AYANT (CodCom, NoCham) values ('AF','0101')
+--Valeurs auto-générée et aléatoire
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('AP', '0101')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('AS', '0102')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('NF', '0103')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('CC', '0104')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('NF', '0105')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('BA', '0106')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('BA', '0107')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('SG', '0108')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('BA', '0109')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('BA', '0110')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('AS', '0201')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('HP', '0202')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('BT', '0203')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('IN', '0204')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('MB', '0205')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('AF', '0206')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('AP', '0207')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('SG', '0208')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('NF', '0209')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('AS', '0210')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('CC', '0301')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('BA', '0302')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('BT', '0303')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('AS', '0304')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('AP', '0305')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('NF', '0306')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('BT', '0307')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('BT', '0308')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('CC', '0309')
+INSERT INTO AYANT (CodCom, NoCham) VALUES ('BT', '0310')
+
+
+/**************************************
+*
+*		INSERTION RÉSERVATION
+*
+***************************************/
+insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('01/02/2017','05/06/2017' ,'10/06/2017', 1)
+insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('01/04/2017','02/04/2017' ,'17/04/2017', 20)
+insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('22/12/2016','03/03/2017' ,'10/03/2017', 31)
+insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('06/01/2017','02/03/2017' ,'07/03/2017', 44)
+insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('01/02/2017','25/02/2017' ,'28/02/2017', 6)
+
+insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('02/02/2017','10/03/2017' ,'21/03/2017', 12)
+insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('02/01/2017','9/03/2017' ,'18/03/2017', 24)
+insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('15/02/2017','16/03/2017' ,'20/03/2017', 48)
+
+
+/**************************************
+*
+*		INSERTION ARRIVE
+*
+***************************************/
+insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('09/02/2017', 1, 1, '0102')
+insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('02/04/2017', 20, 2, '0102')
+insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('05/02/2017', 45, 2, '0105')
+insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('02/03/2017', 8, 4, '0304')
+insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('06/03/2017', 6, 3, '0202')
+
+insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('16/03/2017', 12, 6, '0201')
+insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('15/03/2017', 24, 7, '0106')
+insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('14/03/2017', 25, 7, '0107')
+insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('16/03/2017', 48, 8, '0209')
+
+
+/**************************************
+*
+*		INSERTION TYPETRX
+*
+***************************************/
+INSERT INTO TypeTrx(CodTypTrx,DescTrx,Nature) VALUES ('01','PRIX DE LA CHAMBRE','DB')
+INSERT INTO TypeTrx(CodTypTrx,DescTrx,Nature) VALUES ('02','LIT ADDITIONNEL','DB')
+INSERT INTO TypeTrx(CodTypTrx,DescTrx,Nature) VALUES ('03','TÉLÉPHONE INTERRUBAIN','DB')
+INSERT INTO TypeTrx(CodTypTrx,DescTrx,Nature) VALUES ('04','PHOTOCOPIE','DB')
+INSERT INTO TypeTrx(CodTypTrx,DescTrx,Nature) VALUES ('05','INTERNET','DB')
+INSERT INTO TypeTrx(CodTypTrx,DescTrx,Nature) VALUES ('06','RESTAURANT','DB')
+INSERT INTO TypeTrx(CodTypTrx,DescTrx,Nature) VALUES ('07','BAR TERRASSE','DB')
+INSERT INTO TypeTrx(CodTypTrx,DescTrx,Nature) VALUES ('08','DÉPOT ARGENT','CR')
+INSERT INTO TypeTrx(CodTypTrx,DescTrx,Nature) VALUES ('09','PAIEMENT','CR')
+
+
+/**************************************
+*
+*		INSERTION TRX
+*
+***************************************/
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('09/02/2017', 299.99, 1, '08', 1, '0102', 1 ,1)
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('09/02/2017', 005.00, 0, '07', 1, '0102', 1 ,2)
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('09/02/2017', 025.00, 1, '05', 1, '0102', 1 ,3)
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('02/04/2017', 299.99, 0, '08', 2, '0102', 20 ,4)
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('02/04/2017', 005.22, 1, '05', 2, '0102', 20 ,5)
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('02/04/2017', 056.00, 1, '06', 2, '0102', 20 ,6)
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('05/02/2017', 699.99, 0, '01', 2, '0105', 45 ,7) -- tite note qui fait les changer pcq stau hazard
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('05/02/2017', 025.78, 0, '05', 2, '0105', 45 ,8)
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('05/02/2017', 209.00, 1, '03', 2, '0105', 45 ,7)
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('02/10/2026', 299.99, 0, '02', 4, '0304', 8 ,6)
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('02/03/2017', 048.70, 1, '05', 4, '0304', 8 ,5)
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('02/03/2017', 420.00, 1, '06', 4, '0304', 8 ,4)
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('06/03/2017', 299.99, 0, '02', 3, '0202', 6 ,3)
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('06/03/2017', 048.70, 0, '05', 3, '0202', 6 ,2)
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('06/03/2017', 420.00, 0, '06', 3, '0202', 6 ,1)
+
+
+/**************************************
+*
+*		INSERTION DEPART
+*
+***************************************/
+insert into Depart (DateDepart, ConfirmerPar, IdReser, NoCham, IdCli, IdArrive) values ('05/02/2017', 'JJ', 1, '0101', 1, 1)
+
+
+/**************************************
+*
+*		INSERTION DE
+*
+***************************************/
+insert into De (Attribuee, IdReser, NoCham) values (0, 1, '0101')
+insert into De (Attribuee, IdReser, NoCham) values (0, 1, '0301')
+insert into De (Attribuee, IdReser, NoCham) values (0, 1, '0202')
+insert into De (Attribuee, IdReser, NoCham) values (0, 1, '0102')
+
+insert into De (Attribuee, IdReser, NoCham) values (0, 2, '0102')
+insert into De (Attribuee, IdReser, NoCham) values (0, 2, '0105')
+
+insert into De (Attribuee, IdReser, NoCham) values (1, 3, '0202')
+
+insert into De (Attribuee, IdReser, NoCham) values (0, 4, '0301')
+insert into De (Attribuee, IdReser, NoCham) values (0, 4, '0302')
+insert into De (Attribuee, IdReser, NoCham) values (0, 4, '0303')
+insert into De (Attribuee, IdReser, NoCham) values (1, 4, '0304')
+insert into De (Attribuee, IdReser, NoCham) values (0, 4, '0305')
+
+
+insert into De (Attribuee, IdReser, NoCham) values (0, 5, '0105')
+insert into De (Attribuee, IdReser, NoCham) values (0, 5, '0106')
+insert into De (Attribuee, IdReser, NoCham) values (0, 5, '0205')
+
+insert into De (Attribuee, IdReser, NoCham) values (1, 6, '0201')
+
+insert into De (Attribuee, IdReser, NoCham) values (1, 7, '0106')
+insert into De (Attribuee, IdReser, NoCham) values (1, 7, '0107')
+
+insert into De (Attribuee, IdReser, NoCham) values (1, 8, '0209')
+
+
+
 /*
 Dans l'insert des types de chambre : est-ce que le total des type dispo doit être = au total de chambre ?
 */			 	
