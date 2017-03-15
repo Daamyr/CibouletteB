@@ -124,7 +124,7 @@ namespace Prj_ArriveeDepart_Maxime
                 BS_De.Position = 0;
                 this.BS_De.DataSource = BS_Reser;
                 this.BS_De.DataMember = "FK_DERES";
-                dataGridView1.DataSource = BS_De;
+                DGV_Arrivee.DataSource = BS_De;
 
             }
             catch (Exception) { }
@@ -146,7 +146,7 @@ namespace Prj_ArriveeDepart_Maxime
             label24.Text = DataSet_Arrivee.Tables["Reservation"].Rows[BS_Reser.Position].GetParentRow("FK_RESCLI")["Nom"].ToString();
             try
             {
-                this.dataGridView1.Sort(dataGridView1.Columns["attribueeDataGridViewTextBoxColumn"], ListSortDirection.Descending);
+                this.DGV_Arrivee.Sort(DGV_Arrivee.Columns["attribueeDataGridViewTextBoxColumn"], ListSortDirection.Descending);
             }
             catch (Exception) { }
         }

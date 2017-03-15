@@ -211,7 +211,7 @@
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label10);
-            this.panel3.Location = new System.Drawing.Point(813, 4);
+            this.panel3.Location = new System.Drawing.Point(702, 4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(453, 176);
             this.panel3.TabIndex = 7;
@@ -313,7 +313,7 @@
             // Depart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(1335, 608);
+            this.ClientSize = new System.Drawing.Size(1182, 622);
             this.Name = "Depart";
             ((System.ComponentModel.ISupportInitialize)(this.logo_CB)).EndInit();
             this.panel1.ResumeLayout(false);
