@@ -20,6 +20,7 @@ namespace Prj_Reservation_James
             Fill();
             Lien_Res();
             FKClient();
+            //LIGNE INUTILE POUR POUVOIR COMMIT okkokokk
         }
 
         private void Fill()
