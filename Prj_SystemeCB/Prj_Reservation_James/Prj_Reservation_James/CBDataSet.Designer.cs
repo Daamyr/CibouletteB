@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Prj_Chambre_Janie {
+namespace Prj_Reservation_James {
     
     
     /// <summary>
@@ -20,9 +20,9 @@ namespace Prj_Chambre_Janie {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DataSet_Chambre")]
+    [global::System.Xml.Serialization.XmlRootAttribute("CBDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DataSet_Chambre : global::System.Data.DataSet {
+    public partial class CBDataSet : global::System.Data.DataSet {
         
         private ArriveDataTable tableArrive;
         
@@ -86,7 +86,7 @@ namespace Prj_Chambre_Janie {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public DataSet_Chambre() {
+        public CBDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -97,7 +97,7 @@ namespace Prj_Chambre_Janie {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected DataSet_Chambre(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected CBDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -326,7 +326,7 @@ namespace Prj_Chambre_Janie {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DataSet_Chambre cln = ((DataSet_Chambre)(base.Clone()));
+            CBDataSet cln = ((CBDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -514,9 +514,9 @@ namespace Prj_Chambre_Janie {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DataSet_Chambre";
+            this.DataSetName = "CBDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DataSet_Chambre.xsd";
+            this.Namespace = "http://tempuri.org/CBDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableArrive = new ArriveDataTable();
@@ -696,7 +696,7 @@ namespace Prj_Chambre_Janie {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DataSet_Chambre ds = new DataSet_Chambre();
+            CBDataSet ds = new CBDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -1048,7 +1048,7 @@ namespace Prj_Chambre_Janie {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSet_Chambre ds = new DataSet_Chambre();
+                CBDataSet ds = new CBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1222,14 +1222,6 @@ namespace Prj_Chambre_Janie {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public AyantRow FindByNoChamCodCom(string NoCham, string CodCom) {
-                return ((AyantRow)(this.Rows.Find(new object[] {
-                            NoCham,
-                            CodCom})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 AyantDataTable cln = ((AyantDataTable)(base.Clone()));
                 cln.InitVars();
@@ -1256,9 +1248,6 @@ namespace Prj_Chambre_Janie {
                 base.Columns.Add(this.columnNoCham);
                 this.columnCodCom = new global::System.Data.DataColumn("CodCom", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCodCom);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnNoCham,
-                                this.columnCodCom}, true));
                 this.columnNoCham.AllowDBNull = false;
                 this.columnNoCham.MaxLength = 4;
                 this.columnCodCom.AllowDBNull = false;
@@ -1330,7 +1319,7 @@ namespace Prj_Chambre_Janie {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSet_Chambre ds = new DataSet_Chambre();
+                CBDataSet ds = new CBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1685,7 +1674,7 @@ namespace Prj_Chambre_Janie {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSet_Chambre ds = new DataSet_Chambre();
+                CBDataSet ds = new CBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2050,7 +2039,7 @@ namespace Prj_Chambre_Janie {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSet_Chambre ds = new DataSet_Chambre();
+                CBDataSet ds = new CBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2324,7 +2313,7 @@ namespace Prj_Chambre_Janie {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSet_Chambre ds = new DataSet_Chambre();
+                CBDataSet ds = new CBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2608,7 +2597,7 @@ namespace Prj_Chambre_Janie {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSet_Chambre ds = new DataSet_Chambre();
+                CBDataSet ds = new CBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2954,7 +2943,7 @@ namespace Prj_Chambre_Janie {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSet_Chambre ds = new DataSet_Chambre();
+                CBDataSet ds = new CBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3228,7 +3217,7 @@ namespace Prj_Chambre_Janie {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSet_Chambre ds = new DataSet_Chambre();
+                CBDataSet ds = new CBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3550,7 +3539,7 @@ namespace Prj_Chambre_Janie {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSet_Chambre ds = new DataSet_Chambre();
+                CBDataSet ds = new CBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3928,7 +3917,7 @@ namespace Prj_Chambre_Janie {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSet_Chambre ds = new DataSet_Chambre();
+                CBDataSet ds = new CBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4216,7 +4205,7 @@ namespace Prj_Chambre_Janie {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSet_Chambre ds = new DataSet_Chambre();
+                CBDataSet ds = new CBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4505,7 +4494,7 @@ namespace Prj_Chambre_Janie {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSet_Chambre ds = new DataSet_Chambre();
+                CBDataSet ds = new CBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -6580,7 +6569,7 @@ namespace Prj_Chambre_Janie {
         }
     }
 }
-namespace Prj_Chambre_Janie.DataSet_ChambreTableAdapters {
+namespace Prj_Reservation_James.CBDataSetTableAdapters {
     
     
     /// <summary>
@@ -6752,7 +6741,7 @@ SELECT IdArrive, DateArrive, IdCli, IdReser, NoCham FROM Arrive WHERE (IdArrive 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Prj_Chambre_Janie.Properties.Settings.Default.CBConnectionString;
+            this._connection.ConnectionString = global::Prj_Reservation_James.Properties.Settings.Default.CBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6769,7 +6758,7 @@ SELECT IdArrive, DateArrive, IdCli, IdReser, NoCham FROM Arrive WHERE (IdArrive 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet_Chambre.ArriveDataTable dataTable) {
+        public virtual int Fill(CBDataSet.ArriveDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6782,9 +6771,9 @@ SELECT IdArrive, DateArrive, IdCli, IdReser, NoCham FROM Arrive WHERE (IdArrive 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet_Chambre.ArriveDataTable GetData() {
+        public virtual CBDataSet.ArriveDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet_Chambre.ArriveDataTable dataTable = new DataSet_Chambre.ArriveDataTable();
+            CBDataSet.ArriveDataTable dataTable = new CBDataSet.ArriveDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6792,14 +6781,14 @@ SELECT IdArrive, DateArrive, IdCli, IdReser, NoCham FROM Arrive WHERE (IdArrive 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet_Chambre.ArriveDataTable dataTable) {
+        public virtual int Update(CBDataSet.ArriveDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet_Chambre dataSet) {
+        public virtual int Update(CBDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Arrive");
         }
         
@@ -7077,35 +7066,19 @@ SELECT IdArrive, DateArrive, IdCli, IdReser, NoCham FROM Arrive WHERE (IdArrive 
             tableMapping.ColumnMappings.Add("NoCham", "NoCham");
             tableMapping.ColumnMappings.Add("CodCom", "CodCom");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Ayant] WHERE (([NoCham] = @Original_NoCham) AND ([CodCom] = @O" +
-                "riginal_CodCom))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NoCham", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NoCham", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CodCom", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodCom", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Ayant] ([NoCham], [CodCom]) VALUES (@NoCham, @CodCom)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NoCham", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NoCham", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodCom", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodCom", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Ayant] SET [NoCham] = @NoCham, [CodCom] = @CodCom WHERE (([NoCham] " +
-                "= @Original_NoCham) AND ([CodCom] = @Original_CodCom))";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NoCham", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NoCham", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodCom", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodCom", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NoCham", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NoCham", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CodCom", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodCom", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Prj_Chambre_Janie.Properties.Settings.Default.CBConnectionString;
+            this._connection.ConnectionString = global::Prj_Reservation_James.Properties.Settings.Default.CBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7122,7 +7095,7 @@ SELECT IdArrive, DateArrive, IdCli, IdReser, NoCham FROM Arrive WHERE (IdArrive 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet_Chambre.AyantDataTable dataTable) {
+        public virtual int Fill(CBDataSet.AyantDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7135,9 +7108,9 @@ SELECT IdArrive, DateArrive, IdCli, IdReser, NoCham FROM Arrive WHERE (IdArrive 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet_Chambre.AyantDataTable GetData() {
+        public virtual CBDataSet.AyantDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet_Chambre.AyantDataTable dataTable = new DataSet_Chambre.AyantDataTable();
+            CBDataSet.AyantDataTable dataTable = new CBDataSet.AyantDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7145,14 +7118,14 @@ SELECT IdArrive, DateArrive, IdCli, IdReser, NoCham FROM Arrive WHERE (IdArrive 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet_Chambre.AyantDataTable dataTable) {
+        public virtual int Update(CBDataSet.AyantDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet_Chambre dataSet) {
+        public virtual int Update(CBDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Ayant");
         }
         
@@ -7169,39 +7142,6 @@ SELECT IdArrive, DateArrive, IdCli, IdReser, NoCham FROM Arrive WHERE (IdArrive 
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow[] dataRows) {
             return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_NoCham, string Original_CodCom) {
-            if ((Original_NoCham == null)) {
-                throw new global::System.ArgumentNullException("Original_NoCham");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_NoCham));
-            }
-            if ((Original_CodCom == null)) {
-                throw new global::System.ArgumentNullException("Original_CodCom");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_CodCom));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7235,59 +7175,6 @@ SELECT IdArrive, DateArrive, IdCli, IdReser, NoCham FROM Arrive WHERE (IdArrive 
                     this.Adapter.InsertCommand.Connection.Close();
                 }
             }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string NoCham, string CodCom, string Original_NoCham, string Original_CodCom) {
-            if ((NoCham == null)) {
-                throw new global::System.ArgumentNullException("NoCham");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(NoCham));
-            }
-            if ((CodCom == null)) {
-                throw new global::System.ArgumentNullException("CodCom");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(CodCom));
-            }
-            if ((Original_NoCham == null)) {
-                throw new global::System.ArgumentNullException("Original_NoCham");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_NoCham));
-            }
-            if ((Original_CodCom == null)) {
-                throw new global::System.ArgumentNullException("Original_CodCom");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_CodCom));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Original_NoCham, string Original_CodCom) {
-            return this.Update(Original_NoCham, Original_CodCom, Original_NoCham, Original_CodCom);
         }
     }
     
@@ -7476,7 +7363,7 @@ SELECT NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham FROM Chambre WHERE (N
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Prj_Chambre_Janie.Properties.Settings.Default.CBConnectionString;
+            this._connection.ConnectionString = global::Prj_Reservation_James.Properties.Settings.Default.CBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7493,7 +7380,7 @@ SELECT NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham FROM Chambre WHERE (N
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet_Chambre.ChambreDataTable dataTable) {
+        public virtual int Fill(CBDataSet.ChambreDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7506,9 +7393,9 @@ SELECT NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham FROM Chambre WHERE (N
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet_Chambre.ChambreDataTable GetData() {
+        public virtual CBDataSet.ChambreDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet_Chambre.ChambreDataTable dataTable = new DataSet_Chambre.ChambreDataTable();
+            CBDataSet.ChambreDataTable dataTable = new CBDataSet.ChambreDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7516,14 +7403,14 @@ SELECT NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham FROM Chambre WHERE (N
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet_Chambre.ChambreDataTable dataTable) {
+        public virtual int Update(CBDataSet.ChambreDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet_Chambre dataSet) {
+        public virtual int Update(CBDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Chambre");
         }
         
@@ -7993,7 +7880,7 @@ SELECT IdCli, Nom, Adresse, Telephone, NoCarte, TypeCarte, DateExp, Solde_Du FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Prj_Chambre_Janie.Properties.Settings.Default.CBConnectionString;
+            this._connection.ConnectionString = global::Prj_Reservation_James.Properties.Settings.Default.CBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8011,7 +7898,7 @@ SELECT IdCli, Nom, Adresse, Telephone, NoCarte, TypeCarte, DateExp, Solde_Du FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet_Chambre.ClientDataTable dataTable) {
+        public virtual int Fill(CBDataSet.ClientDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8024,9 +7911,9 @@ SELECT IdCli, Nom, Adresse, Telephone, NoCarte, TypeCarte, DateExp, Solde_Du FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet_Chambre.ClientDataTable GetData() {
+        public virtual CBDataSet.ClientDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet_Chambre.ClientDataTable dataTable = new DataSet_Chambre.ClientDataTable();
+            CBDataSet.ClientDataTable dataTable = new CBDataSet.ClientDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8034,14 +7921,14 @@ SELECT IdCli, Nom, Adresse, Telephone, NoCarte, TypeCarte, DateExp, Solde_Du FRO
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet_Chambre.ClientDataTable dataTable) {
+        public virtual int Update(CBDataSet.ClientDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet_Chambre dataSet) {
+        public virtual int Update(CBDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Client");
         }
         
@@ -8502,7 +8389,7 @@ SELECT CodCom, DescCom FROM Commodite WHERE (CodCom = @CodCom)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Prj_Chambre_Janie.Properties.Settings.Default.CBConnectionString;
+            this._connection.ConnectionString = global::Prj_Reservation_James.Properties.Settings.Default.CBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8519,7 +8406,7 @@ SELECT CodCom, DescCom FROM Commodite WHERE (CodCom = @CodCom)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet_Chambre.CommoditeDataTable dataTable) {
+        public virtual int Fill(CBDataSet.CommoditeDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8532,9 +8419,9 @@ SELECT CodCom, DescCom FROM Commodite WHERE (CodCom = @CodCom)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet_Chambre.CommoditeDataTable GetData() {
+        public virtual CBDataSet.CommoditeDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet_Chambre.CommoditeDataTable dataTable = new DataSet_Chambre.CommoditeDataTable();
+            CBDataSet.CommoditeDataTable dataTable = new CBDataSet.CommoditeDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8542,14 +8429,14 @@ SELECT CodCom, DescCom FROM Commodite WHERE (CodCom = @CodCom)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet_Chambre.CommoditeDataTable dataTable) {
+        public virtual int Update(CBDataSet.CommoditeDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet_Chambre dataSet) {
+        public virtual int Update(CBDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Commodite");
         }
         
@@ -8831,7 +8718,7 @@ SELECT CodCom, DescCom FROM Commodite WHERE (CodCom = @CodCom)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Prj_Chambre_Janie.Properties.Settings.Default.CBConnectionString;
+            this._connection.ConnectionString = global::Prj_Reservation_James.Properties.Settings.Default.CBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8848,7 +8735,7 @@ SELECT CodCom, DescCom FROM Commodite WHERE (CodCom = @CodCom)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet_Chambre.DeDataTable dataTable) {
+        public virtual int Fill(CBDataSet.DeDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8861,9 +8748,9 @@ SELECT CodCom, DescCom FROM Commodite WHERE (CodCom = @CodCom)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet_Chambre.DeDataTable GetData() {
+        public virtual CBDataSet.DeDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet_Chambre.DeDataTable dataTable = new DataSet_Chambre.DeDataTable();
+            CBDataSet.DeDataTable dataTable = new CBDataSet.DeDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8871,14 +8758,14 @@ SELECT CodCom, DescCom FROM Commodite WHERE (CodCom = @CodCom)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet_Chambre.DeDataTable dataTable) {
+        public virtual int Update(CBDataSet.DeDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet_Chambre dataSet) {
+        public virtual int Update(CBDataSet dataSet) {
             return this.Adapter.Update(dataSet, "De");
         }
         
@@ -9107,7 +8994,7 @@ SELECT IdDepart, DateDepart, ConfirmerPar, IdReser, NoCham, IdCli FROM Depart WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Prj_Chambre_Janie.Properties.Settings.Default.CBConnectionString;
+            this._connection.ConnectionString = global::Prj_Reservation_James.Properties.Settings.Default.CBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9125,7 +9012,7 @@ SELECT IdDepart, DateDepart, ConfirmerPar, IdReser, NoCham, IdCli FROM Depart WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet_Chambre.DepartDataTable dataTable) {
+        public virtual int Fill(CBDataSet.DepartDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9138,9 +9025,9 @@ SELECT IdDepart, DateDepart, ConfirmerPar, IdReser, NoCham, IdCli FROM Depart WH
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet_Chambre.DepartDataTable GetData() {
+        public virtual CBDataSet.DepartDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet_Chambre.DepartDataTable dataTable = new DataSet_Chambre.DepartDataTable();
+            CBDataSet.DepartDataTable dataTable = new CBDataSet.DepartDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9148,14 +9035,14 @@ SELECT IdDepart, DateDepart, ConfirmerPar, IdReser, NoCham, IdCli FROM Depart WH
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet_Chambre.DepartDataTable dataTable) {
+        public virtual int Update(CBDataSet.DepartDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet_Chambre dataSet) {
+        public virtual int Update(CBDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Depart");
         }
         
@@ -9492,7 +9379,7 @@ SELECT CodLoc, DescLoc FROM Localisation WHERE (CodLoc = @CodLoc)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Prj_Chambre_Janie.Properties.Settings.Default.CBConnectionString;
+            this._connection.ConnectionString = global::Prj_Reservation_James.Properties.Settings.Default.CBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9509,7 +9396,7 @@ SELECT CodLoc, DescLoc FROM Localisation WHERE (CodLoc = @CodLoc)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet_Chambre.LocalisationDataTable dataTable) {
+        public virtual int Fill(CBDataSet.LocalisationDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9522,9 +9409,9 @@ SELECT CodLoc, DescLoc FROM Localisation WHERE (CodLoc = @CodLoc)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet_Chambre.LocalisationDataTable GetData() {
+        public virtual CBDataSet.LocalisationDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet_Chambre.LocalisationDataTable dataTable = new DataSet_Chambre.LocalisationDataTable();
+            CBDataSet.LocalisationDataTable dataTable = new CBDataSet.LocalisationDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9532,14 +9419,14 @@ SELECT CodLoc, DescLoc FROM Localisation WHERE (CodLoc = @CodLoc)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet_Chambre.LocalisationDataTable dataTable) {
+        public virtual int Update(CBDataSet.LocalisationDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet_Chambre dataSet) {
+        public virtual int Update(CBDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Localisation");
         }
         
@@ -9855,7 +9742,7 @@ SELECT IdReser, DateReser, DateDebut, DateFin, IdCli FROM Reservation WHERE (IdR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Prj_Chambre_Janie.Properties.Settings.Default.CBConnectionString;
+            this._connection.ConnectionString = global::Prj_Reservation_James.Properties.Settings.Default.CBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9872,7 +9759,7 @@ SELECT IdReser, DateReser, DateDebut, DateFin, IdCli FROM Reservation WHERE (IdR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet_Chambre.ReservationDataTable dataTable) {
+        public virtual int Fill(CBDataSet.ReservationDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9885,9 +9772,9 @@ SELECT IdReser, DateReser, DateDebut, DateFin, IdCli FROM Reservation WHERE (IdR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet_Chambre.ReservationDataTable GetData() {
+        public virtual CBDataSet.ReservationDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet_Chambre.ReservationDataTable dataTable = new DataSet_Chambre.ReservationDataTable();
+            CBDataSet.ReservationDataTable dataTable = new CBDataSet.ReservationDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9895,14 +9782,14 @@ SELECT IdReser, DateReser, DateDebut, DateFin, IdCli FROM Reservation WHERE (IdR
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet_Chambre.ReservationDataTable dataTable) {
+        public virtual int Update(CBDataSet.ReservationDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet_Chambre dataSet) {
+        public virtual int Update(CBDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Reservation");
         }
         
@@ -10271,7 +10158,7 @@ SELECT IdTrx, DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli F
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Prj_Chambre_Janie.Properties.Settings.Default.CBConnectionString;
+            this._connection.ConnectionString = global::Prj_Reservation_James.Properties.Settings.Default.CBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10289,7 +10176,7 @@ SELECT IdTrx, DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli F
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet_Chambre.TrxDataTable dataTable) {
+        public virtual int Fill(CBDataSet.TrxDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10302,9 +10189,9 @@ SELECT IdTrx, DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli F
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet_Chambre.TrxDataTable GetData() {
+        public virtual CBDataSet.TrxDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet_Chambre.TrxDataTable dataTable = new DataSet_Chambre.TrxDataTable();
+            CBDataSet.TrxDataTable dataTable = new CBDataSet.TrxDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10312,14 +10199,14 @@ SELECT IdTrx, DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli F
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet_Chambre.TrxDataTable dataTable) {
+        public virtual int Update(CBDataSet.TrxDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet_Chambre dataSet) {
+        public virtual int Update(CBDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Trx");
         }
         
@@ -10734,7 +10621,7 @@ SELECT CodTypCham, DescTyp, NbDispo FROM TypeCham WHERE (CodTypCham = @CodTypCha
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Prj_Chambre_Janie.Properties.Settings.Default.CBConnectionString;
+            this._connection.ConnectionString = global::Prj_Reservation_James.Properties.Settings.Default.CBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10751,7 +10638,7 @@ SELECT CodTypCham, DescTyp, NbDispo FROM TypeCham WHERE (CodTypCham = @CodTypCha
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet_Chambre.TypeChamDataTable dataTable) {
+        public virtual int Fill(CBDataSet.TypeChamDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10764,9 +10651,9 @@ SELECT CodTypCham, DescTyp, NbDispo FROM TypeCham WHERE (CodTypCham = @CodTypCha
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet_Chambre.TypeChamDataTable GetData() {
+        public virtual CBDataSet.TypeChamDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet_Chambre.TypeChamDataTable dataTable = new DataSet_Chambre.TypeChamDataTable();
+            CBDataSet.TypeChamDataTable dataTable = new CBDataSet.TypeChamDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10774,14 +10661,14 @@ SELECT CodTypCham, DescTyp, NbDispo FROM TypeCham WHERE (CodTypCham = @CodTypCha
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet_Chambre.TypeChamDataTable dataTable) {
+        public virtual int Update(CBDataSet.TypeChamDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet_Chambre dataSet) {
+        public virtual int Update(CBDataSet dataSet) {
             return this.Adapter.Update(dataSet, "TypeCham");
         }
         
@@ -11116,7 +11003,7 @@ SELECT CodTypTrx, DescTrx, Nature FROM TypeTrx WHERE (CodTypTrx = @CodTypTrx)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Prj_Chambre_Janie.Properties.Settings.Default.CBConnectionString;
+            this._connection.ConnectionString = global::Prj_Reservation_James.Properties.Settings.Default.CBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11133,7 +11020,7 @@ SELECT CodTypTrx, DescTrx, Nature FROM TypeTrx WHERE (CodTypTrx = @CodTypTrx)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet_Chambre.TypeTrxDataTable dataTable) {
+        public virtual int Fill(CBDataSet.TypeTrxDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -11146,9 +11033,9 @@ SELECT CodTypTrx, DescTrx, Nature FROM TypeTrx WHERE (CodTypTrx = @CodTypTrx)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet_Chambre.TypeTrxDataTable GetData() {
+        public virtual CBDataSet.TypeTrxDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet_Chambre.TypeTrxDataTable dataTable = new DataSet_Chambre.TypeTrxDataTable();
+            CBDataSet.TypeTrxDataTable dataTable = new CBDataSet.TypeTrxDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -11156,14 +11043,14 @@ SELECT CodTypTrx, DescTrx, Nature FROM TypeTrx WHERE (CodTypTrx = @CodTypTrx)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet_Chambre.TypeTrxDataTable dataTable) {
+        public virtual int Update(CBDataSet.TypeTrxDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet_Chambre dataSet) {
+        public virtual int Update(CBDataSet dataSet) {
             return this.Adapter.Update(dataSet, "TypeTrx");
         }
         
@@ -11678,7 +11565,7 @@ SELECT CodTypTrx, DescTrx, Nature FROM TypeTrx WHERE (CodTypTrx = @CodTypTrx)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(DataSet_Chambre dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(CBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._clientTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Client.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -11796,7 +11683,7 @@ SELECT CodTypTrx, DescTrx, Nature FROM TypeTrx WHERE (CodTypTrx = @CodTypTrx)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(DataSet_Chambre dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(CBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._clientTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Client.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -11902,7 +11789,7 @@ SELECT CodTypTrx, DescTrx, Nature FROM TypeTrx WHERE (CodTypTrx = @CodTypTrx)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(DataSet_Chambre dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(CBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._trxTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Trx.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -12032,7 +11919,7 @@ SELECT CodTypTrx, DescTrx, Nature FROM TypeTrx WHERE (CodTypTrx = @CodTypTrx)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(DataSet_Chambre dataSet) {
+        public virtual int UpdateAll(CBDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

@@ -54,15 +54,55 @@
     <Compile Include="Chambre.Designer.cs">
       <DependentUpon>Chambre.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataSet_Chambre.cs">
+      <DependentUpon>DataSet_Chambre.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DataSet_Chambre.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet_Chambre.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ListeChambre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeChambre.Designer.cs">
+      <DependentUpon>ListeChambre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListeCommodite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeCommodite.Designer.cs">
+      <DependentUpon>ListeCommodite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListeLocalisation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeLocalisation.Designer.cs">
+      <DependentUpon>ListeLocalisation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListeTypeChambre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeTypeChambre.Designer.cs">
+      <DependentUpon>ListeTypeChambre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Chambre.resx">
       <DependentUpon>Chambre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeChambre.resx">
+      <DependentUpon>ListeChambre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeCommodite.resx">
+      <DependentUpon>ListeCommodite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeLocalisation.resx">
+      <DependentUpon>ListeLocalisation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeTypeChambre.resx">
+      <DependentUpon>ListeTypeChambre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
