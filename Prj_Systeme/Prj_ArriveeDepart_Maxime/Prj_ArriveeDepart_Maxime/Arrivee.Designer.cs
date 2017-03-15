@@ -43,24 +43,17 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.attribueeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idReserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noChamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TYPECHAM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Prix = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BS_De = new System.Windows.Forms.BindingSource(this.components);
             this.DataSet_Arrivee = new Prj_ArriveeDepart_Maxime.DataSet_Arrivee();
             this.BS_Client = new System.Windows.Forms.BindingSource(this.components);
@@ -75,6 +68,10 @@
             this.TA_TypeCham = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.TypeChamTableAdapter();
             this.TA_Arrive = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.ArriveTableAdapter();
             this.BS_Arrive = new System.Windows.Forms.BindingSource(this.components);
+            this.noChamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TYPECHAM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Prix = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.attribueeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.logo_CB1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -237,13 +234,11 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label17);
             this.panel2.Controls.Add(this.label16);
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
@@ -253,16 +248,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(514, 176);
             this.panel2.TabIndex = 6;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(335, 88);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(42, 18);
-            this.label17.TabIndex = 6;
-            this.label17.Text = "Value";
             // 
             // label16
             // 
@@ -310,16 +295,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(59, 20);
             this.textBox1.TabIndex = 5;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(293, 88);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 18);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Fax :";
             // 
             // label4
             // 
@@ -373,49 +348,21 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.attribueeDataGridViewTextBoxColumn,
-            this.idReserDataGridViewTextBoxColumn,
             this.noChamDataGridViewTextBoxColumn,
             this.TYPECHAM,
-            this.Prix});
+            this.Prix,
+            this.attribueeDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.BS_De;
             this.dataGridView1.Location = new System.Drawing.Point(3, 186);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1151, 250);
             this.dataGridView1.TabIndex = 8;
-            // 
-            // attribueeDataGridViewTextBoxColumn
-            // 
-            this.attribueeDataGridViewTextBoxColumn.DataPropertyName = "Attribuee";
-            this.attribueeDataGridViewTextBoxColumn.HeaderText = "Attribuee";
-            this.attribueeDataGridViewTextBoxColumn.Name = "attribueeDataGridViewTextBoxColumn";
-            // 
-            // idReserDataGridViewTextBoxColumn
-            // 
-            this.idReserDataGridViewTextBoxColumn.DataPropertyName = "IdReser";
-            this.idReserDataGridViewTextBoxColumn.HeaderText = "IdReser";
-            this.idReserDataGridViewTextBoxColumn.Name = "idReserDataGridViewTextBoxColumn";
-            // 
-            // noChamDataGridViewTextBoxColumn
-            // 
-            this.noChamDataGridViewTextBoxColumn.DataPropertyName = "NoCham";
-            this.noChamDataGridViewTextBoxColumn.HeaderText = "NoCham";
-            this.noChamDataGridViewTextBoxColumn.Name = "noChamDataGridViewTextBoxColumn";
-            // 
-            // TYPECHAM
-            // 
-            this.TYPECHAM.DataPropertyName = "DesTyp";
-            this.TYPECHAM.HeaderText = "Type de Chambre";
-            this.TYPECHAM.Name = "TYPECHAM";
-            // 
-            // Prix
-            // 
-            this.Prix.DataPropertyName = "Prix";
-            this.Prix.HeaderText = "Prix";
-            this.Prix.Name = "Prix";
             // 
             // BS_De
             // 
@@ -482,6 +429,34 @@
             this.BS_Arrive.DataMember = "Arrive";
             this.BS_Arrive.DataSource = this.DataSet_Arrivee;
             // 
+            // noChamDataGridViewTextBoxColumn
+            // 
+            this.noChamDataGridViewTextBoxColumn.DataPropertyName = "NoCham";
+            this.noChamDataGridViewTextBoxColumn.HeaderText = "NoCham";
+            this.noChamDataGridViewTextBoxColumn.Name = "noChamDataGridViewTextBoxColumn";
+            this.noChamDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // TYPECHAM
+            // 
+            this.TYPECHAM.DataPropertyName = "DesTyp";
+            this.TYPECHAM.HeaderText = "Type de Chambre";
+            this.TYPECHAM.Name = "TYPECHAM";
+            this.TYPECHAM.ReadOnly = true;
+            // 
+            // Prix
+            // 
+            this.Prix.DataPropertyName = "Prix";
+            this.Prix.HeaderText = "Prix";
+            this.Prix.Name = "Prix";
+            this.Prix.ReadOnly = true;
+            // 
+            // attribueeDataGridViewTextBoxColumn
+            // 
+            this.attribueeDataGridViewTextBoxColumn.DataPropertyName = "Attribuee";
+            this.attribueeDataGridViewTextBoxColumn.HeaderText = "Attribuee";
+            this.attribueeDataGridViewTextBoxColumn.Name = "attribueeDataGridViewTextBoxColumn";
+            this.attribueeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // Arrivee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -523,13 +498,11 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -548,13 +521,12 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.BindingSource BS_TypeCham;
         private DataSet_ArriveeTableAdapters.TypeChamTableAdapter TA_TypeCham;
-        private System.Windows.Forms.DataGridViewTextBoxColumn attribueeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idReserDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn noChamDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TYPECHAM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Prix;
         private Prj_lib_graphique.lab_format lb_IdArrive;
         private DataSet_ArriveeTableAdapters.ArriveTableAdapter TA_Arrive;
         private System.Windows.Forms.BindingSource BS_Arrive;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noChamDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TYPECHAM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Prix;
+        private System.Windows.Forms.DataGridViewTextBoxColumn attribueeDataGridViewTextBoxColumn;
     }
 }

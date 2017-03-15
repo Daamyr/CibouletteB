@@ -1,14 +1,8 @@
-Pour les standards :
-	définir CHAQUE objets ou juste des noms générique e.g. "Tous les boutons seront nommés BTN_(utilité)_(lieu)
-	-- On doit lister tous les types ?
+On navigue sur les arrivées mais on continue de voir toutes les chambres d'une réservation dans le datagrid
+Quand est-ce qu'une arrivée n'est plus visible ? Quand elle a un départ associé ?
+Comment faire pour ne pas afficher une arrivée qui a un départ ?
+	Comment dire "si l'entrée est dans cette table aussi, ne l'affiche pas"
 
-	Le nom des projets individuels devront contenir nos nom?
-
-	Nom formulaire .cs?
-
-	Tout ce qu'il y a dans l'exemple donné sont des exemples ? Ou alors y a-t-il des consignes?
-	/ on ne peut faire que s'en inspirer?
-
-
-	On pourra modifier/compléter nos standards au besoin?
-
+Mon datagrid affiche affiche toutes les chambres d'une réservation.
+Est-ce que je dois afficher les chambres qui ne sont pas occupées ?
+Lors d'une arrivée, une chambre de la réservation doit être obligatoirement prise ?

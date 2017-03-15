@@ -65,7 +65,6 @@ namespace Prj_ArriveeDepart_Maxime
             this.BS_Reser.DataSource = this.DataSet_Arrivee;
 
 
-
             dateTimePicker1.DataBindings.Add("Value", BS_Reser, "DateDebut");
             dateTimePicker2.DataBindings.Add("Value", BS_Reser, "DateFin");
             label22.DataBindings.Add("Text", BS_Reser, "IdCli");

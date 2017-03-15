@@ -1,21 +1,21 @@
 set dateformat dmy
 
-IF OBJECT_ID (N'Ayant', N'U') IS NOT NULL
-DROP TABLE Ayant
-IF OBJECT_ID (N'De', N'U') IS NOT NULL
-DROP TABLE De
-IF OBJECT_ID (N'Arrive', N'U') IS NOT NULL
-DROP TABLE Arrive
 IF OBJECT_ID (N'Trx', N'U') IS NOT NULL
 DROP TABLE Trx
 IF OBJECT_ID (N'TypeTrx', N'U') IS NOT NULL
 DROP TABLE TypeTrx
-IF OBJECT_ID (N'Commodite', N'U') IS NOT NULL
-DROP TABLE Commodite
 IF OBJECT_ID (N'Depart', N'U') IS NOT NULL
 DROP TABLE Depart
+IF OBJECT_ID (N'Arrive', N'U') IS NOT NULL
+DROP TABLE Arrive
+IF OBJECT_ID (N'Ayant', N'U') IS NOT NULL
+DROP TABLE Ayant
+IF OBJECT_ID (N'De', N'U') IS NOT NULL
+DROP TABLE De
 IF OBJECT_ID (N'Chambre', N'U') IS NOT NULL
 DROP TABLE Chambre
+IF OBJECT_ID (N'Commodite', N'U') IS NOT NULL
+DROP TABLE Commodite
 IF OBJECT_ID (N'Localisation', N'U') IS NOT NULL
 DROP TABLE Localisation
 IF OBJECT_ID (N'TypeCham', N'U') IS NOT NULL
@@ -134,10 +134,14 @@ create table Depart
 	NoCham				varchar(4)			not null,
 	IdCli				int					not null,
 
+	IdArrive			int             	not null,
+
 	constraint PK_DEP		primary key(IdDepart),
 	constraint FK_DEPRES	foreign key	(IdReser)	references Reservation (IdReser),
 	constraint FK_DEPCHAM	foreign key	(NoCham)	references Chambre (NoCham),
 	constraint FK_DEPCLI	foreign key	(IdCli)		references Client (IdCli),
+
+	constraint FK_DEPARR	foreign key (IdArrive)	references Arrive (IdArrive),
 )
 
 create table TypeTrx
@@ -159,10 +163,14 @@ create table Trx
 	IdReser				int					not null,
 	NoCham				varchar(4)			not null,
 	IdCli				int					not null,
+	
+	IdArrive			int             	not null,
 
 	constraint PK_TRX		primary key (IdTrx),
 	constraint FK_TRXTYP	foreign key (CodTypTrx) references TypeTrx (CodTypTrx),
 	constraint FK_TRXRES	foreign key	(IdReser)	references Reservation (IdReser),
 	constraint FK_TRXCHAM	foreign key	(NoCham)	references Chambre (NoCham),
 	constraint FK_TRXCLI	foreign key	(IdCli)		references Client (IdCli),
+	
+	constraint FK_TRXARR	foreign key (IdArrive)	references Arrive (IdArrive),
 )
