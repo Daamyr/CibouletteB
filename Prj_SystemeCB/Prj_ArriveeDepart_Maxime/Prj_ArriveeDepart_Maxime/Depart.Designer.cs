@@ -44,6 +44,14 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.txtBox_name1 = new Prj_lib_graphique.txtBox_name();
+            this.txtBox_name2 = new Prj_lib_graphique.txtBox_name();
+            this.txtBox_name3 = new Prj_lib_graphique.txtBox_name();
+            this.txtBox_name4 = new Prj_lib_graphique.txtBox_name();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.logo_CB)).BeginInit();
             this.pan_principal.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -57,6 +65,11 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.txtBox_name4);
+            this.panel2.Controls.Add(this.txtBox_name3);
+            this.panel2.Controls.Add(this.txtBox_name2);
+            this.panel2.Controls.Add(this.txtBox_name1);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
@@ -80,7 +93,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(15, 126);
+            this.label5.Location = new System.Drawing.Point(16, 134);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 18);
             this.label5.TabIndex = 4;
@@ -90,7 +103,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(15, 144);
+            this.label4.Location = new System.Drawing.Point(15, 168);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 18);
             this.label4.TabIndex = 3;
@@ -138,6 +151,9 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.dateTimePicker3);
+            this.panel3.Controls.Add(this.dateTimePicker4);
+            this.panel3.Controls.Add(this.dateTimePicker2);
             this.panel3.Controls.Add(this.textBox3);
             this.panel3.Controls.Add(this.textBox2);
             this.panel3.Controls.Add(this.label6);
@@ -147,7 +163,7 @@
             this.panel3.Controls.Add(this.label10);
             this.panel3.Location = new System.Drawing.Point(702, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(453, 176);
+            this.panel3.Size = new System.Drawing.Size(453, 197);
             this.panel3.TabIndex = 7;
             // 
             // textBox3
@@ -214,6 +230,70 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "N° Réservation :";
             // 
+            // txtBox_name1
+            // 
+            this.txtBox_name1.Enabled = false;
+            this.txtBox_name1.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_name1.Location = new System.Drawing.Point(227, 17);
+            this.txtBox_name1.Name = "txtBox_name1";
+            this.txtBox_name1.Size = new System.Drawing.Size(167, 25);
+            this.txtBox_name1.TabIndex = 6;
+            // 
+            // txtBox_name2
+            // 
+            this.txtBox_name2.Enabled = false;
+            this.txtBox_name2.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_name2.Location = new System.Drawing.Point(76, 50);
+            this.txtBox_name2.Name = "txtBox_name2";
+            this.txtBox_name2.Size = new System.Drawing.Size(318, 25);
+            this.txtBox_name2.TabIndex = 6;
+            // 
+            // txtBox_name3
+            // 
+            this.txtBox_name3.Enabled = false;
+            this.txtBox_name3.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_name3.Location = new System.Drawing.Point(97, 85);
+            this.txtBox_name3.Name = "txtBox_name3";
+            this.txtBox_name3.Size = new System.Drawing.Size(123, 25);
+            this.txtBox_name3.TabIndex = 6;
+            // 
+            // txtBox_name4
+            // 
+            this.txtBox_name4.Enabled = false;
+            this.txtBox_name4.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_name4.Location = new System.Drawing.Point(114, 131);
+            this.txtBox_name4.Name = "txtBox_name4";
+            this.txtBox_name4.Size = new System.Drawing.Size(211, 25);
+            this.txtBox_name4.TabIndex = 6;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(132, 168);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(175, 20);
+            this.dateTimePicker1.TabIndex = 7;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(117, 64);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(175, 20);
+            this.dateTimePicker2.TabIndex = 7;
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Location = new System.Drawing.Point(116, 98);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(175, 20);
+            this.dateTimePicker3.TabIndex = 7;
+            // 
+            // dateTimePicker4
+            // 
+            this.dateTimePicker4.Location = new System.Drawing.Point(275, 17);
+            this.dateTimePicker4.Name = "dateTimePicker4";
+            this.dateTimePicker4.Size = new System.Drawing.Size(152, 20);
+            this.dateTimePicker4.TabIndex = 7;
+            // 
             // Depart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,5 +328,13 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private Prj_lib_graphique.txtBox_name txtBox_name4;
+        private Prj_lib_graphique.txtBox_name txtBox_name3;
+        private Prj_lib_graphique.txtBox_name txtBox_name2;
+        private Prj_lib_graphique.txtBox_name txtBox_name1;
     }
 }
