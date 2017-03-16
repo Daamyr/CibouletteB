@@ -55,8 +55,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataSet_Depart = new Prj_ArriveeDepart_Maxime.DataSet_Depart();
-            this.departBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.departTableAdapter = new Prj_ArriveeDepart_Maxime.DataSet_DepartTableAdapters.DepartTableAdapter();
+            this.BS_Depart = new System.Windows.Forms.BindingSource(this.components);
+            this.TA_Depart = new Prj_ArriveeDepart_Maxime.DataSet_DepartTableAdapters.DepartTableAdapter();
             this.idDepartDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDepartDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.confirmerParDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,13 +66,22 @@
             this.idArriveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lab_format1 = new Prj_lib_graphique.lab_format();
             this.lab_format2 = new Prj_lib_graphique.lab_format();
+            this.TA_Arrive = new Prj_ArriveeDepart_Maxime.DataSet_DepartTableAdapters.ArriveTableAdapter();
+            this.TA_Client = new Prj_ArriveeDepart_Maxime.DataSet_DepartTableAdapters.ClientTableAdapter();
+            this.TA_Reser = new Prj_ArriveeDepart_Maxime.DataSet_DepartTableAdapters.ReservationTableAdapter();
+            this.BS_Arrive = new System.Windows.Forms.BindingSource(this.components);
+            this.BS_Client = new System.Windows.Forms.BindingSource(this.components);
+            this.BS_Reser = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.logo_CB)).BeginInit();
             this.pan_principal.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Depart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_Depart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_Arrive)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_Client)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_Reser)).BeginInit();
             this.SuspendLayout();
             // 
             // pan_principal
@@ -332,7 +341,7 @@
             this.noChamDataGridViewTextBoxColumn,
             this.idCliDataGridViewTextBoxColumn,
             this.idArriveDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.departBindingSource;
+            this.dataGridView1.DataSource = this.BS_Depart;
             this.dataGridView1.Location = new System.Drawing.Point(1, 207);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -344,14 +353,14 @@
             this.dataSet_Depart.DataSetName = "DataSet_Depart";
             this.dataSet_Depart.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // departBindingSource
+            // BS_Depart
             // 
-            this.departBindingSource.DataMember = "Depart";
-            this.departBindingSource.DataSource = this.dataSet_Depart;
+            this.BS_Depart.DataMember = "Depart";
+            this.BS_Depart.DataSource = this.dataSet_Depart;
             // 
-            // departTableAdapter
+            // TA_Depart
             // 
-            this.departTableAdapter.ClearBeforeFill = true;
+            this.TA_Depart.ClearBeforeFill = true;
             // 
             // idDepartDataGridViewTextBoxColumn
             // 
@@ -422,6 +431,33 @@
             this.lab_format2.TabIndex = 8;
             this.lab_format2.Text = "Information sur la réservation";
             // 
+            // TA_Arrive
+            // 
+            this.TA_Arrive.ClearBeforeFill = true;
+            // 
+            // TA_Client
+            // 
+            this.TA_Client.ClearBeforeFill = true;
+            // 
+            // TA_Reser
+            // 
+            this.TA_Reser.ClearBeforeFill = true;
+            // 
+            // BS_Arrive
+            // 
+            this.BS_Arrive.DataMember = "Arrive";
+            this.BS_Arrive.DataSource = this.dataSet_Depart;
+            // 
+            // BS_Client
+            // 
+            this.BS_Client.DataMember = "Client";
+            this.BS_Client.DataSource = this.dataSet_Depart;
+            // 
+            // BS_Reser
+            // 
+            this.BS_Reser.DataMember = "Reservation";
+            this.BS_Reser.DataSource = this.dataSet_Depart;
+            // 
             // Depart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -436,7 +472,10 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Depart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_Depart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_Arrive)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_Client)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BS_Reser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -470,8 +509,8 @@
         private Prj_lib_graphique.txtBox_name txtBox_name1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private DataSet_Depart dataSet_Depart;
-        private System.Windows.Forms.BindingSource departBindingSource;
-        private DataSet_DepartTableAdapters.DepartTableAdapter departTableAdapter;
+        private System.Windows.Forms.BindingSource BS_Depart;
+        private DataSet_DepartTableAdapters.DepartTableAdapter TA_Depart;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDepartDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDepartDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn confirmerParDataGridViewTextBoxColumn;
@@ -481,5 +520,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idArriveDataGridViewTextBoxColumn;
         private Prj_lib_graphique.lab_format lab_format2;
         private Prj_lib_graphique.lab_format lab_format1;
+        private DataSet_DepartTableAdapters.ArriveTableAdapter TA_Arrive;
+        private DataSet_DepartTableAdapters.ClientTableAdapter TA_Client;
+        private DataSet_DepartTableAdapters.ReservationTableAdapter TA_Reser;
+        private System.Windows.Forms.BindingSource BS_Arrive;
+        private System.Windows.Forms.BindingSource BS_Client;
+        private System.Windows.Forms.BindingSource BS_Reser;
     }
 }
