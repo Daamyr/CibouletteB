@@ -29,31 +29,37 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.pan_Reser = new System.Windows.Forms.Panel();
+            this.date_DateReser = new System.Windows.Forms.DateTimePicker();
+            this.date_ReserFin = new System.Windows.Forms.DateTimePicker();
+            this.date_ReserDebut = new System.Windows.Forms.DateTimePicker();
             this.label24 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBox_IdReser = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lab_Nom_Reser = new System.Windows.Forms.Label();
+            this.lab_IdCli_Reser = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lab_DateReser = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pan_Arrivee = new System.Windows.Forms.Panel();
+            this.txtBox_IdArrive = new Prj_lib_graphique.txtBox_name();
+            this.lab_IdArrive = new Prj_lib_graphique.lab_format();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtBox_IdCli_Arrive = new System.Windows.Forms.TextBox();
+            this.lab_NumCham = new System.Windows.Forms.Label();
+            this.lab_Telephone = new System.Windows.Forms.Label();
+            this.lab_Adresse = new System.Windows.Forms.Label();
+            this.lab_Nom = new System.Windows.Forms.Label();
+            this.lab_IdCli_Arrive = new System.Windows.Forms.Label();
+            this.DGV_Arrivee = new System.Windows.Forms.DataGridView();
             this.noChamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TYPECHAM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prix = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,7 +68,6 @@
             this.DataSet_Arrivee = new Prj_ArriveeDepart_Maxime.DataSet_Arrivee();
             this.BS_Client = new System.Windows.Forms.BindingSource(this.components);
             this.BS_Chambre = new System.Windows.Forms.BindingSource(this.components);
-            this.lb_IdArrive = new Prj_lib_graphique.lab_format();
             this.BS_Reser = new System.Windows.Forms.BindingSource(this.components);
             this.TA_Reservation = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.ReservationTableAdapter();
             this.TA_De = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.DeTableAdapter();
@@ -74,9 +79,9 @@
             this.BS_Arrive = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.logo_CB)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.pan_Reser.SuspendLayout();
+            this.pan_Arrivee.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Arrivee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BS_De)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet_Arrivee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BS_Client)).BeginInit();
@@ -94,55 +99,61 @@
             // 
             this.btn_next.Click += new System.EventHandler(this.btn_next1_Click);
             // 
+            // btn_add
+            // 
+            this.btn_add.Cursor = System.Windows.Forms.Cursors.Hand;
+            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.lb_IdArrive);
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.DGV_Arrivee);
+            this.panel1.Controls.Add(this.pan_Reser);
+            this.panel1.Controls.Add(this.pan_Arrivee);
             // 
-            // panel3
+            // pan_Reser
             // 
-            this.panel3.Controls.Add(this.dateTimePicker3);
-            this.panel3.Controls.Add(this.dateTimePicker2);
-            this.panel3.Controls.Add(this.dateTimePicker1);
-            this.panel3.Controls.Add(this.label24);
-            this.panel3.Controls.Add(this.label22);
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Location = new System.Drawing.Point(701, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(453, 176);
-            this.panel3.TabIndex = 7;
+            this.pan_Reser.Controls.Add(this.date_DateReser);
+            this.pan_Reser.Controls.Add(this.date_ReserFin);
+            this.pan_Reser.Controls.Add(this.date_ReserDebut);
+            this.pan_Reser.Controls.Add(this.label24);
+            this.pan_Reser.Controls.Add(this.label22);
+            this.pan_Reser.Controls.Add(this.txtBox_IdReser);
+            this.pan_Reser.Controls.Add(this.label6);
+            this.pan_Reser.Controls.Add(this.lab_Nom_Reser);
+            this.pan_Reser.Controls.Add(this.lab_IdCli_Reser);
+            this.pan_Reser.Controls.Add(this.label8);
+            this.pan_Reser.Controls.Add(this.lab_DateReser);
+            this.pan_Reser.Controls.Add(this.label10);
+            this.pan_Reser.Location = new System.Drawing.Point(701, 3);
+            this.pan_Reser.Name = "pan_Reser";
+            this.pan_Reser.Size = new System.Drawing.Size(453, 176);
+            this.pan_Reser.TabIndex = 7;
             // 
-            // dateTimePicker3
+            // date_DateReser
             // 
-            this.dateTimePicker3.Enabled = false;
-            this.dateTimePicker3.Location = new System.Drawing.Point(280, 14);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(136, 20);
-            this.dateTimePicker3.TabIndex = 8;
+            this.date_DateReser.Enabled = false;
+            this.date_DateReser.Font = new System.Drawing.Font("Californian FB", 11.25F);
+            this.date_DateReser.Location = new System.Drawing.Point(280, 14);
+            this.date_DateReser.Name = "date_DateReser";
+            this.date_DateReser.Size = new System.Drawing.Size(136, 25);
+            this.date_DateReser.TabIndex = 8;
             // 
-            // dateTimePicker2
+            // date_ReserFin
             // 
-            this.dateTimePicker2.Enabled = false;
-            this.dateTimePicker2.Location = new System.Drawing.Point(117, 97);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 7;
+            this.date_ReserFin.Enabled = false;
+            this.date_ReserFin.Font = new System.Drawing.Font("Californian FB", 11.25F);
+            this.date_ReserFin.Location = new System.Drawing.Point(117, 97);
+            this.date_ReserFin.Name = "date_ReserFin";
+            this.date_ReserFin.Size = new System.Drawing.Size(200, 25);
+            this.date_ReserFin.TabIndex = 7;
             // 
-            // dateTimePicker1
+            // date_ReserDebut
             // 
-            this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(117, 61);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 7;
+            this.date_ReserDebut.Enabled = false;
+            this.date_ReserDebut.Font = new System.Drawing.Font("Californian FB", 11.25F);
+            this.date_ReserDebut.Location = new System.Drawing.Point(117, 61);
+            this.date_ReserDebut.Name = "date_ReserDebut";
+            this.date_ReserDebut.Size = new System.Drawing.Size(200, 25);
+            this.date_ReserDebut.TabIndex = 7;
             // 
             // label24
             // 
@@ -164,13 +175,14 @@
             this.label22.TabIndex = 6;
             this.label22.Text = "Value";
             // 
-            // textBox2
+            // txtBox_IdReser
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(122, 17);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(59, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtBox_IdReser.Enabled = false;
+            this.txtBox_IdReser.Font = new System.Drawing.Font("Californian FB", 11.25F);
+            this.txtBox_IdReser.Location = new System.Drawing.Point(122, 17);
+            this.txtBox_IdReser.Name = "txtBox_IdReser";
+            this.txtBox_IdReser.Size = new System.Drawing.Size(59, 25);
+            this.txtBox_IdReser.TabIndex = 5;
             // 
             // label6
             // 
@@ -182,25 +194,25 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "Date de fin :";
             // 
-            // label11
+            // lab_Nom_Reser
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(15, 147);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(45, 18);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "Nom :";
+            this.lab_Nom_Reser.AutoSize = true;
+            this.lab_Nom_Reser.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_Nom_Reser.Location = new System.Drawing.Point(15, 147);
+            this.lab_Nom_Reser.Name = "lab_Nom_Reser";
+            this.lab_Nom_Reser.Size = new System.Drawing.Size(45, 18);
+            this.lab_Nom_Reser.TabIndex = 3;
+            this.lab_Nom_Reser.Text = "Nom :";
             // 
-            // label7
+            // lab_IdCli_Reser
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(15, 129);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 18);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Client no°";
+            this.lab_IdCli_Reser.AutoSize = true;
+            this.lab_IdCli_Reser.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_IdCli_Reser.Location = new System.Drawing.Point(15, 129);
+            this.lab_IdCli_Reser.Name = "lab_IdCli_Reser";
+            this.lab_IdCli_Reser.Size = new System.Drawing.Size(68, 18);
+            this.lab_IdCli_Reser.TabIndex = 3;
+            this.lab_IdCli_Reser.Text = "Client no°";
             // 
             // label8
             // 
@@ -212,15 +224,15 @@
             this.label8.TabIndex = 2;
             this.label8.Text = "Date de début :";
             // 
-            // label9
+            // lab_DateReser
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(202, 17);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(71, 18);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Réservé le :";
+            this.lab_DateReser.AutoSize = true;
+            this.lab_DateReser.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_DateReser.Location = new System.Drawing.Point(202, 17);
+            this.lab_DateReser.Name = "lab_DateReser";
+            this.lab_DateReser.Size = new System.Drawing.Size(71, 18);
+            this.lab_DateReser.TabIndex = 1;
+            this.lab_DateReser.Text = "Réservé le :";
             // 
             // label10
             // 
@@ -232,22 +244,44 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "N° Réservation :";
             // 
-            // panel2
+            // pan_Arrivee
             // 
-            this.panel2.Controls.Add(this.label16);
-            this.panel2.Controls.Add(this.label15);
-            this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(514, 176);
-            this.panel2.TabIndex = 6;
+            this.pan_Arrivee.Controls.Add(this.txtBox_IdArrive);
+            this.pan_Arrivee.Controls.Add(this.lab_IdArrive);
+            this.pan_Arrivee.Controls.Add(this.label16);
+            this.pan_Arrivee.Controls.Add(this.label15);
+            this.pan_Arrivee.Controls.Add(this.label14);
+            this.pan_Arrivee.Controls.Add(this.label13);
+            this.pan_Arrivee.Controls.Add(this.txtBox_IdCli_Arrive);
+            this.pan_Arrivee.Controls.Add(this.lab_NumCham);
+            this.pan_Arrivee.Controls.Add(this.lab_Telephone);
+            this.pan_Arrivee.Controls.Add(this.lab_Adresse);
+            this.pan_Arrivee.Controls.Add(this.lab_Nom);
+            this.pan_Arrivee.Controls.Add(this.lab_IdCli_Arrive);
+            this.pan_Arrivee.Location = new System.Drawing.Point(3, 3);
+            this.pan_Arrivee.Name = "pan_Arrivee";
+            this.pan_Arrivee.Size = new System.Drawing.Size(514, 176);
+            this.pan_Arrivee.TabIndex = 6;
+            // 
+            // txtBox_IdArrive
+            // 
+            this.txtBox_IdArrive.Enabled = false;
+            this.txtBox_IdArrive.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_IdArrive.Location = new System.Drawing.Point(389, 85);
+            this.txtBox_IdArrive.Name = "txtBox_IdArrive";
+            this.txtBox_IdArrive.Size = new System.Drawing.Size(37, 25);
+            this.txtBox_IdArrive.TabIndex = 8;
+            this.txtBox_IdArrive.TextChanged += new System.EventHandler(this.txtBox_IdArrive_TextChanged);
+            // 
+            // lab_IdArrive
+            // 
+            this.lab_IdArrive.AutoSize = true;
+            this.lab_IdArrive.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_IdArrive.Location = new System.Drawing.Point(309, 88);
+            this.lab_IdArrive.Name = "lab_IdArrive";
+            this.lab_IdArrive.Size = new System.Drawing.Size(74, 18);
+            this.lab_IdArrive.TabIndex = 7;
+            this.lab_IdArrive.Text = "N° Arrivée :";
             // 
             // label16
             // 
@@ -289,105 +323,119 @@
             this.label13.TabIndex = 6;
             this.label13.Text = "Value";
             // 
-            // textBox1
+            // txtBox_IdCli_Arrive
             // 
-            this.textBox1.Location = new System.Drawing.Point(89, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(59, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtBox_IdCli_Arrive.Enabled = false;
+            this.txtBox_IdCli_Arrive.Font = new System.Drawing.Font("Californian FB", 11.25F);
+            this.txtBox_IdCli_Arrive.Location = new System.Drawing.Point(89, 17);
+            this.txtBox_IdCli_Arrive.Name = "txtBox_IdCli_Arrive";
+            this.txtBox_IdCli_Arrive.Size = new System.Drawing.Size(59, 25);
+            this.txtBox_IdCli_Arrive.TabIndex = 5;
             // 
-            // label4
+            // lab_NumCham
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 137);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 18);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Numéro Chambre :";
+            this.lab_NumCham.AutoSize = true;
+            this.lab_NumCham.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_NumCham.Location = new System.Drawing.Point(14, 137);
+            this.lab_NumCham.Name = "lab_NumCham";
+            this.lab_NumCham.Size = new System.Drawing.Size(123, 18);
+            this.lab_NumCham.TabIndex = 3;
+            this.lab_NumCham.Text = "Numéro Chambre :";
             // 
-            // label3
+            // lab_Telephone
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(15, 88);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 18);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Téléphone :";
+            this.lab_Telephone.AutoSize = true;
+            this.lab_Telephone.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_Telephone.Location = new System.Drawing.Point(15, 88);
+            this.lab_Telephone.Name = "lab_Telephone";
+            this.lab_Telephone.Size = new System.Drawing.Size(76, 18);
+            this.lab_Telephone.TabIndex = 2;
+            this.lab_Telephone.Text = "Téléphone :";
             // 
-            // label2
+            // lab_Adresse
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(15, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 18);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Adresse :";
+            this.lab_Adresse.AutoSize = true;
+            this.lab_Adresse.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_Adresse.Location = new System.Drawing.Point(15, 53);
+            this.lab_Adresse.Name = "lab_Adresse";
+            this.lab_Adresse.Size = new System.Drawing.Size(60, 18);
+            this.lab_Adresse.TabIndex = 1;
+            this.lab_Adresse.Text = "Adresse :";
             // 
-            // label12
+            // lab_Nom
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(175, 17);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(45, 18);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Nom :";
+            this.lab_Nom.AutoSize = true;
+            this.lab_Nom.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_Nom.Location = new System.Drawing.Point(175, 17);
+            this.lab_Nom.Name = "lab_Nom";
+            this.lab_Nom.Size = new System.Drawing.Size(45, 18);
+            this.lab_Nom.TabIndex = 0;
+            this.lab_Nom.Text = "Nom :";
             // 
-            // label1
+            // lab_IdCli_Arrive
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Client no°";
+            this.lab_IdCli_Arrive.AutoSize = true;
+            this.lab_IdCli_Arrive.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_IdCli_Arrive.Location = new System.Drawing.Point(15, 17);
+            this.lab_IdCli_Arrive.Name = "lab_IdCli_Arrive";
+            this.lab_IdCli_Arrive.Size = new System.Drawing.Size(68, 18);
+            this.lab_IdCli_Arrive.TabIndex = 0;
+            this.lab_IdCli_Arrive.Text = "Client no°";
             // 
-            // dataGridView1
+            // DGV_Arrivee
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DGV_Arrivee.AllowUserToAddRows = false;
+            this.DGV_Arrivee.AllowUserToDeleteRows = false;
+            this.DGV_Arrivee.AutoGenerateColumns = false;
+            this.DGV_Arrivee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Arrivee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.noChamDataGridViewTextBoxColumn,
             this.TYPECHAM,
             this.Prix,
             this.attribueeDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.BS_De;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 186);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1151, 250);
-            this.dataGridView1.TabIndex = 8;
+            this.DGV_Arrivee.DataSource = this.BS_De;
+            this.DGV_Arrivee.Location = new System.Drawing.Point(3, 186);
+            this.DGV_Arrivee.Name = "DGV_Arrivee";
+            this.DGV_Arrivee.ReadOnly = true;
+            this.DGV_Arrivee.Size = new System.Drawing.Size(1151, 250);
+            this.DGV_Arrivee.TabIndex = 8;
             // 
             // noChamDataGridViewTextBoxColumn
             // 
+            this.noChamDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.noChamDataGridViewTextBoxColumn.DataPropertyName = "NoCham";
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Californian FB", 11.25F);
+            this.noChamDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
             this.noChamDataGridViewTextBoxColumn.HeaderText = "NoCham";
             this.noChamDataGridViewTextBoxColumn.Name = "noChamDataGridViewTextBoxColumn";
             this.noChamDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // TYPECHAM
             // 
+            this.TYPECHAM.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.TYPECHAM.DataPropertyName = "DesTyp";
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Californian FB", 11.25F);
+            this.TYPECHAM.DefaultCellStyle = dataGridViewCellStyle10;
             this.TYPECHAM.HeaderText = "Type de Chambre";
             this.TYPECHAM.Name = "TYPECHAM";
             this.TYPECHAM.ReadOnly = true;
             // 
             // Prix
             // 
+            this.Prix.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Prix.DataPropertyName = "Prix";
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Californian FB", 11.25F);
+            this.Prix.DefaultCellStyle = dataGridViewCellStyle11;
             this.Prix.HeaderText = "Prix";
             this.Prix.Name = "Prix";
             this.Prix.ReadOnly = true;
             // 
             // attribueeDataGridViewTextBoxColumn
             // 
+            this.attribueeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.attribueeDataGridViewTextBoxColumn.DataPropertyName = "Attribuee";
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Californian FB", 11.25F);
+            this.attribueeDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
             this.attribueeDataGridViewTextBoxColumn.HeaderText = "Attribuee";
             this.attribueeDataGridViewTextBoxColumn.Name = "attribueeDataGridViewTextBoxColumn";
             this.attribueeDataGridViewTextBoxColumn.ReadOnly = true;
@@ -406,17 +454,6 @@
             // 
             this.BS_Client.DataMember = "Client";
             this.BS_Client.DataSource = this.DataSet_Arrivee;
-            // 
-            // lb_IdArrive
-            // 
-            this.lb_IdArrive.AutoSize = true;
-            this.lb_IdArrive.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_IdArrive.Location = new System.Drawing.Point(587, 17);
-            this.lb_IdArrive.Name = "lb_IdArrive";
-            this.lb_IdArrive.Size = new System.Drawing.Size(76, 18);
-            this.lb_IdArrive.TabIndex = 9;
-            this.lb_IdArrive.Text = "lab_format1";
-            this.lb_IdArrive.TextChanged += new System.EventHandler(this.lb_IdArrive_TextChanged);
             // 
             // BS_Reser
             // 
@@ -465,12 +502,11 @@
             this.Load += new System.EventHandler(this.Arrivee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logo_CB)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.pan_Reser.ResumeLayout(false);
+            this.pan_Reser.PerformLayout();
+            this.pan_Arrivee.ResumeLayout(false);
+            this.pan_Arrivee.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Arrivee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BS_De)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet_Arrivee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BS_Client)).EndInit();
@@ -485,30 +521,30 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Panel pan_Reser;
+        private System.Windows.Forms.DateTimePicker date_ReserFin;
+        private System.Windows.Forms.DateTimePicker date_ReserDebut;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBox_IdReser;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lab_Nom_Reser;
+        private System.Windows.Forms.Label lab_IdCli_Reser;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lab_DateReser;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pan_Arrivee;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtBox_IdCli_Arrive;
+        private System.Windows.Forms.Label lab_NumCham;
+        private System.Windows.Forms.Label lab_Telephone;
+        private System.Windows.Forms.Label lab_Adresse;
+        private System.Windows.Forms.Label lab_Nom;
+        private System.Windows.Forms.Label lab_IdCli_Arrive;
+        private System.Windows.Forms.DataGridView DGV_Arrivee;
         private DataSet_Arrivee DataSet_Arrivee;
         private System.Windows.Forms.BindingSource BS_Reser;
         private DataSet_ArriveeTableAdapters.ReservationTableAdapter TA_Reservation;
@@ -518,15 +554,16 @@
         private System.Windows.Forms.BindingSource BS_Client;
         private DataSet_ArriveeTableAdapters.ChambreTableAdapter TA_Chambre;
         private System.Windows.Forms.BindingSource BS_Chambre;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker date_DateReser;
         private System.Windows.Forms.BindingSource BS_TypeCham;
         private DataSet_ArriveeTableAdapters.TypeChamTableAdapter TA_TypeCham;
-        private Prj_lib_graphique.lab_format lb_IdArrive;
         private DataSet_ArriveeTableAdapters.ArriveTableAdapter TA_Arrive;
         private System.Windows.Forms.BindingSource BS_Arrive;
         private System.Windows.Forms.DataGridViewTextBoxColumn noChamDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn TYPECHAM;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prix;
         private System.Windows.Forms.DataGridViewTextBoxColumn attribueeDataGridViewTextBoxColumn;
+        private Prj_lib_graphique.txtBox_name txtBox_IdArrive;
+        private Prj_lib_graphique.lab_format lab_IdArrive;
     }
 }
