@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pan_Reser = new System.Windows.Forms.Panel();
+            this.lab_InfoReser = new Prj_lib_graphique.lab_format();
             this.txtBox_Nom_Reser = new Prj_lib_graphique.txtBox_name();
             this.txtBox_IdCli_Reser = new Prj_lib_graphique.txtBox_name();
             this.date_DateReser = new System.Windows.Forms.DateTimePicker();
@@ -47,6 +48,7 @@
             this.lab_DateReser = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.pan_Arrivee = new System.Windows.Forms.Panel();
+            this.lab_InfoCli = new Prj_lib_graphique.lab_format();
             this.txtBox_NumCham = new Prj_lib_graphique.txtBox_name();
             this.txtBox_Telephone = new Prj_lib_graphique.txtBox_name();
             this.txtBox_Adresse = new Prj_lib_graphique.txtBox_name();
@@ -77,8 +79,6 @@
             this.TA_TypeCham = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.TypeChamTableAdapter();
             this.TA_Arrive = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.ArriveTableAdapter();
             this.BS_Arrive = new System.Windows.Forms.BindingSource(this.components);
-            this.lab_format1 = new Prj_lib_graphique.lab_format();
-            this.lab_format2 = new Prj_lib_graphique.lab_format();
             ((System.ComponentModel.ISupportInitialize)(this.logo_CB)).BeginInit();
             this.pan_principal.SuspendLayout();
             this.pan_Reser.SuspendLayout();
@@ -136,7 +136,7 @@
             // 
             // pan_Reser
             // 
-            this.pan_Reser.Controls.Add(this.lab_format2);
+            this.pan_Reser.Controls.Add(this.lab_InfoReser);
             this.pan_Reser.Controls.Add(this.txtBox_Nom_Reser);
             this.pan_Reser.Controls.Add(this.txtBox_IdCli_Reser);
             this.pan_Reser.Controls.Add(this.date_DateReser);
@@ -153,6 +153,16 @@
             this.pan_Reser.Name = "pan_Reser";
             this.pan_Reser.Size = new System.Drawing.Size(453, 180);
             this.pan_Reser.TabIndex = 7;
+            // 
+            // lab_InfoReser
+            // 
+            this.lab_InfoReser.AutoSize = true;
+            this.lab_InfoReser.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_InfoReser.Location = new System.Drawing.Point(116, 4);
+            this.lab_InfoReser.Name = "lab_InfoReser";
+            this.lab_InfoReser.Size = new System.Drawing.Size(187, 18);
+            this.lab_InfoReser.TabIndex = 12;
+            this.lab_InfoReser.Text = "Informations sur la réservation";
             // 
             // txtBox_Nom_Reser
             // 
@@ -272,7 +282,7 @@
             // 
             // pan_Arrivee
             // 
-            this.pan_Arrivee.Controls.Add(this.lab_format1);
+            this.pan_Arrivee.Controls.Add(this.lab_InfoCli);
             this.pan_Arrivee.Controls.Add(this.txtBox_NumCham);
             this.pan_Arrivee.Controls.Add(this.txtBox_Telephone);
             this.pan_Arrivee.Controls.Add(this.txtBox_Adresse);
@@ -289,6 +299,16 @@
             this.pan_Arrivee.Name = "pan_Arrivee";
             this.pan_Arrivee.Size = new System.Drawing.Size(514, 180);
             this.pan_Arrivee.TabIndex = 6;
+            // 
+            // lab_InfoCli
+            // 
+            this.lab_InfoCli.AutoSize = true;
+            this.lab_InfoCli.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_InfoCli.Location = new System.Drawing.Point(79, 4);
+            this.lab_InfoCli.Name = "lab_InfoCli";
+            this.lab_InfoCli.Size = new System.Drawing.Size(214, 18);
+            this.lab_InfoCli.TabIndex = 12;
+            this.lab_InfoCli.Text = "Informations sur le client qui arrive";
             // 
             // txtBox_NumCham
             // 
@@ -521,26 +541,6 @@
             this.BS_Arrive.DataMember = "Arrive";
             this.BS_Arrive.DataSource = this.DataSet_Arrivee;
             // 
-            // lab_format1
-            // 
-            this.lab_format1.AutoSize = true;
-            this.lab_format1.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_format1.Location = new System.Drawing.Point(79, 4);
-            this.lab_format1.Name = "lab_format1";
-            this.lab_format1.Size = new System.Drawing.Size(214, 18);
-            this.lab_format1.TabIndex = 12;
-            this.lab_format1.Text = "Informations sur le client qui arrive";
-            // 
-            // lab_format2
-            // 
-            this.lab_format2.AutoSize = true;
-            this.lab_format2.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_format2.Location = new System.Drawing.Point(116, 4);
-            this.lab_format2.Name = "lab_format2";
-            this.lab_format2.Size = new System.Drawing.Size(187, 18);
-            this.lab_format2.TabIndex = 12;
-            this.lab_format2.Text = "Informations sur la réservation";
-            // 
             // Arrivee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -612,7 +612,7 @@
         private Prj_lib_graphique.txtBox_name txtBox_Adresse;
         private Prj_lib_graphique.txtBox_name txtBox_IdCli_Reser;
         private Prj_lib_graphique.txtBox_name txtBox_Nom_Reser;
-        private Prj_lib_graphique.lab_format lab_format2;
-        private Prj_lib_graphique.lab_format lab_format1;
+        private Prj_lib_graphique.lab_format lab_InfoReser;
+        private Prj_lib_graphique.lab_format lab_InfoCli;
     }
 }
