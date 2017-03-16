@@ -77,6 +77,8 @@
             this.TA_TypeCham = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.TypeChamTableAdapter();
             this.TA_Arrive = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.ArriveTableAdapter();
             this.BS_Arrive = new System.Windows.Forms.BindingSource(this.components);
+            this.lab_format1 = new Prj_lib_graphique.lab_format();
+            this.lab_format2 = new Prj_lib_graphique.lab_format();
             ((System.ComponentModel.ISupportInitialize)(this.logo_CB)).BeginInit();
             this.pan_principal.SuspendLayout();
             this.pan_Reser.SuspendLayout();
@@ -134,6 +136,7 @@
             // 
             // pan_Reser
             // 
+            this.pan_Reser.Controls.Add(this.lab_format2);
             this.pan_Reser.Controls.Add(this.txtBox_Nom_Reser);
             this.pan_Reser.Controls.Add(this.txtBox_IdCli_Reser);
             this.pan_Reser.Controls.Add(this.date_DateReser);
@@ -148,14 +151,14 @@
             this.pan_Reser.Controls.Add(this.label10);
             this.pan_Reser.Location = new System.Drawing.Point(701, 3);
             this.pan_Reser.Name = "pan_Reser";
-            this.pan_Reser.Size = new System.Drawing.Size(453, 176);
+            this.pan_Reser.Size = new System.Drawing.Size(453, 180);
             this.pan_Reser.TabIndex = 7;
             // 
             // txtBox_Nom_Reser
             // 
             this.txtBox_Nom_Reser.Enabled = false;
             this.txtBox_Nom_Reser.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_Nom_Reser.Location = new System.Drawing.Point(80, 145);
+            this.txtBox_Nom_Reser.Location = new System.Drawing.Point(81, 152);
             this.txtBox_Nom_Reser.Name = "txtBox_Nom_Reser";
             this.txtBox_Nom_Reser.Size = new System.Drawing.Size(238, 25);
             this.txtBox_Nom_Reser.TabIndex = 9;
@@ -165,7 +168,7 @@
             // 
             this.txtBox_IdCli_Reser.Enabled = false;
             this.txtBox_IdCli_Reser.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_IdCli_Reser.Location = new System.Drawing.Point(99, 117);
+            this.txtBox_IdCli_Reser.Location = new System.Drawing.Point(100, 124);
             this.txtBox_IdCli_Reser.Name = "txtBox_IdCli_Reser";
             this.txtBox_IdCli_Reser.Size = new System.Drawing.Size(63, 25);
             this.txtBox_IdCli_Reser.TabIndex = 9;
@@ -175,7 +178,7 @@
             // 
             this.date_DateReser.Enabled = false;
             this.date_DateReser.Font = new System.Drawing.Font("Californian FB", 11.25F);
-            this.date_DateReser.Location = new System.Drawing.Point(280, 14);
+            this.date_DateReser.Location = new System.Drawing.Point(281, 24);
             this.date_DateReser.Name = "date_DateReser";
             this.date_DateReser.Size = new System.Drawing.Size(155, 25);
             this.date_DateReser.TabIndex = 8;
@@ -184,7 +187,7 @@
             // 
             this.date_ReserFin.Enabled = false;
             this.date_ReserFin.Font = new System.Drawing.Font("Californian FB", 11.25F);
-            this.date_ReserFin.Location = new System.Drawing.Point(118, 87);
+            this.date_ReserFin.Location = new System.Drawing.Point(119, 94);
             this.date_ReserFin.Name = "date_ReserFin";
             this.date_ReserFin.Size = new System.Drawing.Size(200, 25);
             this.date_ReserFin.TabIndex = 7;
@@ -193,7 +196,7 @@
             // 
             this.date_ReserDebut.Enabled = false;
             this.date_ReserDebut.Font = new System.Drawing.Font("Californian FB", 11.25F);
-            this.date_ReserDebut.Location = new System.Drawing.Point(118, 51);
+            this.date_ReserDebut.Location = new System.Drawing.Point(119, 58);
             this.date_ReserDebut.Name = "date_ReserDebut";
             this.date_ReserDebut.Size = new System.Drawing.Size(200, 25);
             this.date_ReserDebut.TabIndex = 7;
@@ -202,7 +205,7 @@
             // 
             this.txtBox_IdReser.Enabled = false;
             this.txtBox_IdReser.Font = new System.Drawing.Font("Californian FB", 11.25F);
-            this.txtBox_IdReser.Location = new System.Drawing.Point(122, 17);
+            this.txtBox_IdReser.Location = new System.Drawing.Point(123, 27);
             this.txtBox_IdReser.Name = "txtBox_IdReser";
             this.txtBox_IdReser.Size = new System.Drawing.Size(59, 25);
             this.txtBox_IdReser.TabIndex = 5;
@@ -211,7 +214,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(16, 90);
+            this.label6.Location = new System.Drawing.Point(17, 97);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 18);
             this.label6.TabIndex = 4;
@@ -221,7 +224,7 @@
             // 
             this.lab_Nom_Reser.AutoSize = true;
             this.lab_Nom_Reser.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_Nom_Reser.Location = new System.Drawing.Point(29, 148);
+            this.lab_Nom_Reser.Location = new System.Drawing.Point(30, 155);
             this.lab_Nom_Reser.Name = "lab_Nom_Reser";
             this.lab_Nom_Reser.Size = new System.Drawing.Size(45, 18);
             this.lab_Nom_Reser.TabIndex = 3;
@@ -231,7 +234,7 @@
             // 
             this.lab_IdCli_Reser.AutoSize = true;
             this.lab_IdCli_Reser.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_IdCli_Reser.Location = new System.Drawing.Point(25, 121);
+            this.lab_IdCli_Reser.Location = new System.Drawing.Point(26, 128);
             this.lab_IdCli_Reser.Name = "lab_IdCli_Reser";
             this.lab_IdCli_Reser.Size = new System.Drawing.Size(68, 18);
             this.lab_IdCli_Reser.TabIndex = 3;
@@ -241,7 +244,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(16, 54);
+            this.label8.Location = new System.Drawing.Point(17, 61);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(96, 18);
             this.label8.TabIndex = 2;
@@ -251,7 +254,7 @@
             // 
             this.lab_DateReser.AutoSize = true;
             this.lab_DateReser.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_DateReser.Location = new System.Drawing.Point(202, 17);
+            this.lab_DateReser.Location = new System.Drawing.Point(203, 27);
             this.lab_DateReser.Name = "lab_DateReser";
             this.lab_DateReser.Size = new System.Drawing.Size(71, 18);
             this.lab_DateReser.TabIndex = 1;
@@ -261,7 +264,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(15, 17);
+            this.label10.Location = new System.Drawing.Point(16, 27);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(101, 18);
             this.label10.TabIndex = 0;
@@ -269,6 +272,7 @@
             // 
             // pan_Arrivee
             // 
+            this.pan_Arrivee.Controls.Add(this.lab_format1);
             this.pan_Arrivee.Controls.Add(this.txtBox_NumCham);
             this.pan_Arrivee.Controls.Add(this.txtBox_Telephone);
             this.pan_Arrivee.Controls.Add(this.txtBox_Adresse);
@@ -283,14 +287,14 @@
             this.pan_Arrivee.Controls.Add(this.lab_IdCli_Arrive);
             this.pan_Arrivee.Location = new System.Drawing.Point(3, 3);
             this.pan_Arrivee.Name = "pan_Arrivee";
-            this.pan_Arrivee.Size = new System.Drawing.Size(514, 176);
+            this.pan_Arrivee.Size = new System.Drawing.Size(514, 180);
             this.pan_Arrivee.TabIndex = 6;
             // 
             // txtBox_NumCham
             // 
             this.txtBox_NumCham.Enabled = false;
             this.txtBox_NumCham.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_NumCham.Location = new System.Drawing.Point(143, 134);
+            this.txtBox_NumCham.Location = new System.Drawing.Point(144, 144);
             this.txtBox_NumCham.Name = "txtBox_NumCham";
             this.txtBox_NumCham.Size = new System.Drawing.Size(77, 25);
             this.txtBox_NumCham.TabIndex = 11;
@@ -300,7 +304,7 @@
             // 
             this.txtBox_Telephone.Enabled = false;
             this.txtBox_Telephone.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_Telephone.Location = new System.Drawing.Point(92, 85);
+            this.txtBox_Telephone.Location = new System.Drawing.Point(93, 104);
             this.txtBox_Telephone.Name = "txtBox_Telephone";
             this.txtBox_Telephone.Size = new System.Drawing.Size(197, 25);
             this.txtBox_Telephone.TabIndex = 10;
@@ -310,7 +314,7 @@
             // 
             this.txtBox_Adresse.Enabled = false;
             this.txtBox_Adresse.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_Adresse.Location = new System.Drawing.Point(81, 50);
+            this.txtBox_Adresse.Location = new System.Drawing.Point(82, 69);
             this.txtBox_Adresse.Name = "txtBox_Adresse";
             this.txtBox_Adresse.Size = new System.Drawing.Size(378, 25);
             this.txtBox_Adresse.TabIndex = 9;
@@ -320,7 +324,7 @@
             // 
             this.txtBox_IdArrive.Enabled = false;
             this.txtBox_IdArrive.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_IdArrive.Location = new System.Drawing.Point(422, 85);
+            this.txtBox_IdArrive.Location = new System.Drawing.Point(423, 104);
             this.txtBox_IdArrive.Name = "txtBox_IdArrive";
             this.txtBox_IdArrive.Size = new System.Drawing.Size(37, 25);
             this.txtBox_IdArrive.TabIndex = 8;
@@ -331,7 +335,7 @@
             // 
             this.lab_IdArrive.AutoSize = true;
             this.lab_IdArrive.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_IdArrive.Location = new System.Drawing.Point(342, 88);
+            this.lab_IdArrive.Location = new System.Drawing.Point(343, 107);
             this.lab_IdArrive.Name = "lab_IdArrive";
             this.lab_IdArrive.Size = new System.Drawing.Size(74, 18);
             this.lab_IdArrive.TabIndex = 7;
@@ -341,7 +345,7 @@
             // 
             this.txtBox_Nom_Arrive.Enabled = false;
             this.txtBox_Nom_Arrive.Font = new System.Drawing.Font("Californian FB", 11.25F);
-            this.txtBox_Nom_Arrive.Location = new System.Drawing.Point(226, 14);
+            this.txtBox_Nom_Arrive.Location = new System.Drawing.Point(227, 33);
             this.txtBox_Nom_Arrive.Name = "txtBox_Nom_Arrive";
             this.txtBox_Nom_Arrive.Size = new System.Drawing.Size(233, 25);
             this.txtBox_Nom_Arrive.TabIndex = 5;
@@ -350,7 +354,7 @@
             // 
             this.txtBox_IdCli_Arrive.Enabled = false;
             this.txtBox_IdCli_Arrive.Font = new System.Drawing.Font("Californian FB", 11.25F);
-            this.txtBox_IdCli_Arrive.Location = new System.Drawing.Point(89, 17);
+            this.txtBox_IdCli_Arrive.Location = new System.Drawing.Point(90, 36);
             this.txtBox_IdCli_Arrive.Name = "txtBox_IdCli_Arrive";
             this.txtBox_IdCli_Arrive.Size = new System.Drawing.Size(59, 25);
             this.txtBox_IdCli_Arrive.TabIndex = 5;
@@ -359,7 +363,7 @@
             // 
             this.lab_NumCham.AutoSize = true;
             this.lab_NumCham.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_NumCham.Location = new System.Drawing.Point(14, 137);
+            this.lab_NumCham.Location = new System.Drawing.Point(15, 147);
             this.lab_NumCham.Name = "lab_NumCham";
             this.lab_NumCham.Size = new System.Drawing.Size(123, 18);
             this.lab_NumCham.TabIndex = 3;
@@ -369,7 +373,7 @@
             // 
             this.lab_Telephone.AutoSize = true;
             this.lab_Telephone.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_Telephone.Location = new System.Drawing.Point(15, 88);
+            this.lab_Telephone.Location = new System.Drawing.Point(16, 107);
             this.lab_Telephone.Name = "lab_Telephone";
             this.lab_Telephone.Size = new System.Drawing.Size(76, 18);
             this.lab_Telephone.TabIndex = 2;
@@ -379,7 +383,7 @@
             // 
             this.lab_Adresse.AutoSize = true;
             this.lab_Adresse.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_Adresse.Location = new System.Drawing.Point(15, 53);
+            this.lab_Adresse.Location = new System.Drawing.Point(16, 72);
             this.lab_Adresse.Name = "lab_Adresse";
             this.lab_Adresse.Size = new System.Drawing.Size(60, 18);
             this.lab_Adresse.TabIndex = 1;
@@ -389,7 +393,7 @@
             // 
             this.lab_Nom.AutoSize = true;
             this.lab_Nom.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_Nom.Location = new System.Drawing.Point(175, 17);
+            this.lab_Nom.Location = new System.Drawing.Point(176, 36);
             this.lab_Nom.Name = "lab_Nom";
             this.lab_Nom.Size = new System.Drawing.Size(45, 18);
             this.lab_Nom.TabIndex = 0;
@@ -399,7 +403,7 @@
             // 
             this.lab_IdCli_Arrive.AutoSize = true;
             this.lab_IdCli_Arrive.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_IdCli_Arrive.Location = new System.Drawing.Point(15, 17);
+            this.lab_IdCli_Arrive.Location = new System.Drawing.Point(16, 36);
             this.lab_IdCli_Arrive.Name = "lab_IdCli_Arrive";
             this.lab_IdCli_Arrive.Size = new System.Drawing.Size(68, 18);
             this.lab_IdCli_Arrive.TabIndex = 0;
@@ -517,6 +521,26 @@
             this.BS_Arrive.DataMember = "Arrive";
             this.BS_Arrive.DataSource = this.DataSet_Arrivee;
             // 
+            // lab_format1
+            // 
+            this.lab_format1.AutoSize = true;
+            this.lab_format1.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_format1.Location = new System.Drawing.Point(79, 4);
+            this.lab_format1.Name = "lab_format1";
+            this.lab_format1.Size = new System.Drawing.Size(214, 18);
+            this.lab_format1.TabIndex = 12;
+            this.lab_format1.Text = "Informations sur le client qui arrive";
+            // 
+            // lab_format2
+            // 
+            this.lab_format2.AutoSize = true;
+            this.lab_format2.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_format2.Location = new System.Drawing.Point(116, 4);
+            this.lab_format2.Name = "lab_format2";
+            this.lab_format2.Size = new System.Drawing.Size(187, 18);
+            this.lab_format2.TabIndex = 12;
+            this.lab_format2.Text = "Informations sur la réservation";
+            // 
             // Arrivee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -588,5 +612,7 @@
         private Prj_lib_graphique.txtBox_name txtBox_Adresse;
         private Prj_lib_graphique.txtBox_name txtBox_IdCli_Reser;
         private Prj_lib_graphique.txtBox_name txtBox_Nom_Reser;
+        private Prj_lib_graphique.lab_format lab_format2;
+        private Prj_lib_graphique.lab_format lab_format1;
     }
 }

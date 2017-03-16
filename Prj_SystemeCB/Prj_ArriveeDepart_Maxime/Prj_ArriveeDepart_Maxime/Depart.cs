@@ -14,5 +14,12 @@ namespace Prj_ArriveeDepart_Maxime
         {
             InitializeComponent();
         }
+
+        private void Depart_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dataSet_Depart.Depart' table. You can move, or remove it, as needed.
+            this.departTableAdapter.Fill(this.dataSet_Depart.Depart);
+
+        }
     }
 }
