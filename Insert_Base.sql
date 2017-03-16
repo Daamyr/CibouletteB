@@ -245,21 +245,21 @@ INSERT INTO TypeTrx(CodTypTrx,DescTrx,Nature) VALUES ('09','PAIEMENT','CR')
 *		INSERTION TRX
 *
 ***************************************/
-insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('09/02/2017', 299.99, 1, '08', 1, '0102', 1 ,1)
-insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('09/02/2017', 005.00, 0, '07', 1, '0102', 1 ,2)
-insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('09/02/2017', 025.00, 1, '05', 1, '0102', 1 ,3)
-insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('02/04/2017', 299.99, 0, '08', 2, '0102', 20 ,4)
-insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('02/04/2017', 005.22, 1, '05', 2, '0102', 20 ,5)
-insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('02/04/2017', 056.00, 1, '06', 2, '0102', 20 ,6)
-insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('05/02/2017', 699.99, 0, '01', 2, '0105', 45 ,7) -- tite note qui fait les changer pcq stau hazard
-insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('05/02/2017', 025.78, 0, '05', 2, '0105', 45 ,8)
-insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('05/02/2017', 209.00, 1, '03', 2, '0105', 45 ,7)
-insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('02/10/2026', 299.99, 0, '02', 4, '0304', 8 ,6)
-insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('02/03/2017', 048.70, 1, '05', 4, '0304', 8 ,5)
-insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('02/03/2017', 420.00, 1, '06', 4, '0304', 8 ,4)
-insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('06/03/2017', 299.99, 0, '02', 3, '0202', 6 ,3)
-insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('06/03/2017', 048.70, 0, '05', 3, '0202', 6 ,2)
-insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('06/03/2017', 420.00, 0, '06', 3, '0202', 6 ,1)
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('05/06/2016', 299.99, 1, '08', 1, '0102', 1 ,1)
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('05/06/2016', 005.00, 0, '07', 1, '0102', 1 ,2)
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('06/06/2016', 025.00, 1, '05', 1, '0102', 1 ,3)
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('06/06/2016', 299.99, 0, '08', 1, '0102', 20 ,4)
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('10/02/2017', 005.22, 1, '05', 2, '0102', 20 ,5)
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('12/02/2017', 056.00, 1, '06', 2, '0102', 20 ,6)
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('10/02/2017', 699.99, 0, '01', 2, '0105', 45 ,7) -- tite note qui fait les changer pcq stau hazard
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('11/02/2017', 025.78, 0, '05', 2, '0105', 45 ,8)
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('11/02/2017', 209.00, 1, '03', 2, '0105', 45 ,7)
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('06/03/2017', 299.99, 0, '02', 3, '0202', 8 ,6)
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('04/03/2017', 048.70, 1, '05', 3, '0202', 8 ,5)
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('04/03/2017', 420.00, 1, '06', 3, '0202', 8 ,4)
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('15/03/2017', 299.99, 0, '02', 4, '0304', 6 ,3)
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('10/03/2017', 048.70, 0, '05', 4, '0304', 6 ,2)
+insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli , IdArrive) values ('10/03/2017', 420.00, 0, '06', 4, '0304', 6 ,1)
 
 
 /**************************************

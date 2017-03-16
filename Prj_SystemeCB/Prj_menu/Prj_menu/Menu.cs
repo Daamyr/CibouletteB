@@ -16,5 +16,10 @@ namespace Prj_menu
         {
             InitializeComponent();
         }
+
+        private void onNonImplemented(object sender, EventArgs e)
+        {
+            MessageBox.Show("Cette fonction n'est pas encore implémentée.", "Impossible d'accèder à votre requette!");
+        }
     }
 }
