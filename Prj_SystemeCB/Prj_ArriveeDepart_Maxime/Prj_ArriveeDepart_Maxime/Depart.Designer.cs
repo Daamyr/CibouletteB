@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,9 +37,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -65,11 +57,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label23);
-            this.panel2.Controls.Add(this.label16);
-            this.panel2.Controls.Add(this.label15);
-            this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
@@ -81,56 +68,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(514, 197);
             this.panel2.TabIndex = 2;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(130, 126);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(42, 18);
-            this.label23.TabIndex = 6;
-            this.label23.Text = "Value";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(144, 144);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(42, 18);
-            this.label16.TabIndex = 6;
-            this.label16.Text = "Value";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(97, 88);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(42, 18);
-            this.label15.TabIndex = 6;
-            this.label15.Text = "Value";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(97, 53);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(42, 18);
-            this.label14.TabIndex = 6;
-            this.label14.Text = "Value";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(226, 17);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(42, 18);
-            this.label13.TabIndex = 6;
-            this.label13.Text = "Value";
             // 
             // textBox1
             // 
@@ -201,9 +138,6 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.label21);
-            this.panel3.Controls.Add(this.label20);
-            this.panel3.Controls.Add(this.label19);
             this.panel3.Controls.Add(this.textBox3);
             this.panel3.Controls.Add(this.textBox2);
             this.panel3.Controls.Add(this.label6);
@@ -215,36 +149,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(453, 176);
             this.panel3.TabIndex = 7;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(122, 101);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(42, 18);
-            this.label21.TabIndex = 6;
-            this.label21.Text = "Value";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(122, 64);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(42, 18);
-            this.label20.TabIndex = 6;
-            this.label20.Text = "Value";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(279, 17);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(42, 18);
-            this.label19.TabIndex = 6;
-            this.label19.Text = "Value";
             // 
             // textBox3
             // 
@@ -329,10 +233,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -341,9 +241,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
@@ -351,6 +248,5 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label23;
     }
 }

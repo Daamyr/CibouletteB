@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pan_Reser = new System.Windows.Forms.Panel();
+            this.txtBox_Nom_Reser = new Prj_lib_graphique.txtBox_name();
+            this.txtBox_IdCli_Reser = new Prj_lib_graphique.txtBox_name();
             this.date_DateReser = new System.Windows.Forms.DateTimePicker();
             this.date_ReserFin = new System.Windows.Forms.DateTimePicker();
             this.date_ReserDebut = new System.Windows.Forms.DateTimePicker();
@@ -45,8 +47,12 @@
             this.lab_DateReser = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.pan_Arrivee = new System.Windows.Forms.Panel();
+            this.txtBox_NumCham = new Prj_lib_graphique.txtBox_name();
+            this.txtBox_Telephone = new Prj_lib_graphique.txtBox_name();
+            this.txtBox_Adresse = new Prj_lib_graphique.txtBox_name();
             this.txtBox_IdArrive = new Prj_lib_graphique.txtBox_name();
             this.lab_IdArrive = new Prj_lib_graphique.lab_format();
+            this.txtBox_Nom_Arrive = new System.Windows.Forms.TextBox();
             this.txtBox_IdCli_Arrive = new System.Windows.Forms.TextBox();
             this.lab_NumCham = new System.Windows.Forms.Label();
             this.lab_Telephone = new System.Windows.Forms.Label();
@@ -71,12 +77,6 @@
             this.TA_TypeCham = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.TypeChamTableAdapter();
             this.TA_Arrive = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.ArriveTableAdapter();
             this.BS_Arrive = new System.Windows.Forms.BindingSource(this.components);
-            this.txtBox_Nom_Arrive = new System.Windows.Forms.TextBox();
-            this.txtBox_Adresse = new Prj_lib_graphique.txtBox_name();
-            this.txtBox_Telephone = new Prj_lib_graphique.txtBox_name();
-            this.txtBox_NumCham = new Prj_lib_graphique.txtBox_name();
-            this.txtBox_IdCli_Reser = new Prj_lib_graphique.txtBox_name();
-            this.txtBox_Nom_Reser = new Prj_lib_graphique.txtBox_name();
             ((System.ComponentModel.ISupportInitialize)(this.logo_CB)).BeginInit();
             this.pan_principal.SuspendLayout();
             this.pan_Reser.SuspendLayout();
@@ -94,6 +94,7 @@
             // btn_cancel
             // 
             this.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancel.Click += new System.EventHandler(this.onNonImplemented);
             // 
             // btn_previous
             // 
@@ -108,18 +109,22 @@
             // btn_save
             // 
             this.btn_save.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_save.Click += new System.EventHandler(this.onNonImplemented);
             // 
             // btn_add
             // 
             this.btn_add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_add.Click += new System.EventHandler(this.onNonImplemented);
             // 
             // btn_delete
             // 
             this.btn_delete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_delete.Click += new System.EventHandler(this.onNonImplemented);
             // 
             // btn_edit
             // 
             this.btn_edit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_edit.Click += new System.EventHandler(this.onNonImplemented);
             // 
             // pan_principal
             // 
@@ -145,6 +150,26 @@
             this.pan_Reser.Name = "pan_Reser";
             this.pan_Reser.Size = new System.Drawing.Size(453, 176);
             this.pan_Reser.TabIndex = 7;
+            // 
+            // txtBox_Nom_Reser
+            // 
+            this.txtBox_Nom_Reser.Enabled = false;
+            this.txtBox_Nom_Reser.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_Nom_Reser.Location = new System.Drawing.Point(80, 145);
+            this.txtBox_Nom_Reser.Name = "txtBox_Nom_Reser";
+            this.txtBox_Nom_Reser.Size = new System.Drawing.Size(238, 25);
+            this.txtBox_Nom_Reser.TabIndex = 9;
+            this.txtBox_Nom_Reser.Text = "txtBox";
+            // 
+            // txtBox_IdCli_Reser
+            // 
+            this.txtBox_IdCli_Reser.Enabled = false;
+            this.txtBox_IdCli_Reser.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_IdCli_Reser.Location = new System.Drawing.Point(99, 117);
+            this.txtBox_IdCli_Reser.Name = "txtBox_IdCli_Reser";
+            this.txtBox_IdCli_Reser.Size = new System.Drawing.Size(63, 25);
+            this.txtBox_IdCli_Reser.TabIndex = 9;
+            this.txtBox_IdCli_Reser.Text = "txtBox";
             // 
             // date_DateReser
             // 
@@ -261,6 +286,36 @@
             this.pan_Arrivee.Size = new System.Drawing.Size(514, 176);
             this.pan_Arrivee.TabIndex = 6;
             // 
+            // txtBox_NumCham
+            // 
+            this.txtBox_NumCham.Enabled = false;
+            this.txtBox_NumCham.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_NumCham.Location = new System.Drawing.Point(143, 134);
+            this.txtBox_NumCham.Name = "txtBox_NumCham";
+            this.txtBox_NumCham.Size = new System.Drawing.Size(77, 25);
+            this.txtBox_NumCham.TabIndex = 11;
+            this.txtBox_NumCham.Text = "txtBox";
+            // 
+            // txtBox_Telephone
+            // 
+            this.txtBox_Telephone.Enabled = false;
+            this.txtBox_Telephone.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_Telephone.Location = new System.Drawing.Point(92, 85);
+            this.txtBox_Telephone.Name = "txtBox_Telephone";
+            this.txtBox_Telephone.Size = new System.Drawing.Size(197, 25);
+            this.txtBox_Telephone.TabIndex = 10;
+            this.txtBox_Telephone.Text = "txtBox";
+            // 
+            // txtBox_Adresse
+            // 
+            this.txtBox_Adresse.Enabled = false;
+            this.txtBox_Adresse.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_Adresse.Location = new System.Drawing.Point(81, 50);
+            this.txtBox_Adresse.Name = "txtBox_Adresse";
+            this.txtBox_Adresse.Size = new System.Drawing.Size(378, 25);
+            this.txtBox_Adresse.TabIndex = 9;
+            this.txtBox_Adresse.Text = "txtBox";
+            // 
             // txtBox_IdArrive
             // 
             this.txtBox_IdArrive.Enabled = false;
@@ -281,6 +336,15 @@
             this.lab_IdArrive.Size = new System.Drawing.Size(74, 18);
             this.lab_IdArrive.TabIndex = 7;
             this.lab_IdArrive.Text = "N° Arrivée :";
+            // 
+            // txtBox_Nom_Arrive
+            // 
+            this.txtBox_Nom_Arrive.Enabled = false;
+            this.txtBox_Nom_Arrive.Font = new System.Drawing.Font("Californian FB", 11.25F);
+            this.txtBox_Nom_Arrive.Location = new System.Drawing.Point(226, 14);
+            this.txtBox_Nom_Arrive.Name = "txtBox_Nom_Arrive";
+            this.txtBox_Nom_Arrive.Size = new System.Drawing.Size(233, 25);
+            this.txtBox_Nom_Arrive.TabIndex = 5;
             // 
             // txtBox_IdCli_Arrive
             // 
@@ -363,8 +427,8 @@
             // 
             this.noChamDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.noChamDataGridViewTextBoxColumn.DataPropertyName = "NoCham";
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Californian FB", 11.25F);
-            this.noChamDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Californian FB", 11.25F);
+            this.noChamDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.noChamDataGridViewTextBoxColumn.HeaderText = "NoCham";
             this.noChamDataGridViewTextBoxColumn.Name = "noChamDataGridViewTextBoxColumn";
             this.noChamDataGridViewTextBoxColumn.ReadOnly = true;
@@ -373,8 +437,8 @@
             // 
             this.TYPECHAM.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.TYPECHAM.DataPropertyName = "DesTyp";
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Californian FB", 11.25F);
-            this.TYPECHAM.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Californian FB", 11.25F);
+            this.TYPECHAM.DefaultCellStyle = dataGridViewCellStyle2;
             this.TYPECHAM.HeaderText = "Type de Chambre";
             this.TYPECHAM.Name = "TYPECHAM";
             this.TYPECHAM.ReadOnly = true;
@@ -383,8 +447,8 @@
             // 
             this.Prix.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Prix.DataPropertyName = "Prix";
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Californian FB", 11.25F);
-            this.Prix.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Californian FB", 11.25F);
+            this.Prix.DefaultCellStyle = dataGridViewCellStyle3;
             this.Prix.HeaderText = "Prix";
             this.Prix.Name = "Prix";
             this.Prix.ReadOnly = true;
@@ -393,8 +457,8 @@
             // 
             this.attribueeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.attribueeDataGridViewTextBoxColumn.DataPropertyName = "Attribuee";
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Californian FB", 11.25F);
-            this.attribueeDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Californian FB", 11.25F);
+            this.attribueeDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.attribueeDataGridViewTextBoxColumn.HeaderText = "Attribuee";
             this.attribueeDataGridViewTextBoxColumn.Name = "attribueeDataGridViewTextBoxColumn";
             this.attribueeDataGridViewTextBoxColumn.ReadOnly = true;
@@ -452,60 +516,6 @@
             // 
             this.BS_Arrive.DataMember = "Arrive";
             this.BS_Arrive.DataSource = this.DataSet_Arrivee;
-            // 
-            // txtBox_Nom_Arrive
-            // 
-            this.txtBox_Nom_Arrive.Enabled = false;
-            this.txtBox_Nom_Arrive.Font = new System.Drawing.Font("Californian FB", 11.25F);
-            this.txtBox_Nom_Arrive.Location = new System.Drawing.Point(226, 14);
-            this.txtBox_Nom_Arrive.Name = "txtBox_Nom_Arrive";
-            this.txtBox_Nom_Arrive.Size = new System.Drawing.Size(233, 25);
-            this.txtBox_Nom_Arrive.TabIndex = 5;
-            // 
-            // txtBox_Adresse
-            // 
-            this.txtBox_Adresse.Enabled = false;
-            this.txtBox_Adresse.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_Adresse.Location = new System.Drawing.Point(81, 50);
-            this.txtBox_Adresse.Name = "txtBox_Adresse";
-            this.txtBox_Adresse.Size = new System.Drawing.Size(378, 25);
-            this.txtBox_Adresse.TabIndex = 9;
-            // 
-            // txtBox_Telephone
-            // 
-            this.txtBox_Telephone.Enabled = false;
-            this.txtBox_Telephone.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_Telephone.Location = new System.Drawing.Point(92, 85);
-            this.txtBox_Telephone.Name = "txtBox_Telephone";
-            this.txtBox_Telephone.Size = new System.Drawing.Size(197, 25);
-            this.txtBox_Telephone.TabIndex = 10;
-            // 
-            // txtBox_NumCham
-            // 
-            this.txtBox_NumCham.Enabled = false;
-            this.txtBox_NumCham.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_NumCham.Location = new System.Drawing.Point(143, 134);
-            this.txtBox_NumCham.Name = "txtBox_NumCham";
-            this.txtBox_NumCham.Size = new System.Drawing.Size(77, 25);
-            this.txtBox_NumCham.TabIndex = 11;
-            // 
-            // txtBox_IdCli_Reser
-            // 
-            this.txtBox_IdCli_Reser.Enabled = false;
-            this.txtBox_IdCli_Reser.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_IdCli_Reser.Location = new System.Drawing.Point(99, 117);
-            this.txtBox_IdCli_Reser.Name = "txtBox_IdCli_Reser";
-            this.txtBox_IdCli_Reser.Size = new System.Drawing.Size(63, 25);
-            this.txtBox_IdCli_Reser.TabIndex = 9;
-            // 
-            // txtBox_Nom_Reser
-            // 
-            this.txtBox_Nom_Reser.Enabled = false;
-            this.txtBox_Nom_Reser.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_Nom_Reser.Location = new System.Drawing.Point(80, 145);
-            this.txtBox_Nom_Reser.Name = "txtBox_Nom_Reser";
-            this.txtBox_Nom_Reser.Size = new System.Drawing.Size(238, 25);
-            this.txtBox_Nom_Reser.TabIndex = 9;
             // 
             // Arrivee
             // 
