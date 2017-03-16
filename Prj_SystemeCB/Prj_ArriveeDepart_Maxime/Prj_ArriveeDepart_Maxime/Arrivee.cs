@@ -20,6 +20,13 @@ namespace Prj_ArriveeDepart_Maxime
         {
             // TODO: This line of code loads data into the 'DataSet_Arrivee.TypeCham' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'DataSet_Arrivee.De' table. You can move, or remove it, as needed.
+            System.Windows.Forms.ToolTip tooltip_Add = new System.Windows.Forms.ToolTip();
+            System.Windows.Forms.ToolTip tooltip_Delete = new System.Windows.Forms.ToolTip();
+            System.Windows.Forms.ToolTip tooltip_Edit = new System.Windows.Forms.ToolTip();
+            tooltip_Add.SetToolTip(this.btn_add, "Cliquez pour ajouter une arrivée");
+            tooltip_Delete.SetToolTip(this.btn_delete, "Cliquez pour supprimer une arrivée");
+            tooltip_Edit.SetToolTip(this.btn_edit, "Cliquez pour  modifier une arrivée");
+            
             fill();
 
             BS_Arrive.Position = 0;
@@ -51,7 +58,7 @@ namespace Prj_ArriveeDepart_Maxime
             txtBox_IdCli_Arrive.DataBindings.Add("Text", BS_Arrive, "IdCli");
             txtBox_IdArrive.DataBindings.Add("Text", BS_Arrive, "IdArrive");
 
-            label16.DataBindings.Add("Text", BS_Arrive, "NoCHam");
+            txtBox_NumCham.DataBindings.Add("Text", BS_Arrive, "NoCHam");
 
         }
 
@@ -63,7 +70,7 @@ namespace Prj_ArriveeDepart_Maxime
 
             date_ReserDebut.DataBindings.Add("Value", BS_Reser, "DateDebut");
             date_ReserFin.DataBindings.Add("Value", BS_Reser, "DateFin");
-            label22.DataBindings.Add("Text", BS_Reser, "IdCli");
+            txtBox_IdCli_Reser.DataBindings.Add("Text", BS_Reser, "IdCli");
             date_DateReser.DataBindings.Add("Value", BS_Reser, "DateReser");
 
 
@@ -71,9 +78,9 @@ namespace Prj_ArriveeDepart_Maxime
 
         private void lien_Client()
         {
-            label13.DataBindings.Add("Text", BS_Client, "Nom");
-            label14.DataBindings.Add("Text", BS_Client, "Adresse");
-            label15.DataBindings.Add("Text", BS_Client, "Telephone");
+            txtBox_Nom_Arrive.DataBindings.Add("Text", BS_Client, "Nom");
+            txtBox_Adresse.DataBindings.Add("Text", BS_Client, "Adresse");
+            txtBox_Telephone.DataBindings.Add("Text", BS_Client, "Telephone");
         }
 
         private void trouve_ReservClient()
@@ -85,7 +92,7 @@ namespace Prj_ArriveeDepart_Maxime
                 BS_Client.Position = BS_Client.Find("IdCli", DataSet_Arrivee.Tables["Arrive"].Rows[BS_Arrive.Position]["IdCli"]);
 
             }
-            catch(Exception eee) { }
+            catch(Exception) { }
         }
 
         private void lien_De()
@@ -139,7 +146,7 @@ namespace Prj_ArriveeDepart_Maxime
         private void txtBox_IdArrive_TextChanged(object sender, EventArgs e)
         {
             trouve_ReservClient();
-            label24.Text = DataSet_Arrivee.Tables["Reservation"].Rows[BS_Reser.Position].GetParentRow("FK_RESCLI")["Nom"].ToString();
+            txtBox_Nom_Reser.Text = DataSet_Arrivee.Tables["Reservation"].Rows[BS_Reser.Position].GetParentRow("FK_RESCLI")["Nom"].ToString();
             try
             {
                 this.DGV_Arrivee.Sort(DGV_Arrivee.Columns["attribueeDataGridViewTextBoxColumn"], ListSortDirection.Descending);

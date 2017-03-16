@@ -29,16 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pan_Reser = new System.Windows.Forms.Panel();
             this.date_DateReser = new System.Windows.Forms.DateTimePicker();
             this.date_ReserFin = new System.Windows.Forms.DateTimePicker();
             this.date_ReserDebut = new System.Windows.Forms.DateTimePicker();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
             this.txtBox_IdReser = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.lab_Nom_Reser = new System.Windows.Forms.Label();
@@ -49,10 +47,6 @@
             this.pan_Arrivee = new System.Windows.Forms.Panel();
             this.txtBox_IdArrive = new Prj_lib_graphique.txtBox_name();
             this.lab_IdArrive = new Prj_lib_graphique.lab_format();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.txtBox_IdCli_Arrive = new System.Windows.Forms.TextBox();
             this.lab_NumCham = new System.Windows.Forms.Label();
             this.lab_Telephone = new System.Windows.Forms.Label();
@@ -77,8 +71,14 @@
             this.TA_TypeCham = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.TypeChamTableAdapter();
             this.TA_Arrive = new Prj_ArriveeDepart_Maxime.DataSet_ArriveeTableAdapters.ArriveTableAdapter();
             this.BS_Arrive = new System.Windows.Forms.BindingSource(this.components);
+            this.txtBox_Nom_Arrive = new System.Windows.Forms.TextBox();
+            this.txtBox_Adresse = new Prj_lib_graphique.txtBox_name();
+            this.txtBox_Telephone = new Prj_lib_graphique.txtBox_name();
+            this.txtBox_NumCham = new Prj_lib_graphique.txtBox_name();
+            this.txtBox_IdCli_Reser = new Prj_lib_graphique.txtBox_name();
+            this.txtBox_Nom_Reser = new Prj_lib_graphique.txtBox_name();
             ((System.ComponentModel.ISupportInitialize)(this.logo_CB)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.pan_principal.SuspendLayout();
             this.pan_Reser.SuspendLayout();
             this.pan_Arrivee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Arrivee)).BeginInit();
@@ -91,31 +91,49 @@
             ((System.ComponentModel.ISupportInitialize)(this.BS_Arrive)).BeginInit();
             this.SuspendLayout();
             // 
+            // btn_cancel
+            // 
+            this.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            // 
             // btn_previous
             // 
+            this.btn_previous.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_previous.Click += new System.EventHandler(this.btn_previous1_Click);
             // 
             // btn_next
             // 
+            this.btn_next.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_next.Click += new System.EventHandler(this.btn_next1_Click);
+            // 
+            // btn_save
+            // 
+            this.btn_save.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
             // btn_add
             // 
             this.btn_add.Cursor = System.Windows.Forms.Cursors.Hand;
             // 
-            // panel1
+            // btn_delete
             // 
-            this.panel1.Controls.Add(this.DGV_Arrivee);
-            this.panel1.Controls.Add(this.pan_Reser);
-            this.panel1.Controls.Add(this.pan_Arrivee);
+            this.btn_delete.Cursor = System.Windows.Forms.Cursors.Hand;
+            // 
+            // btn_edit
+            // 
+            this.btn_edit.Cursor = System.Windows.Forms.Cursors.Hand;
+            // 
+            // pan_principal
+            // 
+            this.pan_principal.Controls.Add(this.DGV_Arrivee);
+            this.pan_principal.Controls.Add(this.pan_Reser);
+            this.pan_principal.Controls.Add(this.pan_Arrivee);
             // 
             // pan_Reser
             // 
+            this.pan_Reser.Controls.Add(this.txtBox_Nom_Reser);
+            this.pan_Reser.Controls.Add(this.txtBox_IdCli_Reser);
             this.pan_Reser.Controls.Add(this.date_DateReser);
             this.pan_Reser.Controls.Add(this.date_ReserFin);
             this.pan_Reser.Controls.Add(this.date_ReserDebut);
-            this.pan_Reser.Controls.Add(this.label24);
-            this.pan_Reser.Controls.Add(this.label22);
             this.pan_Reser.Controls.Add(this.txtBox_IdReser);
             this.pan_Reser.Controls.Add(this.label6);
             this.pan_Reser.Controls.Add(this.lab_Nom_Reser);
@@ -134,14 +152,14 @@
             this.date_DateReser.Font = new System.Drawing.Font("Californian FB", 11.25F);
             this.date_DateReser.Location = new System.Drawing.Point(280, 14);
             this.date_DateReser.Name = "date_DateReser";
-            this.date_DateReser.Size = new System.Drawing.Size(136, 25);
+            this.date_DateReser.Size = new System.Drawing.Size(155, 25);
             this.date_DateReser.TabIndex = 8;
             // 
             // date_ReserFin
             // 
             this.date_ReserFin.Enabled = false;
             this.date_ReserFin.Font = new System.Drawing.Font("Californian FB", 11.25F);
-            this.date_ReserFin.Location = new System.Drawing.Point(117, 97);
+            this.date_ReserFin.Location = new System.Drawing.Point(118, 87);
             this.date_ReserFin.Name = "date_ReserFin";
             this.date_ReserFin.Size = new System.Drawing.Size(200, 25);
             this.date_ReserFin.TabIndex = 7;
@@ -150,30 +168,10 @@
             // 
             this.date_ReserDebut.Enabled = false;
             this.date_ReserDebut.Font = new System.Drawing.Font("Californian FB", 11.25F);
-            this.date_ReserDebut.Location = new System.Drawing.Point(117, 61);
+            this.date_ReserDebut.Location = new System.Drawing.Point(118, 51);
             this.date_ReserDebut.Name = "date_ReserDebut";
             this.date_ReserDebut.Size = new System.Drawing.Size(200, 25);
             this.date_ReserDebut.TabIndex = 7;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(122, 147);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(42, 18);
-            this.label24.TabIndex = 6;
-            this.label24.Text = "Value";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(122, 129);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(42, 18);
-            this.label22.TabIndex = 6;
-            this.label22.Text = "Value";
             // 
             // txtBox_IdReser
             // 
@@ -188,7 +186,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(15, 100);
+            this.label6.Location = new System.Drawing.Point(16, 90);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 18);
             this.label6.TabIndex = 4;
@@ -198,7 +196,7 @@
             // 
             this.lab_Nom_Reser.AutoSize = true;
             this.lab_Nom_Reser.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_Nom_Reser.Location = new System.Drawing.Point(15, 147);
+            this.lab_Nom_Reser.Location = new System.Drawing.Point(29, 148);
             this.lab_Nom_Reser.Name = "lab_Nom_Reser";
             this.lab_Nom_Reser.Size = new System.Drawing.Size(45, 18);
             this.lab_Nom_Reser.TabIndex = 3;
@@ -208,7 +206,7 @@
             // 
             this.lab_IdCli_Reser.AutoSize = true;
             this.lab_IdCli_Reser.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_IdCli_Reser.Location = new System.Drawing.Point(15, 129);
+            this.lab_IdCli_Reser.Location = new System.Drawing.Point(25, 121);
             this.lab_IdCli_Reser.Name = "lab_IdCli_Reser";
             this.lab_IdCli_Reser.Size = new System.Drawing.Size(68, 18);
             this.lab_IdCli_Reser.TabIndex = 3;
@@ -218,7 +216,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(15, 64);
+            this.label8.Location = new System.Drawing.Point(16, 54);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(96, 18);
             this.label8.TabIndex = 2;
@@ -246,12 +244,12 @@
             // 
             // pan_Arrivee
             // 
+            this.pan_Arrivee.Controls.Add(this.txtBox_NumCham);
+            this.pan_Arrivee.Controls.Add(this.txtBox_Telephone);
+            this.pan_Arrivee.Controls.Add(this.txtBox_Adresse);
             this.pan_Arrivee.Controls.Add(this.txtBox_IdArrive);
             this.pan_Arrivee.Controls.Add(this.lab_IdArrive);
-            this.pan_Arrivee.Controls.Add(this.label16);
-            this.pan_Arrivee.Controls.Add(this.label15);
-            this.pan_Arrivee.Controls.Add(this.label14);
-            this.pan_Arrivee.Controls.Add(this.label13);
+            this.pan_Arrivee.Controls.Add(this.txtBox_Nom_Arrive);
             this.pan_Arrivee.Controls.Add(this.txtBox_IdCli_Arrive);
             this.pan_Arrivee.Controls.Add(this.lab_NumCham);
             this.pan_Arrivee.Controls.Add(this.lab_Telephone);
@@ -267,61 +265,22 @@
             // 
             this.txtBox_IdArrive.Enabled = false;
             this.txtBox_IdArrive.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_IdArrive.Location = new System.Drawing.Point(389, 85);
+            this.txtBox_IdArrive.Location = new System.Drawing.Point(422, 85);
             this.txtBox_IdArrive.Name = "txtBox_IdArrive";
             this.txtBox_IdArrive.Size = new System.Drawing.Size(37, 25);
             this.txtBox_IdArrive.TabIndex = 8;
+            this.txtBox_IdArrive.Text = "txtBox";
             this.txtBox_IdArrive.TextChanged += new System.EventHandler(this.txtBox_IdArrive_TextChanged);
             // 
             // lab_IdArrive
             // 
             this.lab_IdArrive.AutoSize = true;
             this.lab_IdArrive.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lab_IdArrive.Location = new System.Drawing.Point(309, 88);
+            this.lab_IdArrive.Location = new System.Drawing.Point(342, 88);
             this.lab_IdArrive.Name = "lab_IdArrive";
             this.lab_IdArrive.Size = new System.Drawing.Size(74, 18);
             this.lab_IdArrive.TabIndex = 7;
             this.lab_IdArrive.Text = "N° Arrivée :";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(143, 137);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(42, 18);
-            this.label16.TabIndex = 6;
-            this.label16.Text = "Value";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(97, 88);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(42, 18);
-            this.label15.TabIndex = 6;
-            this.label15.Text = "Value";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(97, 53);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(42, 18);
-            this.label14.TabIndex = 6;
-            this.label14.Text = "Value";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(226, 17);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(42, 18);
-            this.label13.TabIndex = 6;
-            this.label13.Text = "Value";
             // 
             // txtBox_IdCli_Arrive
             // 
@@ -404,8 +363,8 @@
             // 
             this.noChamDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.noChamDataGridViewTextBoxColumn.DataPropertyName = "NoCham";
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Californian FB", 11.25F);
-            this.noChamDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Californian FB", 11.25F);
+            this.noChamDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle13;
             this.noChamDataGridViewTextBoxColumn.HeaderText = "NoCham";
             this.noChamDataGridViewTextBoxColumn.Name = "noChamDataGridViewTextBoxColumn";
             this.noChamDataGridViewTextBoxColumn.ReadOnly = true;
@@ -414,8 +373,8 @@
             // 
             this.TYPECHAM.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.TYPECHAM.DataPropertyName = "DesTyp";
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Californian FB", 11.25F);
-            this.TYPECHAM.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Californian FB", 11.25F);
+            this.TYPECHAM.DefaultCellStyle = dataGridViewCellStyle14;
             this.TYPECHAM.HeaderText = "Type de Chambre";
             this.TYPECHAM.Name = "TYPECHAM";
             this.TYPECHAM.ReadOnly = true;
@@ -424,8 +383,8 @@
             // 
             this.Prix.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Prix.DataPropertyName = "Prix";
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Californian FB", 11.25F);
-            this.Prix.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Californian FB", 11.25F);
+            this.Prix.DefaultCellStyle = dataGridViewCellStyle15;
             this.Prix.HeaderText = "Prix";
             this.Prix.Name = "Prix";
             this.Prix.ReadOnly = true;
@@ -434,8 +393,8 @@
             // 
             this.attribueeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.attribueeDataGridViewTextBoxColumn.DataPropertyName = "Attribuee";
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Californian FB", 11.25F);
-            this.attribueeDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Californian FB", 11.25F);
+            this.attribueeDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle16;
             this.attribueeDataGridViewTextBoxColumn.HeaderText = "Attribuee";
             this.attribueeDataGridViewTextBoxColumn.Name = "attribueeDataGridViewTextBoxColumn";
             this.attribueeDataGridViewTextBoxColumn.ReadOnly = true;
@@ -494,6 +453,60 @@
             this.BS_Arrive.DataMember = "Arrive";
             this.BS_Arrive.DataSource = this.DataSet_Arrivee;
             // 
+            // txtBox_Nom_Arrive
+            // 
+            this.txtBox_Nom_Arrive.Enabled = false;
+            this.txtBox_Nom_Arrive.Font = new System.Drawing.Font("Californian FB", 11.25F);
+            this.txtBox_Nom_Arrive.Location = new System.Drawing.Point(226, 14);
+            this.txtBox_Nom_Arrive.Name = "txtBox_Nom_Arrive";
+            this.txtBox_Nom_Arrive.Size = new System.Drawing.Size(233, 25);
+            this.txtBox_Nom_Arrive.TabIndex = 5;
+            // 
+            // txtBox_Adresse
+            // 
+            this.txtBox_Adresse.Enabled = false;
+            this.txtBox_Adresse.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_Adresse.Location = new System.Drawing.Point(81, 50);
+            this.txtBox_Adresse.Name = "txtBox_Adresse";
+            this.txtBox_Adresse.Size = new System.Drawing.Size(378, 25);
+            this.txtBox_Adresse.TabIndex = 9;
+            // 
+            // txtBox_Telephone
+            // 
+            this.txtBox_Telephone.Enabled = false;
+            this.txtBox_Telephone.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_Telephone.Location = new System.Drawing.Point(92, 85);
+            this.txtBox_Telephone.Name = "txtBox_Telephone";
+            this.txtBox_Telephone.Size = new System.Drawing.Size(197, 25);
+            this.txtBox_Telephone.TabIndex = 10;
+            // 
+            // txtBox_NumCham
+            // 
+            this.txtBox_NumCham.Enabled = false;
+            this.txtBox_NumCham.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_NumCham.Location = new System.Drawing.Point(143, 134);
+            this.txtBox_NumCham.Name = "txtBox_NumCham";
+            this.txtBox_NumCham.Size = new System.Drawing.Size(77, 25);
+            this.txtBox_NumCham.TabIndex = 11;
+            // 
+            // txtBox_IdCli_Reser
+            // 
+            this.txtBox_IdCli_Reser.Enabled = false;
+            this.txtBox_IdCli_Reser.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_IdCli_Reser.Location = new System.Drawing.Point(99, 117);
+            this.txtBox_IdCli_Reser.Name = "txtBox_IdCli_Reser";
+            this.txtBox_IdCli_Reser.Size = new System.Drawing.Size(63, 25);
+            this.txtBox_IdCli_Reser.TabIndex = 9;
+            // 
+            // txtBox_Nom_Reser
+            // 
+            this.txtBox_Nom_Reser.Enabled = false;
+            this.txtBox_Nom_Reser.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_Nom_Reser.Location = new System.Drawing.Point(80, 145);
+            this.txtBox_Nom_Reser.Name = "txtBox_Nom_Reser";
+            this.txtBox_Nom_Reser.Size = new System.Drawing.Size(238, 25);
+            this.txtBox_Nom_Reser.TabIndex = 9;
+            // 
             // Arrivee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -501,7 +514,7 @@
             this.Name = "Arrivee";
             this.Load += new System.EventHandler(this.Arrivee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logo_CB)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.pan_principal.ResumeLayout(false);
             this.pan_Reser.ResumeLayout(false);
             this.pan_Reser.PerformLayout();
             this.pan_Arrivee.ResumeLayout(false);
@@ -524,8 +537,6 @@
         private System.Windows.Forms.Panel pan_Reser;
         private System.Windows.Forms.DateTimePicker date_ReserFin;
         private System.Windows.Forms.DateTimePicker date_ReserDebut;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox txtBox_IdReser;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lab_Nom_Reser;
@@ -534,10 +545,6 @@
         private System.Windows.Forms.Label lab_DateReser;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel pan_Arrivee;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtBox_IdCli_Arrive;
         private System.Windows.Forms.Label lab_NumCham;
         private System.Windows.Forms.Label lab_Telephone;
@@ -565,5 +572,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn attribueeDataGridViewTextBoxColumn;
         private Prj_lib_graphique.txtBox_name txtBox_IdArrive;
         private Prj_lib_graphique.lab_format lab_IdArrive;
+        private System.Windows.Forms.TextBox txtBox_Nom_Arrive;
+        private Prj_lib_graphique.txtBox_name txtBox_NumCham;
+        private Prj_lib_graphique.txtBox_name txtBox_Telephone;
+        private Prj_lib_graphique.txtBox_name txtBox_Adresse;
+        private Prj_lib_graphique.txtBox_name txtBox_IdCli_Reser;
+        private Prj_lib_graphique.txtBox_name txtBox_Nom_Reser;
     }
 }

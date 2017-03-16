@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pan_principal = new System.Windows.Forms.Panel();
             this.btn_edit = new Prj_lib_graphique.btn_edit();
             this.btn_delete = new Prj_lib_graphique.btn_delete();
             this.btn_add = new Prj_lib_graphique.btn_add();
@@ -42,12 +42,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.logo_CB)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // pan_principal
             // 
-            this.panel1.Location = new System.Drawing.Point(12, 102);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1158, 439);
-            this.panel1.TabIndex = 8;
+            this.pan_principal.Location = new System.Drawing.Point(12, 102);
+            this.pan_principal.Name = "pan_principal";
+            this.pan_principal.Size = new System.Drawing.Size(1158, 439);
+            this.pan_principal.TabIndex = 8;
             // 
             // btn_edit
             // 
@@ -160,7 +160,7 @@
             this.Controls.Add(this.btn_next);
             this.Controls.Add(this.btn_previous);
             this.Controls.Add(this.btn_cancel);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pan_principal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.logo_CB)).EndInit();
@@ -180,6 +180,6 @@
         protected btn_delete btn_delete;
         protected btn_edit btn_edit;
 
-        protected System.Windows.Forms.Panel panel1;
+        protected System.Windows.Forms.Panel pan_principal;
     }
 }

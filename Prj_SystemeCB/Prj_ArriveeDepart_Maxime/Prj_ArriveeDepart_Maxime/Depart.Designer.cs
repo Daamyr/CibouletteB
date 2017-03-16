@@ -53,15 +53,15 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.logo_CB)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.pan_principal.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pan_principal
             // 
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
+            this.pan_principal.Controls.Add(this.panel3);
+            this.pan_principal.Controls.Add(this.panel2);
             // 
             // panel2
             // 
@@ -316,7 +316,7 @@
             this.ClientSize = new System.Drawing.Size(1182, 622);
             this.Name = "Depart";
             ((System.ComponentModel.ISupportInitialize)(this.logo_CB)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.pan_principal.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
