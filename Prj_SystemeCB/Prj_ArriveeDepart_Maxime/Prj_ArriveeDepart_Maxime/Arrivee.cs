@@ -11,9 +11,6 @@ namespace Prj_ArriveeDepart_Maxime
 
     public partial class Arrivee : Prj_lib_graphique.Form1
     {
-        DataRow dtr_Client;
-        
-
         public Arrivee()
         {
             InitializeComponent();
@@ -45,15 +42,14 @@ namespace Prj_ArriveeDepart_Maxime
             this.TA_Chambre.Fill(this.DataSet_Arrivee.Chambre);
             this.TA_TypeCham.Fill(this.DataSet_Arrivee.TypeCham);
             this.TA_Arrive.Fill(this.DataSet_Arrivee.Arrive);
-            this.TA_TypeCham.Fill(this.DataSet_Arrivee.TypeCham);
         }
 
         private void lien_Arrive()
         {
-            textBox2.DataBindings.Add("Text", BS_Arrive, "IdReser");
+            txtBox_IdReser.DataBindings.Add("Text", BS_Arrive, "IdReser");
 
-            textBox1.DataBindings.Add("Text", BS_Arrive, "IdCli");
-            lb_IdArrive.DataBindings.Add("Text", BS_Arrive, "IdArrive");
+            txtBox_IdCli_Arrive.DataBindings.Add("Text", BS_Arrive, "IdCli");
+            txtBox_IdArrive.DataBindings.Add("Text", BS_Arrive, "IdArrive");
 
             label16.DataBindings.Add("Text", BS_Arrive, "NoCHam");
 
@@ -65,10 +61,10 @@ namespace Prj_ArriveeDepart_Maxime
             this.BS_Reser.DataSource = this.DataSet_Arrivee;
 
 
-            dateTimePicker1.DataBindings.Add("Value", BS_Reser, "DateDebut");
-            dateTimePicker2.DataBindings.Add("Value", BS_Reser, "DateFin");
+            date_ReserDebut.DataBindings.Add("Value", BS_Reser, "DateDebut");
+            date_ReserFin.DataBindings.Add("Value", BS_Reser, "DateFin");
             label22.DataBindings.Add("Text", BS_Reser, "IdCli");
-            dateTimePicker3.DataBindings.Add("Value", BS_Reser, "DateReser");
+            date_DateReser.DataBindings.Add("Value", BS_Reser, "DateReser");
 
 
         }
@@ -140,7 +136,7 @@ namespace Prj_ArriveeDepart_Maxime
             BS_Arrive.MovePrevious();
         }
 
-        private void lb_IdArrive_TextChanged(object sender, EventArgs e)
+        private void txtBox_IdArrive_TextChanged(object sender, EventArgs e)
         {
             trouve_ReservClient();
             label24.Text = DataSet_Arrivee.Tables["Reservation"].Rows[BS_Reser.Position].GetParentRow("FK_RESCLI")["Nom"].ToString();
