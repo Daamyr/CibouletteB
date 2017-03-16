@@ -84,6 +84,39 @@
             ((System.ComponentModel.ISupportInitialize)(this.BS_Reser)).BeginInit();
             this.SuspendLayout();
             // 
+            // btn_cancel
+            // 
+            this.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancel.Click += new System.EventHandler(this.onNonImplemented);
+            // 
+            // btn_previous
+            // 
+            this.btn_previous.Cursor = System.Windows.Forms.Cursors.Hand;
+            // 
+            // btn_next
+            // 
+            this.btn_next.Cursor = System.Windows.Forms.Cursors.Hand;
+            // 
+            // btn_save
+            // 
+            this.btn_save.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_save.Click += new System.EventHandler(this.onNonImplemented);
+            // 
+            // btn_add
+            // 
+            this.btn_add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_add.Click += new System.EventHandler(this.onNonImplemented);
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_delete.Click += new System.EventHandler(this.onNonImplemented);
+            // 
+            // btn_edit
+            // 
+            this.btn_edit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_edit.Click += new System.EventHandler(this.onNonImplemented);
+            // 
             // pan_principal
             // 
             this.pan_principal.Controls.Add(this.DGV_Depart);
@@ -122,6 +155,7 @@
             // 
             // date_DateCarte
             // 
+            this.date_DateCarte.Enabled = false;
             this.date_DateCarte.Location = new System.Drawing.Point(132, 168);
             this.date_DateCarte.Name = "date_DateCarte";
             this.date_DateCarte.Size = new System.Drawing.Size(175, 20);
