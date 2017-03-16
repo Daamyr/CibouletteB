@@ -92,10 +92,12 @@
             // btn_previous
             // 
             this.btn_previous.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_previous.Click += new System.EventHandler(this.btn_previous1_Click);
             // 
             // btn_next
             // 
             this.btn_next.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_next.Click += new System.EventHandler(this.btn_next1_Click);
             // 
             // btn_save
             // 
@@ -461,6 +463,7 @@
             // 
             this.BS_Depart.DataMember = "Depart";
             this.BS_Depart.DataSource = this.dataSet_Depart;
+            this.BS_Depart.PositionChanged += new System.EventHandler(this.onBS_DepartChanged);
             // 
             // dataSet_Depart
             // 

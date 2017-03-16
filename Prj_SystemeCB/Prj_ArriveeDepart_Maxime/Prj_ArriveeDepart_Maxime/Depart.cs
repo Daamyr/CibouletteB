@@ -40,11 +40,6 @@ namespace Prj_ArriveeDepart_Maxime
             this.TA_Reser.Fill(this.dataSet_Depart.Reservation);
         }
 
-        private void lien_Client()
-        {
-
-        }
-
         private void lien_Reservation()
         {
             this.BS_Reser.DataMember = "Reservation";
@@ -55,26 +50,71 @@ namespace Prj_ArriveeDepart_Maxime
             date_DateDebut.DataBindings.Add("Value", BS_Reser, "DateDebut");
             date_DateFin.DataBindings.Add("Value", BS_Reser, "DateFin");
 
+            
+
+        }
+
+        private void trouveClient()
+        {
+            BS_Client.Position = BS_Client.Find("IdCli", dataSet_Depart.Tables["Depart"].Rows[BS_Depart.Position]["IdCli"]);
+        }
+
+        private void lien_Client()
+        {
+            txtBox_IdCli.DataBindings.Add("Text", BS_Client, "IdCli");
+            txtBox_Nom.DataBindings.Add("Text", BS_Client, "Nom");
+            txtBox_Adresse.DataBindings.Add("Text", BS_Client, "Adresse");
+            txtBox_Telephone.DataBindings.Add("Text", BS_Client, "Telephone");
+            txtBox_TypeCarte.DataBindings.Add("Text", BS_Client, "TypeCarte");
+            date_DateCarte.DataBindings.Add("Text", BS_Client, "DateExp");
         }
 
         private void lien_Depart()
         {
+            try
+            {
+                this.BS_Depart.Position = 0;
+                this.BS_Depart.DataSource = BS_Reser;
+                this.BS_Depart.DataMember = "FK_DEPRES";
+                this.DGV_Depart.DataSource = BS_Depart;
 
+            }
+            catch (Exception) { }
         }
 
         private void btn_next1_Click(object sender, EventArgs e)
         {
-            BS_Depart.MoveNext();
+            if (BS_Depart.Position+1 == BS_Depart.Count)
+                BS_Reser.MoveNext();
+            else
+                BS_Depart.MoveNext();
+
         }
 
         private void btn_previous1_Click(object sender, EventArgs e)
         {
-            BS_Depart.MovePrevious();
+            if (BS_Depart.Position - 1 < 0)
+                BS_Reser.MovePrevious();
+            else
+                BS_Depart.MovePrevious();
         }
 
         private void onNonImplemented(object sender, EventArgs e)
         {
             MessageBox.Show("Cette fonction n'est pas encore implémentée.", "Impossible d'accèder à votre requette!");
+        }
+
+        private void onBS_DepartChanged(object sender, EventArgs e)
+        {
+            if (BS_Depart.Count <= 0)
+            {
+                DGV_Depart.BackgroundColor = Color.Red;
+            }
+            else
+            {
+                trouveClient();
+                DGV_Depart.BackgroundColor = Color.Gray;
+            }
         }
     }
 }
