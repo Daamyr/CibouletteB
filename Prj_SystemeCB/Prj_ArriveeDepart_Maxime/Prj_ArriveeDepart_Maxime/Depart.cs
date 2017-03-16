@@ -50,7 +50,7 @@ namespace Prj_ArriveeDepart_Maxime
             date_DateDebut.DataBindings.Add("Value", BS_Reser, "DateDebut");
             date_DateFin.DataBindings.Add("Value", BS_Reser, "DateFin");
 
-            
+
 
         }
 
@@ -61,12 +61,14 @@ namespace Prj_ArriveeDepart_Maxime
 
         private void lien_Client()
         {
-            txtBox_IdCli.DataBindings.Add("Text", BS_Client, "IdCli");
-            txtBox_Nom.DataBindings.Add("Text", BS_Client, "Nom");
-            txtBox_Adresse.DataBindings.Add("Text", BS_Client, "Adresse");
-            txtBox_Telephone.DataBindings.Add("Text", BS_Client, "Telephone");
-            txtBox_TypeCarte.DataBindings.Add("Text", BS_Client, "TypeCarte");
-            date_DateCarte.DataBindings.Add("Text", BS_Client, "DateExp");
+                txtBox_IdCli.DataBindings.Add("Text", BS_Client, "IdCli");
+                txtBox_Nom.DataBindings.Add("Text", BS_Client, "Nom");
+                txtBox_Adresse.DataBindings.Add("Text", BS_Client, "Adresse");
+                //txtBox_Telephone.DataBindings.Add("Text", BS_Client, "Telephone");
+                txtBox_Telephone.Text = String.Format("{0:(###) ###-####}",
+                    Convert.ToInt64(dataSet_Depart.Tables["Depart"].Rows[BS_Depart.Position].GetParentRow("FK_DEPCLI")["Telephone"].ToString()));
+                txtBox_TypeCarte.DataBindings.Add("Text", BS_Client, "TypeCarte");
+                date_DateCarte.DataBindings.Add("Text", BS_Client, "DateExp");
         }
 
         private void lien_Depart()
@@ -77,14 +79,27 @@ namespace Prj_ArriveeDepart_Maxime
                 this.BS_Depart.DataSource = BS_Reser;
                 this.BS_Depart.DataMember = "FK_DEPRES";
                 this.DGV_Depart.DataSource = BS_Depart;
+                txtBox_Confirme.DataBindings.Add("Text", BS_Depart, "ConfirmerPar");
 
             }
             catch (Exception) { }
+
+            dataSet_Depart.Tables["Depart"].Columns.Add("Nom", typeof(String));
+
+            foreach (DataRow Dtr_Depart in dataSet_Depart.Tables["Depart"].Rows)
+            {
+                dataSet_Depart.Tables["Depart"].Rows[BS_Depart.Position]["Nom"] = dataSet_Depart.Tables["Depart"].Rows[BS_Depart.Position].GetParentRow("FK_DEPCLI")["Nom"];
+
+                BS_Depart.Position += 1;
+            }
+            dataSet_Depart.Tables["Depart"].AcceptChanges();
+            BS_Depart.Position = 0;
+
         }
 
         private void btn_next1_Click(object sender, EventArgs e)
         {
-            if (BS_Depart.Position+1 == BS_Depart.Count)
+            if (BS_Depart.Position + 1 == BS_Depart.Count)
                 BS_Reser.MoveNext();
             else
                 BS_Depart.MoveNext();
@@ -109,9 +124,11 @@ namespace Prj_ArriveeDepart_Maxime
             if (BS_Depart.Count <= 0)
             {
                 DGV_Depart.BackgroundColor = Color.Red;
+                pan_Client.Hide();
             }
             else
             {
+                pan_Client.Show();
                 trouveClient();
                 DGV_Depart.BackgroundColor = Color.Gray;
             }

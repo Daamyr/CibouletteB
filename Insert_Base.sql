@@ -189,15 +189,15 @@ INSERT INTO AYANT (CodCom, NoCham) VALUES ('BT', '0310')
 *		INSERTION RÉSERVATION
 *
 ***************************************/
-insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('01/02/2017','05/06/2017' ,'10/06/2017', 1)
-insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('01/04/2017','02/04/2017' ,'17/04/2017', 20)
-insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('22/12/2016','03/03/2017' ,'10/03/2017', 31)
-insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('06/01/2017','02/03/2017' ,'07/03/2017', 44)
-insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('01/02/2017','25/02/2017' ,'28/02/2017', 6)
+insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('01/02/2016','05/06/2016' ,'10/06/2016', 1)--fini
+insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('01/01/2017','10/02/2017' ,'20/02/2017', 20)--fini
+insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('22/12/2016','03/03/2017' ,'17/03/2017', 31)--encours
+insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('06/01/2017','10/03/2017' ,'20/03/2017', 44)--encours
+--insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('01/02/2017','25/02/2017' ,'28/02/2017', 6)
 
-insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('02/02/2017','10/03/2017' ,'21/03/2017', 12)
-insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('02/01/2017','9/03/2017' ,'18/03/2017', 24)
-insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('15/02/2017','16/03/2017' ,'20/03/2017', 48)
+--insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('02/02/2017','10/03/2017' ,'21/03/2017', 12)
+--insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('02/01/2017','9/03/2017' ,'18/03/2017', 24)
+--insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('15/02/2017','16/03/2017' ,'20/03/2017', 48)
 
 
 /**************************************
@@ -205,16 +205,23 @@ insert into Reservation (DateReser, DateDebut, DateFin, IdCli) values ('15/02/20
 *		INSERTION ARRIVE
 *
 ***************************************/
-insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('09/02/2017', 1, 1, '0102')
-insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('02/04/2017', 20, 2, '0102')
-insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('05/02/2017', 45, 2, '0105')
-insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('02/03/2017', 8, 4, '0304')
+insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('05/06/2016', 1, 1, '0102')
+insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('06/06/2016', 2, 1, '0301')
+insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('07/06/2016', 3, 1, '0202')
+
+insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('10/02/2017', 20, 2, '0102')
+insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('15/02/2017', 45, 2, '0105')
+
+insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('13/03/2017', 44, 4, '0301')
+insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('14/03/2017', 8, 4, '0302')
+insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('16/03/2017', 16, 4, '0303')
+
 insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('06/03/2017', 6, 3, '0202')
 
-insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('16/03/2017', 12, 6, '0201')
-insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('15/03/2017', 24, 7, '0106')
-insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('14/03/2017', 25, 7, '0107')
-insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('16/03/2017', 48, 8, '0209')
+--insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('16/03/2017', 12, 6, '0201')
+--insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('15/03/2017', 24, 7, '0106')
+--insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('14/03/2017', 25, 7, '0107')
+--insert into Arrive (DateArrive, IdCli, IdReser, NoCham) values ('16/03/2017', 48, 8, '0209')
 
 
 /**************************************
@@ -260,7 +267,14 @@ insert into Trx (DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCl
 *		INSERTION DEPART
 *
 ***************************************/
-insert into Depart (DateDepart, ConfirmerPar, IdReser, NoCham, IdCli, IdArrive) values ('05/02/2017', 'JJ', 1, '0101', 1, 1)
+--insert into Depart (DateDepart, ConfirmerPar, IdReser, NoCham, IdCli, IdArrive) values ('05/02/2017', 'JJ', 1, '0101', 1, 1)
+insert into Depart (DateDepart, ConfirmerPar, IdReser, NoCham, IdCli, IdArrive) values ('09/06/2016', 'JJ', 1, '0102', 1, 1)
+insert into Depart (DateDepart, ConfirmerPar, IdReser, NoCham, IdCli, IdArrive) values ('10/06/2016', 'JP', 1, '0301', 2, 2)
+insert into Depart (DateDepart, ConfirmerPar, IdReser, NoCham, IdCli, IdArrive) values ('10/06/2016', 'RJ', 1, '0202', 3, 3)
+
+insert into Depart (DateDepart, ConfirmerPar, IdReser, NoCham, IdCli, IdArrive) values ('19/02/2017', 'JJ', 2, '0102', 20, 4)
+insert into Depart (DateDepart, ConfirmerPar, IdReser, NoCham, IdCli, IdArrive) values ('20/02/2017', 'MF', 2, '0105', 45, 5)
+--insert into Depart (DateDepart, ConfirmerPar, IdReser, NoCham, IdCli, IdArrive) values ('05/02/2017', 'JJ', 1, '0101', 1, 1)
 
 
 /**************************************
@@ -278,13 +292,13 @@ insert into De (Attribuee, IdReser, NoCham) values (0, 2, '0105')
 
 insert into De (Attribuee, IdReser, NoCham) values (1, 3, '0202')
 
-insert into De (Attribuee, IdReser, NoCham) values (0, 4, '0301')
-insert into De (Attribuee, IdReser, NoCham) values (0, 4, '0302')
-insert into De (Attribuee, IdReser, NoCham) values (0, 4, '0303')
-insert into De (Attribuee, IdReser, NoCham) values (1, 4, '0304')
+insert into De (Attribuee, IdReser, NoCham) values (1, 4, '0301')
+insert into De (Attribuee, IdReser, NoCham) values (1, 4, '0302')
+insert into De (Attribuee, IdReser, NoCham) values (1, 4, '0303')
+insert into De (Attribuee, IdReser, NoCham) values (0, 4, '0304')
 insert into De (Attribuee, IdReser, NoCham) values (0, 4, '0305')
 
-
+/*
 insert into De (Attribuee, IdReser, NoCham) values (0, 5, '0105')
 insert into De (Attribuee, IdReser, NoCham) values (0, 5, '0106')
 insert into De (Attribuee, IdReser, NoCham) values (0, 5, '0205')
@@ -295,7 +309,7 @@ insert into De (Attribuee, IdReser, NoCham) values (1, 7, '0106')
 insert into De (Attribuee, IdReser, NoCham) values (1, 7, '0107')
 
 insert into De (Attribuee, IdReser, NoCham) values (1, 8, '0209')
-
+*/
 
 
 /*

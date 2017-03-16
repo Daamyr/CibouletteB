@@ -16,8 +16,8 @@ namespace Prj_ArriveeDepart_Maxime
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Arrivee());
             Application.Run(new Depart());
-            //Application.Run(new Arrivee());
         }
     }
 }

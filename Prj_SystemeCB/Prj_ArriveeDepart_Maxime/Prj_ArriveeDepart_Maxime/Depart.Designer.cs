@@ -56,13 +56,6 @@
             this.lab_DateReser = new System.Windows.Forms.Label();
             this.lab_IdReser = new System.Windows.Forms.Label();
             this.DGV_Depart = new System.Windows.Forms.DataGridView();
-            this.idDepartDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDepartDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.confirmerParDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idReserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noChamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idCliDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idArriveDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BS_Depart = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet_Depart = new Prj_ArriveeDepart_Maxime.DataSet_Depart();
             this.TA_Depart = new Prj_ArriveeDepart_Maxime.DataSet_DepartTableAdapters.DepartTableAdapter();
@@ -72,6 +65,10 @@
             this.BS_Arrive = new System.Windows.Forms.BindingSource(this.components);
             this.BS_Client = new System.Windows.Forms.BindingSource(this.components);
             this.BS_Reser = new System.Windows.Forms.BindingSource(this.components);
+            this.noChamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idCliDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDepartDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.logo_CB)).BeginInit();
             this.pan_principal.SuspendLayout();
             this.pan_Client.SuspendLayout();
@@ -396,68 +393,16 @@
             this.DGV_Depart.AutoGenerateColumns = false;
             this.DGV_Depart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_Depart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDepartDataGridViewTextBoxColumn,
-            this.dateDepartDataGridViewTextBoxColumn,
-            this.confirmerParDataGridViewTextBoxColumn,
-            this.idReserDataGridViewTextBoxColumn,
             this.noChamDataGridViewTextBoxColumn,
             this.idCliDataGridViewTextBoxColumn,
-            this.idArriveDataGridViewTextBoxColumn});
+            this.Nom,
+            this.dateDepartDataGridViewTextBoxColumn});
             this.DGV_Depart.DataSource = this.BS_Depart;
             this.DGV_Depart.Location = new System.Drawing.Point(1, 207);
             this.DGV_Depart.Name = "DGV_Depart";
             this.DGV_Depart.ReadOnly = true;
             this.DGV_Depart.Size = new System.Drawing.Size(1154, 229);
             this.DGV_Depart.TabIndex = 8;
-            // 
-            // idDepartDataGridViewTextBoxColumn
-            // 
-            this.idDepartDataGridViewTextBoxColumn.DataPropertyName = "IdDepart";
-            this.idDepartDataGridViewTextBoxColumn.HeaderText = "IdDepart";
-            this.idDepartDataGridViewTextBoxColumn.Name = "idDepartDataGridViewTextBoxColumn";
-            this.idDepartDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dateDepartDataGridViewTextBoxColumn
-            // 
-            this.dateDepartDataGridViewTextBoxColumn.DataPropertyName = "DateDepart";
-            this.dateDepartDataGridViewTextBoxColumn.HeaderText = "DateDepart";
-            this.dateDepartDataGridViewTextBoxColumn.Name = "dateDepartDataGridViewTextBoxColumn";
-            this.dateDepartDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // confirmerParDataGridViewTextBoxColumn
-            // 
-            this.confirmerParDataGridViewTextBoxColumn.DataPropertyName = "ConfirmerPar";
-            this.confirmerParDataGridViewTextBoxColumn.HeaderText = "ConfirmerPar";
-            this.confirmerParDataGridViewTextBoxColumn.Name = "confirmerParDataGridViewTextBoxColumn";
-            this.confirmerParDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idReserDataGridViewTextBoxColumn
-            // 
-            this.idReserDataGridViewTextBoxColumn.DataPropertyName = "IdReser";
-            this.idReserDataGridViewTextBoxColumn.HeaderText = "IdReser";
-            this.idReserDataGridViewTextBoxColumn.Name = "idReserDataGridViewTextBoxColumn";
-            this.idReserDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // noChamDataGridViewTextBoxColumn
-            // 
-            this.noChamDataGridViewTextBoxColumn.DataPropertyName = "NoCham";
-            this.noChamDataGridViewTextBoxColumn.HeaderText = "NoCham";
-            this.noChamDataGridViewTextBoxColumn.Name = "noChamDataGridViewTextBoxColumn";
-            this.noChamDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idCliDataGridViewTextBoxColumn
-            // 
-            this.idCliDataGridViewTextBoxColumn.DataPropertyName = "IdCli";
-            this.idCliDataGridViewTextBoxColumn.HeaderText = "IdCli";
-            this.idCliDataGridViewTextBoxColumn.Name = "idCliDataGridViewTextBoxColumn";
-            this.idCliDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idArriveDataGridViewTextBoxColumn
-            // 
-            this.idArriveDataGridViewTextBoxColumn.DataPropertyName = "IdArrive";
-            this.idArriveDataGridViewTextBoxColumn.HeaderText = "IdArrive";
-            this.idArriveDataGridViewTextBoxColumn.Name = "idArriveDataGridViewTextBoxColumn";
-            this.idArriveDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // BS_Depart
             // 
@@ -500,6 +445,38 @@
             // 
             this.BS_Reser.DataMember = "Reservation";
             this.BS_Reser.DataSource = this.dataSet_Depart;
+            // 
+            // noChamDataGridViewTextBoxColumn
+            // 
+            this.noChamDataGridViewTextBoxColumn.DataPropertyName = "NoCham";
+            this.noChamDataGridViewTextBoxColumn.HeaderText = "NoCham";
+            this.noChamDataGridViewTextBoxColumn.Name = "noChamDataGridViewTextBoxColumn";
+            this.noChamDataGridViewTextBoxColumn.ReadOnly = true;
+            this.noChamDataGridViewTextBoxColumn.Width = 278;
+            // 
+            // idCliDataGridViewTextBoxColumn
+            // 
+            this.idCliDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idCliDataGridViewTextBoxColumn.DataPropertyName = "IdCli";
+            this.idCliDataGridViewTextBoxColumn.HeaderText = "IdCli";
+            this.idCliDataGridViewTextBoxColumn.Name = "idCliDataGridViewTextBoxColumn";
+            this.idCliDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Nom
+            // 
+            this.Nom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nom.DataPropertyName = "Nom";
+            this.Nom.HeaderText = "Nom";
+            this.Nom.Name = "Nom";
+            this.Nom.ReadOnly = true;
+            // 
+            // dateDepartDataGridViewTextBoxColumn
+            // 
+            this.dateDepartDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dateDepartDataGridViewTextBoxColumn.DataPropertyName = "DateDepart";
+            this.dateDepartDataGridViewTextBoxColumn.HeaderText = "DateDepart";
+            this.dateDepartDataGridViewTextBoxColumn.Name = "dateDepartDataGridViewTextBoxColumn";
+            this.dateDepartDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Depart
             // 
@@ -554,13 +531,6 @@
         private DataSet_Depart dataSet_Depart;
         private System.Windows.Forms.BindingSource BS_Depart;
         private DataSet_DepartTableAdapters.DepartTableAdapter TA_Depart;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDepartDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateDepartDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn confirmerParDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idReserDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn noChamDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idCliDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idArriveDataGridViewTextBoxColumn;
         private Prj_lib_graphique.lab_format lab_InfoReser;
         private Prj_lib_graphique.lab_format lab_InfoCli;
         private DataSet_DepartTableAdapters.ArriveTableAdapter TA_Arrive;
@@ -569,5 +539,9 @@
         private System.Windows.Forms.BindingSource BS_Arrive;
         private System.Windows.Forms.BindingSource BS_Client;
         private System.Windows.Forms.BindingSource BS_Reser;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noChamDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idCliDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDepartDataGridViewTextBoxColumn;
     }
 }
