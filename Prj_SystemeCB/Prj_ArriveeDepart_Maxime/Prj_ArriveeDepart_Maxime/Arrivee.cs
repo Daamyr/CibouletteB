@@ -80,7 +80,9 @@ namespace Prj_ArriveeDepart_Maxime
         {
             txtBox_Nom_Arrive.DataBindings.Add("Text", BS_Client, "Nom");
             txtBox_Adresse.DataBindings.Add("Text", BS_Client, "Adresse");
-            txtBox_Telephone.DataBindings.Add("Text", BS_Client, "Telephone");
+            //txtBox_Telephone.DataBindings.Add("Text", BS_Client, "Telephone");
+            txtBox_Telephone.Text = String.Format("{0:(###) ###-####}",
+                    Convert.ToInt64(DataSet_Arrivee.Tables["Reservation"].Rows[BS_Reser.Position].GetParentRow("FK_RESCLI")["Telephone"].ToString()));
         }
 
         private void trouve_ReservClient()
@@ -131,7 +133,7 @@ namespace Prj_ArriveeDepart_Maxime
 
             }
             catch (Exception) { }
-        }        
+        }
 
         private void btn_next1_Click(object sender, EventArgs e)
         {
@@ -154,6 +156,10 @@ namespace Prj_ArriveeDepart_Maxime
             catch (Exception) { }
         }
 
+        private void onNonImplemented(object sender, EventArgs e)
+        {
+            MessageBox.Show("Cette fonction n'est pas encore implémentée.", "Impossible d'accèder à votre requette!");
+        }
 
     }
 }

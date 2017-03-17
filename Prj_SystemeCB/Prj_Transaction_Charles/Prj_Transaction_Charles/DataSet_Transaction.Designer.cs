@@ -6708,8 +6708,8 @@ namespace Prj_Transaction_Charles.DataSet_TransactionTableAdapters {
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Arrive] ([DateArrive], [IdCli], [IdReser], [NoCham]) VALUES (@" +
-                "DateArrive, @IdCli, @IdReser, @NoCham);\r\nSELECT IdArrive, DateArrive, IdCli, IdR" +
-                "eser, NoCham FROM Arrive WHERE (IdArrive = SCOPE_IDENTITY())";
+                "DateArrive, @IdCli, @IdReser, @NoCham);\nSELECT IdArrive, DateArrive, IdCli, IdRe" +
+                "ser, NoCham FROM Arrive WHERE (IdArrive = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateArrive", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateArrive", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdCli", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdCli", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7815,8 +7815,8 @@ SELECT NoCham, Etage, Prix, Etat, Memo, CodLoc, CodTypCham FROM Chambre WHERE (N
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DescCom", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DescCom", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Commodite] ([CodCom], [DescCom]) VALUES (@CodCom, @DescCom);\r\n" +
-                "SELECT CodCom, DescCom FROM Commodite WHERE (CodCom = @CodCom)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Commodite] ([CodCom], [DescCom]) VALUES (@CodCom, @DescCom);\nS" +
+                "ELECT CodCom, DescCom FROM Commodite WHERE (CodCom = @CodCom)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodCom", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodCom", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DescCom", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DescCom", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8806,7 +8806,7 @@ SELECT IdDepart, DateDepart, ConfirmerPar, IdReser, NoCham, IdCli FROM Depart WH
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Localisation] ([CodLoc], [DescLoc]) VALUES (@CodLoc, @DescLoc)" +
-                ";\r\nSELECT CodLoc, DescLoc FROM Localisation WHERE (CodLoc = @CodLoc)";
+                ";\nSELECT CodLoc, DescLoc FROM Localisation WHERE (CodLoc = @CodLoc)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodLoc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodLoc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DescLoc", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DescLoc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -9158,8 +9158,8 @@ SELECT CodLoc, DescLoc FROM Localisation WHERE (CodLoc = @CodLoc)";
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Reservation] ([DateReser], [DateDebut], [DateFin], [IdCli]) VA" +
-                "LUES (@DateReser, @DateDebut, @DateFin, @IdCli);\r\nSELECT IdReser, DateReser, Dat" +
-                "eDebut, DateFin, IdCli FROM Reservation WHERE (IdReser = SCOPE_IDENTITY())";
+                "LUES (@DateReser, @DateDebut, @DateFin, @IdCli);\nSELECT IdReser, DateReser, Date" +
+                "Debut, DateFin, IdCli FROM Reservation WHERE (IdReser = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateReser", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateReser", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateDebut", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateDebut", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -10045,8 +10045,8 @@ SELECT IdTrx, DateTrx, MontantTrx, Reportee, CodTypTrx, IdReser, NoCham, IdCli F
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[TypeCham] ([CodTypCham], [DescTyp], [NbDispo]) VALUES (@CodTyp" +
-                "Cham, @DescTyp, @NbDispo);\r\nSELECT CodTypCham, DescTyp, NbDispo FROM TypeCham WH" +
-                "ERE (CodTypCham = @CodTypCham)";
+                "Cham, @DescTyp, @NbDispo);\nSELECT CodTypCham, DescTyp, NbDispo FROM TypeCham WHE" +
+                "RE (CodTypCham = @CodTypCham)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodTypCham", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodTypCham", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DescTyp", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DescTyp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -10427,8 +10427,8 @@ SELECT CodTypCham, DescTyp, NbDispo FROM TypeCham WHERE (CodTypCham = @CodTypCha
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[TypeTrx] ([CodTypTrx], [DescTrx], [Nature]) VALUES (@CodTypTrx" +
-                ", @DescTrx, @Nature);\r\nSELECT CodTypTrx, DescTrx, Nature FROM TypeTrx WHERE (Cod" +
-                "TypTrx = @CodTypTrx)";
+                ", @DescTrx, @Nature);\nSELECT CodTypTrx, DescTrx, Nature FROM TypeTrx WHERE (CodT" +
+                "ypTrx = @CodTypTrx)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodTypTrx", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodTypTrx", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DescTrx", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DescTrx", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
